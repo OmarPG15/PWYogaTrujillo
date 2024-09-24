@@ -430,3 +430,60 @@ section .wave.wave3{
     margin-top: 20px; /* Espacio entre el botón y el texto */
 }
 
+/*Mi parte alex*/
+
+/* Estilo para la sección de cursos */
+.cursos {
+  background-color: #F9F6F4; /* Color de fondo para la sección */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.cursos h2 {
+  color: #C6A39B; /* Color del título */
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.cursos-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.curso-card {
+  background-color: #FFFFFF; /* Fondo blanco para la tarjeta */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 250px;
+  transition: transform 0.3s;
+}
+
+.curso-card:hover {
+  transform: scale(1.05);
+}
+
+.curso-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.curso-button {
+  background-color: #F5F0EC; /* Fondo del botón */
+  color: #7E6464; /* Color del texto del botón */
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.curso-button:hover {
+  background-color: #C6A39B; /* Color de fondo al pasar el cursor */
+  color: #FFFFFF; /* Color de texto al pasar el cursor */
+}
