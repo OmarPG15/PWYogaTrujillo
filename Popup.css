@@ -1,20 +1,21 @@
 dialog{
-    
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.3);
+    
     align-items: center;
     justify-content: center;
     z-index: 1000;
     top: 0;
     left: 0;
-    height: 100vh;
-    width: 100vw;
-    padding: 00px;
+    /* height: 100vh;
+    width: 100vw; */
+    margin: 300px 750px;
+    border-radius: 5%;
+    border-color: #D5B75E;
 }
 .discountForm {
     width: 500px;
     height: 400px;
-    background-color: rgb(255, 255, 255);
+    background-color: #faeaea;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -23,58 +24,64 @@ dialog{
     position: relative;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.082);
     text-align: center;
+    border-radius: 5%;
+    /* opacity: 0.8; */
 }
 
 .DiscountHeading {
+    font-family: 'Monterchi';
     font-size: 1.5em;
-    color: rgb(15, 15, 15);
+    color: #9d7378;
     font-weight: 700;
     text-align: center;
+    font-size: 40px;
 }
 
-.DiscountSubheading {
-    font-size: 0.8em;
-    color: black;
-    text-align: center;
-}
+
 
 .inputContainer {
+    font-family: 'Monterchi';
     width: 100%;
-    display: flex;
+    display: center;
     flex-direction: column;
     margin-top: 20px;
     gap: 20px;
-    font-size: 18px;
+    font-size: 30px;
+    color: #9d7378;
 }
-
-#email-address {
-    height: 30px;
-    width: 100%;
-    border: 1px solid rgb(228, 228, 228);
-    background-color: white;
-    padding: 0px 10px;
-    outline: none;
-    text-align: center;
+.inputContainer ul{
+    margin: 50px 60px;
+    text-align: initial;
+    list-style-type: none;
+}
+.inputContainer ul li i{
+    
+    font-size: 15px;
+}
+.inputContainer h2{
+    font-size: 40px;
+    margin-top: 100px;
 }
 
 .submitButton {
+    font-family: 'Monterchi';
     width: 100%;
     height: 30px;
     border: none;
-    background-color: rgb(15, 15, 15);
+    background-color: #9d7378;
     color: white;
     font-weight: 600;
     cursor: pointer;
 }
 
 .submitButton:hover {
-    background-color: rgb(36, 36, 36);
+    background-color: #EAA7A7;
 }
 
 .exitBtn {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 13px;
+    right: 19px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.171);
     background-color: rgb(255, 255, 255);
     border-radius: 50%;
