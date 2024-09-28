@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Popup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="header.js"></script>
     
@@ -14,6 +15,24 @@
     <title>Yoga Trujillo</title>
 </head>
 <body>
+    <dialog id="formulario">
+        <form class="discountForm">
+            <span class="DiscountHeading">HORARIOS DE SETIEMBRE</span>
+            <div class="inputContainer">
+                <ul>
+                    <li>Sábados 8am</li>
+                    <li>Domingos 9am</li>
+                    <li>Lunes y miercoles 5pm</li>
+                </ul>
+                <h2>Del 7 Set al 2 de Oct</h2>
+                <input placeholder="Enter your email" type="email" name="email" id="email-address">
+                <button type="submit" class="submitButton"></button>
+            </div>
+            <button class="exitBtn">×</button>
+        </form>
+        
+    </dialog> 
+
     <header id="header">
         <div class="container">
             <div class="header-content">
@@ -86,90 +105,29 @@
         <div class="wave wave3"></div>
     </section>
     </header>
+
     
     
-    
-    <div class="large-image">
-        <img src="Images/Portada web.png" alt="Imagen Grande">
+    <div class="large-image"> 
+        <img src="Images/Portada.png" alt="Imagen Grande">
     </div>
     
 
-    
-    
-    
-<div class="content">
-    
-    <div class="card">
-        <div class="card-body">
-            <div class="card-content">
-                    <h2>Nosotros</h2>
-                <p>
-                    Yoga en Trujillo es una escuela peruana fundada en el año 2013 por Carla Castro Mas 
-                    en un salón de su hogar. Este proyecto empezó como un hobbie, desenvolviendo esta gran pasión 
-                    por el yoga dando clases a sus familiares. Más adelante, gracias a su gran desempeño y seriedad 
-                    fue convocada como profesora en distintos lugares (gimnasios, colegios y clubes en Trujillo). 
-                    Luego de 4 años brindando clases, logró aperturar su primer local en el año 2015. 
-                    El éxito de sus clases le permitió incluir en su proyecto a profesores y colaboradores que tuvieran 
-                    su misma pasión por el yoga.
-                </p>
-                </div>
-            </div>
-        </div>
+<div class="grid grid-cols-4 grid-rows-24 gap-5">
+    <div class="col-span-4 row-span-3 d1">
+        <h2>¿Quieres ser parte de nuestra comunidad?</h2>
+        <h4>Registrate y recibe un ebook gratis</h4>
+        <button class="custom-button" id="openM">abrir modal</button>
     </div>
-
-    <div class="card second-card">
-        <div class="card-body">
-            <div class="second-card-content">
-                    <img src="Images/Bio.jpeg" alt="Descripción de la imagen" class="second-card-img">
-                <div class="second-cart-text">
-                        <h2>Bio</h2>
-                    <p>
-                        ¡Hola! Soy Carla, y antes que nada, quiero expresar mi agradecimiento por tu interés en esta práctica y
-                        por tomarte el tiempo para leer. Permíteme compartir un poco sobre mi viaje:
-                        La práctica de yoga llegó a mi vida en un momento desafiante durante mis años universitarios. 
-                        Fue un bálsamo para mis tendencias ansiosas y me ayudó a encontrar equilibrio. Desde entonces, 
-                        me he sumergido en estudios y experiencias relacionadas con el desarrollo personal, 
-                        energético y espiritual desde una edad temprana. Descubrí que tenía una afinidad natural por estos campos, 
-                        pero sentía que faltaba algo en mis prácticas y estudios espirituales.
-                        Fue entonces cuando me sumergí en la investigación del sistema nervioso y el trauma, 
-                        lo cual resultó ser un gran avance. Comprender mejor mi biología, me permitió abordar mis 
-                        reacciones automáticas con compasión, sin idealizar ni exigirme en el proceso.
-                        Es un verdadero honor para mí acompañarte en este viaje hacia la compasión y la aceptación de nuestra humanidad, 
-                        tanto vulnerable como resiliente.
-                    </p>
-                    <button class="custom-button">Ver más...</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="card second-card"></div>
-        <div class="card-body">
-            <div class="second-card-content">
-                    <img src="Images/Bio.jpeg" alt="Descripción de la imagen" class="second-card-img">
-                <div class="second-cart-text">
-                        <h2>Bio</h2>
-                    <p>
-                        ¡Hola! Soy Carla, y antes que nada, quiero expresar mi agradecimiento por tu interés en esta práctica y
-                        por tomarte el tiempo para leer. Permíteme compartir un poco sobre mi viaje:
-                        La práctica de yoga llegó a mi vida en un momento desafiante durante mis años universitarios. 
-                        Fue un bálsamo para mis tendencias ansiosas y me ayudó a encontrar equilibrio. Desde entonces, 
-                        me he sumergido en estudios y experiencias relacionadas con el desarrollo personal, 
-                        energético y espiritual desde una edad temprana. Descubrí que tenía una afinidad natural por estos campos, 
-                        pero sentía que faltaba algo en mis prácticas y estudios espirituales.
-                        Fue entonces cuando me sumergí en la investigación del sistema nervioso y el trauma, 
-                        lo cual resultó ser un gran avance. Comprender mejor mi biología, me permitió abordar mis 
-                        reacciones automáticas con compasión, sin idealizar ni exigirme en el proceso.
-                        Es un verdadero honor para mí acompañarte en este viaje hacia la compasión y la aceptación de nuestra humanidad, 
-                        tanto vulnerable como resiliente.
-                    </p>
-                    <button class="custom-button">Ver más...</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
+    
+    <div class="col-span-4 row-span-6 row-start-4 d2">3</div>
+    <div class="col-span-4 row-span-4 row-start-10 d3">5</div>
+    <div class="col-span-4 row-span-2 row-start-14 d4">6</div>
+    <div class="col-span-4 row-span-3 row-start-16 d5">7</div>
+    <div class="col-span-4 row-span-4 row-start-19 d6">8</div>
 </div>
+     
+
+    
 </body>
 </html>
