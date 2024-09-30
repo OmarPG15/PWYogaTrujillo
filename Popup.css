@@ -1,6 +1,5 @@
 dialog{
     position: fixed;
-    
     align-items: center;
     justify-content: center;
     z-index: 1000;
@@ -11,6 +10,9 @@ dialog{
     margin: 300px 750px;
     border-radius: 5%;
     border-color: #D5B75E;
+    /* mask-image:url(Images/blob2.svg);
+    mask-size: cover;
+    mask-repeat: no-repeat; */
 }
 .discountForm {
     width: 500px;
@@ -80,10 +82,10 @@ dialog{
 
 .exitBtn {
     position: absolute;
-    top: 13px;
-    right: 19px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.171);
-    background-color: rgb(255, 255, 255);
+    top: 9px;
+    right: 10px;
+    
+    background-color: #faeaea;
     border-radius: 50%;
     width: 25px;
     height: 25px;
@@ -91,4 +93,8 @@ dialog{
     color: black;
     font-size: 1.1em;
     cursor: pointer;
+}
+.exitBtn:hover{
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.171);
 }
