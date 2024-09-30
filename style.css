@@ -433,22 +433,28 @@ section .wave.wave3{
 /*Mi parte alex*/
 
 /* Estilo para la sección de cursos */
+
+Cursos-seccion{
+
+}
 .cursos {
-  background-color: #ebebeb; /* Color de fondo para la sección */
+  background-color: #F9DDDC;
   padding: 40px 20px;
   text-align: center;
+  position: relative; /* Añadido para la barra al final */
 }
 
-.cursos h2 {
-  color: #cd4242; /* Color del título */
-  font-size: 28px;
+.CentrarCursos {
+  color: #E9C9C2 ; /* Color del título */
+  font-size: 40px;
   margin-bottom: 30px;
+  text-align: center; /* Alineación centrada */
 }
 
 .cursos-container {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 300px; /* Aumentar el espacio entre las tarjetas */
   flex-wrap: wrap;
 }
 
@@ -486,4 +492,89 @@ section .wave.wave3{
 .curso-button:hover {
   background-color: #C6A39B; /* Color de fondo al pasar el cursor */
   color: #FFFFFF; /* Color de texto al pasar el cursor */
+}
+.cursos-after {
+  display: block;
+  width: 100%;
+  height: 30px;
+  background-color: #E9C9C2 ; /* Color de la barra */
+  margin-top: 30px;
+}
+
+/*Seccion de inicio y servicios*/
+
+.Servicios-seccion{
+  background-color: #F5F2ED; /* Color de fondo de la sección de comunidad */
+    padding: 40px 20px; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+    margin-bottom: 40px; /* Espacio entre secciones */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+
+}
+.Servicios {
+  background-color: #ebebeb;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative; /* Añadido para la barra al final */
+}
+
+.CentrarServicios {
+  color: #E9C9C2 ; /* Color del título */
+  font-size: 40px;
+  margin-bottom: 30px;
+  text-align: center; /* Alineación centrada */
+}
+
+.servicios-container {
+  display: flex;
+  justify-content: center;
+  gap: 300px; /* Aumentar el espacio entre las tarjetas */
+  flex-wrap: wrap;
+ 
+}
+
+.servicios-card {
+  background-color: #FFFFFF; /* Fondo blanco para la tarjeta */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 250px;
+  transition: transform 0.3s;
+
+}
+
+.servicios-card:hover {
+  transform: scale(1.05);
+}
+
+.servicios-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 15px; /* Espacio entre la imagen y el texto */
+}
+
+.servicios-button {
+  background-color: #F5F0EC; /* Fondo del botón */
+  color: #7E6464; /* Color del texto del botón */
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.servicios-button:hover {
+  background-color: #C6A39B; /* Color de fondo al pasar el cursor */
+  color: #FFFFFF; /* Color de texto al pasar el cursor */
+}
+.servicio-texto {
+  color: #7E6464; /* Color del texto */
+  font-size: 14px; /* Tamaño de la fuente */
+  text-align: center; /* Alineación del texto */
+  margin-top: 10px; /* Espacio arriba del texto */
+  font-family: 'Roboto', sans-serif;
 }
