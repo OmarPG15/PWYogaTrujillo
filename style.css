@@ -375,19 +375,22 @@ section .wave.wave3{
 }
 /* body */
 
+.contenido{
+  display: grid;
+}
 .d1{
   padding-top: 20px;
   background-color: #f8f7f3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  place-items: center;
+  color:#9d7378
 }
 .d1 svg{
   display: flex;
   height: 100px;
 }
-.d1 h1{
-  position: center;
+.d1 h2{
+  margin-bottom: 20px;
 }
 .d1 input{
   margin-right: 10px; 
@@ -403,28 +406,86 @@ section .wave.wave3{
 .d1 .input-group{
   display: flex;
   gap: 10px;
+  margin-top: 50px;
 }
 .d1 input:focus{
   box-shadow: 5.5px 7px 0 #9D7378;
 }
 .d2{
-  background-color: #FFFF;
-  height: 700px;
+  padding-top: 20px;
+  display: grid;
+  color:#9d7378;
+  /* height: 700px; */
 }
-.d3{
-  background-color: #faeaea;
+.Servicios{
   height: 500px;
 }
+.Servicios section{
+  display: flex;
+  width: 600px;
+  height: 430px;
+  
+}
+.Servicios section img{
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5s ease;
+}
+.Servicios section img:hover{
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+.d2 svg{
+  display: flex;
+  height: 100px;
+}
+.d3{
+  padding-top: 20px;
+  background-color: #FAEAEA;
+  display: grid;
+  place-items: center;
+}
+.cursos{
+  height: 500px;
+}
+.d3 svg{
+  display: flex;
+  height: 100px;
+}
 .d4{
-  background-color: #f8f7f3;
+  padding-top: 20px;
+  background-color: #F8F7F3;
+  display: grid;
+  place-items: center;
+}
+.sobre-mi{
   height: 300px;
 }
+.d4 svg{
+  display: flex;
+  height: 100px;
+}
 .d5{
-  height: 400px;
+  padding-top: 20px;
+  display: grid;
+  place-items: center;
+}
+.testimonios{
+  height: 500px;
+}
+.d5 svg{
+  display: flex;
+  height: 100px;
 }
 .d6{
-  background-color: #eac9c2;
+  background-color: #EAC9C2;
   height: 200px;
+  display: grid;
+  place-items: center;
 }
 
 button {
