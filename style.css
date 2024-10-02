@@ -282,7 +282,7 @@ header.tooltip-container{
 body {
   margin: 0px;
   font-family: 'Romman';
-  background-color: #FFFFFF; /* color de fondo */
+  background-color: #f8f7f3; /* color de fondo */
   height: 100vh;
 }
 .large-image {
@@ -298,6 +298,7 @@ body {
   height: 100%; 
   object-fit: cover; 
   margin: 0px ; 
+  mask-image: linear-gradient(#9d7378 90%, transparent);
 }
 .olas{
   position: relative;
@@ -380,6 +381,7 @@ body {
   display: grid;
 }
 .d1{
+  font-size: 20px;
   padding-top: 20px;
   background-color: #f8f7f3;
   display: grid;
@@ -413,6 +415,7 @@ body {
   box-shadow: 5.5px 7px 0 #9D7378;
 }
 .d2{
+  background-color: #FFFF;
   padding-top: 20px;
   display: grid;
   color:#9D7378;
@@ -544,37 +547,6 @@ body {
   object-fit: contain;
   width: 100%;
 }
-.retir{
-  position: relative;
-  left: 30%;
-  display: grid;
-  place-items: center;
-}
-.retir h2{
-  font-size: 30px;
-}
-.retiros{
-  display: flex;
-  width: 600px;
-  height: 430px;
-  padding: 5px;
-}
-.retiros img{
-  z-index: 1;
-  width: 0px;
-  flex-grow: 1;
-  object-fit: cover;
-  opacity: .8;
-  transition: .5s ease;
-  border-radius: 1rem;
-  
-}
-.retiros img:hover{
-  cursor: crosshair;
-  width: 300px;
-  opacity: 1;
-  filter: contrast(120%);
-}
 .d2 svg{
   display: flex;
   height: 100px;
@@ -606,6 +578,7 @@ body {
   height: 100px;
 }
 .d5{
+  background-color: #FFFF;
   padding-top: 20px;
   display: grid;
   place-items: center;
