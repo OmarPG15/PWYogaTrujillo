@@ -19,11 +19,11 @@ window.addEventListener('scroll', function() {
     // Verificar si el scroll ha pasado la imagen
     if (window.scrollY > imageBottom) {
         // Detener el movimiento del encabezado después de la imagen
-        header.style.opacity = 0;
+        header.style.position = "relative";
         
     } else {
         // Aplicar el efecto de bajar cuando haces scroll pero antes de pasar la imagen
-        header.style.opacity = 1;
+        header.style.position = "fixed";
     }
 });
 
