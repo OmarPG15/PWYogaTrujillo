@@ -17,7 +17,7 @@
   font-style: normal;
 }
 header {
-  /* display: flexbox; */
+  display: grid;
   position: fixed;
   top: 0;
   left: 0;
@@ -26,6 +26,10 @@ header {
   transition: background-color 0.1s ease;
   z-index:1;
   
+}
+.header-content{
+  height: 100px;
+  width: 100dvw; 
 }
 .logo{
   display: flex;
@@ -335,6 +339,7 @@ body {
   font-family: 'Romman';
   background-color: #f8f7f3; /* color de fondo */
   min-height: 100%;
+  /* min-width: 100dvw; */
 }
 .large-image {
   width: 100%; 
@@ -480,11 +485,14 @@ body {
   background-color: #FFFF;
   padding-top: 20px;
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr;
   color:#9D7378;
   place-items: center;
   /* height: 700px; */
 }
 .Servicios{
+  grid-column: 2;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto 1fr;
@@ -610,6 +618,7 @@ body {
   width: 100%;
 }
 .d2 svg{
+  grid-column: 1/-1;
   display: flex;
   height: 100px;
 }
@@ -618,6 +627,7 @@ body {
   background-color: #FAEAEA;
   display: grid;
   place-items: center;
+  color:#9D7378;
 }
 .cursos{
   height: 500px;
@@ -631,9 +641,18 @@ body {
   background-color: #F8F7F3;
   display: grid;
   place-items: center;
+  color:#9D7378;
 }
-.sobre-mi{
-  height: 300px;
+.imgnsm{
+  object-fit: cover;
+  mask-image: url(Images/blob.svg);
+  mask-repeat: no-repeat;
+}
+.imgnsm img{
+  /* size: 500px; */
+  
+  
+  object-fit: cover;
 }
 .d4 svg{
   display: flex;
