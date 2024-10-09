@@ -4,15 +4,15 @@
 }
 
 @font-face {
-  font-family: 'Monterchi';
+  font-family: 'Monterchi-Serif';
   font-family: 'Romman';
   src: url('Fonts/RTL-Romman-Regular.eot') format('eot'),
         url('Fonts/RTL-Romman-Regular.woff2') format('woff2'),
         url('Fonts/RTL-Romman-Regular.woff') format('woff'),
         url('Fonts/RTL-Romman-Regular.ttf') format('truetype'),
-        url('Fonts/Monterchi-Book-trial.ttf') format('truetype'),
-        url('Fonts/Monterchi-Extrabold-trial.ttf') format('truetype'),
-        url('Fonts/Monterchi-Thin-trial.ttf') format('truetype');
+        url('Fonts/Monterchi-Serif-Book-trial.ttf') format('truetype'),
+        url('Fonts/Monterchi-Serif-Extrabold-trial.ttf') format('truetype'),
+        url('Fonts/Monterchi-Serif-Thin-trial.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,7 +24,7 @@ header {
   right: 0;
   padding-bottom: 0px;
   transition: background-color 0.1s ease;
-  z-index:1;
+  z-index:10;
   
 }
 .header-content{
@@ -59,9 +59,7 @@ header.abajo .header-content{
   background-color: transparent;
   padding: 10px;
   padding-bottom: 5px;
-}
-
-  
+} 
 .social-icons img {
     width: 30px;
     height: 30px;
@@ -95,8 +93,7 @@ header.abajo .header-content{
     background-color: transparent;
     border-radius: 50px;
     transition: background-color 0.3s ease;
-  }
-  
+  } 
 .menu a:hover {
     background-color: whitesmoke;
     opacity: 0.5;
@@ -268,7 +265,7 @@ header.abajo .header-content{
 .social-icon svg {
   width: 24px;
   height: 24px;
-  fill: #333;
+  fill: #9D7378;
   transition:
     transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
     fill 0.3s ease;
@@ -341,6 +338,22 @@ body {
   min-height: 100%;
   /* min-width: 100dvw; */
 }
+.estrella{
+  /* background-color: blue; */
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  z-index: 1;
+  justify-content: center;
+  margin-left: 1150px;
+  margin-top: 440px;
+}
+.estrella img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  /* box-shadow: 0 0 15px rgba(255, 255, 0, 0.8), 0 0 30px rgba(255, 255, 0, 0.6); */
+}
 .large-image {
   width: 100%; 
   height: 100%; 
@@ -348,8 +361,7 @@ body {
   position: relative;
   margin-bottom: 0;
 }
-
-.large-image img {
+.large-image .portada{
   width: 100%; 
   height: 100%; 
   object-fit: cover; 
@@ -449,22 +461,27 @@ body {
 }
 .d1{
   font-size: 20px;
-  padding-top: 20px;
+  padding-top: 30px;
   background-color: #f8f7f3;
   display: grid;
   place-items: center;
-  color:#9d7378
+  color:#9d7378;
+  /* mask-image: linear-gradient(#f8f7f3 90%, transparent); */
 }
 .d1 svg{
-  display: flex;
   height: 100px;
+  grid-column: 1/-1;
 }
 .d1 h2{
   margin-bottom: 20px;
+  font-size: 38px;
+}
+.d1 h3 {
+  font-size: 25px;
 }
 .d1 input{
-  margin-right: 10px; 
-  max-width: 190px;
+  margin: 30px;
+  width: 300px;
   padding: 0.875rem;
   font-size: 1rem;
   border: 1.5px solid #9D7378;
@@ -485,17 +502,20 @@ body {
   background-color: #FFFF;
   padding-top: 20px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto 1fr;
   color:#9D7378;
+  /* align-items: center; */
   place-items: center;
   /* height: 700px; */
 }
+.clases {
+  grid-column: 1;
+}
 .Servicios{
-  grid-column: 2;
+  grid-column: 1;
+  grid-row: 2;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto 1fr;
   place-items: center;
   margin: 20px;
   gap: 30px;
@@ -518,7 +538,7 @@ body {
   grid-column: 3;
   grid-row: 2;
 }
-.card {
+/* .card {
   position: relative;
   width: 300px;
   height: 200px;
@@ -583,7 +603,7 @@ body {
   color: #777;
   line-height: 1.4;
   margin-bottom: 10px;
-}
+} */
 
 /* inspired form gumroad website */
 .button {
@@ -642,41 +662,91 @@ body {
   display: grid;
   place-items: center;
   color:#9D7378;
+  
+}
+.sobre-mi{
+  display: grid;
+  grid-template-columns: 0.05fr 1fr;
+  place-items: center;
+}
+.sobre-mi h2{
+  grid-column: 1/-1;
+  text-align: center;
 }
 .imgnsm{
-  object-fit: cover;
+  grid-column: 1;
+  height: 500px;
+  width: 700px;
   mask-image: url(Images/blob.svg);
+  mask-size: contain;
   mask-repeat: no-repeat;
+  overflow: hidden;
+  animation: cambiodeblob 6s ease-in-out infinite;
+  -webkit-mask-image: url(Images/blob.svg); /* Compatibilidad con WebKit */
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat; 
 }
 .imgnsm img{
-  /* size: 500px; */
-  
-  
-  object-fit: cover;
+  height: 90%;
+  width: 100%;
+  object-fit: contain;
+}
+.bio{
+  grid-column: 2;
+}
+#ver-más{
+  margin-top: 20px;
+  margin-left: 600px;
+  border-radius: 40px;
 }
 .d4 svg{
   display: flex;
   height: 100px;
+  grid-column: 1/-1;
 }
 .d5{
   background-color: #FFFF;
   padding-top: 20px;
   display: grid;
   place-items: center;
+  color:#9D7378;
 }
 .testimonios{
   height: 500px;
+  overflow: hidden;
 }
 .d5 svg{
   display: flex;
   height: 100px;
 }
-.d6{
+footer{
   background-color: #EAC9C2;
   height: 200px;
   display: grid;
-  place-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
+footer .social-icons, 
+footer .men{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+footer .men li {
+  list-style: none;
+}
+footer .men li a{
+  display: inline-block;
+  transition: 0.5s;
+  color: #9D7378;
+  font-size: 2em;
+  margin: 0 10 px;
+}
+
 
 button {
   position: relative;
@@ -687,14 +757,15 @@ button {
   vertical-align: middle;
   text-decoration: none;
   background: transparent;
-  padding: 0;
-  font-size: inherit;
+  padding: 6px;
+  font-size: 24px;
   font-family: inherit;
 }
 
 button.learn-more {
-  width: 12rem;
+  width: 16rem;
   height: auto;
+  justify-content: center;
 }
 
 button.learn-more .circle {
@@ -744,7 +815,7 @@ button.learn-more .button-text {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 0.75rem 0;
+  padding-top: 35px;
   margin: 0 0 0 1.85rem;
   color: #9D7378;
   font-weight: 700;
@@ -762,5 +833,5 @@ transform: translate(1rem, 0);
 }
 
 button:hover .button-text {
-color: #fff;
+  color: #fff;
 }
