@@ -1,0 +1,41 @@
+.testimonios {
+    width: 1500px;
+    align-items: center;
+    object-fit: contain;
+}
+.testimonios h2 {
+    text-align: center;
+}
+.carrusel {
+    display: grid;
+    grid-auto-flow: column;
+    scroll-behavior: auto;
+    gap: .5rem;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.carrusel::-webkit-scrollbar {
+    display:none;
+}
+.cart {
+    padding-left: 35px;
+    scroll-snap-align: start;
+    border-radius: 30px;
+    min-height: 200px;
+    min-width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.zoom-image{
+    height: 90%;
+    width: 95%;
+    transition: transform 0.3s ease;
+    border-radius: 10%;
+}
+.zoom-image:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,68 @@
+.ret{
+    grid-column: 2;
+    padding: 20px; 
+}
+
+.retiros{
+    width: 300px;
+    height: auto;
+    margin: 50px auto 0;
+    overflow: hidden;
+    
+}
+.retiros ul{
+    display: flex;
+    padding: 0;
+    width: 1200%;
+    animation: slider 15s infinite alternate ease-in-out;
+    gap: 5px;
+}
+
+.retiros li{
+    
+    list-style: none;
+    height: 100%;
+    width: 100%;
+}
+.retiros img{
+    width: 100%;
+    border-radius: 10%;
+}
+
+@keyframes slider {
+    0%{margin-left: 0%;}
+    4%{margin-left: 0%;}
+
+    8%{margin-left: -100%;}  
+    12%{margin-left: -100%;}
+    
+    16%{margin-left: -200%;}  
+    20%{margin-left: -200%;}
+
+    24%{margin-left: -300%;}  
+    28%{margin-left: -300%;}
+
+    32%{margin-left: -400%;}  
+    36%{margin-left: -400%;}
+
+    40%{margin-left: -500%;}  
+    44%{margin-left: -500%;}
+
+    48%{margin-left: -600%;}  
+    52%{margin-left: -600%;}
+
+    56%{margin-left: -700%;}  
+    60%{margin-left: -700%;}
+
+    64%{margin-left: -800%;}  
+    68%{margin-left: -800%;}
+
+    72%{margin-left: -900%;}  
+    76%{margin-left: -900%;}
+
+    80%{margin-left: -1000%;}  
+    92%{margin-left: -1000%;}
+
+    96%{margin-left: -1100%;}  
+    100%{margin-left: -1100%;}
+}

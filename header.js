@@ -3,13 +3,14 @@
 window.addEventListener('scroll', function(){
     var header = document.querySelector('header');
     header.classList.toggle("abajo",window.scrollY>0);
-    var wave = document.querySelector('.section')
+    var wave = document.querySelector('.olas')
     wave.classList.toggle("abajo",window.scrollY>0);
+    
 });
 
 window.addEventListener('scroll', function() {
     var header = document.querySelector('#header');
-    var wave = document.querySelector('.section');
+    var wave = document.querySelector('.olas');
     var image = document.querySelector('.large-image img'); // Asegúrate de que este selector sea correcto
 
     // Obtener la altura total de la imagen
@@ -18,11 +19,11 @@ window.addEventListener('scroll', function() {
     // Verificar si el scroll ha pasado la imagen
     if (window.scrollY > imageBottom) {
         // Detener el movimiento del encabezado después de la imagen
-        header.style.opacity = 0;
+        header.style.position = "relative";
         
     } else {
         // Aplicar el efecto de bajar cuando haces scroll pero antes de pasar la imagen
-        header.style.opacity = 1;
+        header.style.position = "fixed";
     }
 });
 
