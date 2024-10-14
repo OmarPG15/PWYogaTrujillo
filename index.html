@@ -14,7 +14,9 @@
     <link rel="stylesheet" type="text/css" href="slider.css">
     <link rel="stylesheet" type="text/css" href="testimonios.css">
     <link rel="stylesheet" href="Clases.css">
-
+    <link rel="stylesheet" href="burger.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="button.css">
     
 
     <title>Yoga Trujillo</title>
@@ -40,16 +42,20 @@
     <header id="header">
             <div class="header-content">
                 <nav class="navbar">
-                    
+
+                    <input type="checkbox" id="checkbox">
+                        <label for="checkbox" class="toggle">
+                            <div class="bars" id="bar1"></div>
+                            <div class="bars" id="bar2"></div>
+                            <div class="bars" id="bar3"></div>
+                        </label>
+
                     <div class="logo">
                         <img src="Images/Brand1.png" alt="logo">
                     </div>
                     
                     <div id="men">
                         <ul class="menu">
-                            <li>
-                                <a class="cel bg-c1 c1b" href="#">Inicio</a>
-                            </li>
                             <li>
                                 <a class="cel bg-c1 c1b" href="#">Clases</a>
                             </li>           
@@ -59,9 +65,9 @@
                             <li>
                                 <a class="cel bg-c1 c1b" href="#">Servicios</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a class="cel bg-c1 c1b" href="#">Contacto</a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a class="cel bg-c1 c1b" href="#">Cursos</a>
                             </li>
@@ -118,9 +124,9 @@
 
     
     <div>
-        <div class="estrella">
+        <!-- <div class="estrella">
             <img src="Images/star.png" alt="Estrella">
-        </div>
+        </div> -->
         <div class="large-image"> 
             <img src="Images/Portada.jpg" alt="Imagen Grande" class="portada">
         </div>
@@ -134,13 +140,10 @@
             <div class="input-group">
                 <input placeholder="Nombre" class="input" name="text" type="name" />
                 <input placeholder="Dirección de correo electronico" class="input" name="text" type="email" />
-                <button class="learn-more">
-                    <span class="circle" aria-hidden="true">
-                    <span class="icon arrow"></span>
-                    </span>
-                    <span class="button-text">Registrarse</span>
-                </button>
+                <div class="reg"><button class="register">Registrarse</button></div>
+                
             </div>     
+            
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" width="100%" height="50px"><path fill="#FFFF" fill-opacity="1" d="M0,192L60,170.7C120,149,240,107,360,96C480,85,600,107,720,144C840,181,960,235,1080,234.7C1200,235,1320,181,1380,154.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
         </div>
 
@@ -150,7 +153,6 @@
                     <div class="card-image"><img src="Images/Clases/R1.png" alt="clases"></div>
                     <div class="category"> Clases </div>
                     <div class="heading"> ¿Listo para encontrar calma y equilibrio en tu vida? 
-                            Únete a las clases de yoga y meditación, apta para principiantes.
                         <!-- <div class="author"> By <span class="name">Abi</span> 4 days ago</div> -->
                     </div>
                 </div>
@@ -165,7 +167,7 @@
                 </div>
             </div>
             
-            <div class="Servicios">
+            <div class="servicios">
                 <div class="card">
                     <div class="card-image"><img src="Images/Servicios/S2.png" alt="clases"></div>
                     <div class="category"> Servicios </div>
@@ -239,7 +241,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" width="100%" height="50px"><path fill="#FAEAEA" fill-opacity="1" d="M0,224L48,186.7C96,149,192,75,288,90.7C384,107,480,213,576,229.3C672,245,768,171,864,160C960,149,1056,203,1152,234.7C1248,267,1344,277,1392,282.7L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
         </div>
         <div class="d3">
-            <div class="cursos">
+            <div class="curso">
                 <h2 class="subt2">Cursos Virtuales</h2>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" width="100%" height="50px"><path fill="#F8F7F3" fill-opacity="1" d="M0,320L24,288C48,256,96,192,144,165.3C192,139,240,149,288,176C336,203,384,245,432,245.3C480,245,528,203,576,170.7C624,139,672,117,720,138.7C768,160,816,224,864,250.7C912,277,960,267,1008,250.7C1056,235,1104,213,1152,208C1200,203,1248,213,1296,229.3C1344,245,1392,267,1416,277.3L1440,288L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path></svg>
@@ -256,10 +258,12 @@
                         lo que me ayudó a enfrentar mis ansiedades y encontrar equilibrio. 
                         Desde entonces, he explorado el desarrollo personal y espiritual, 
                         descubriendo una afinidad por estos campos. La investigación sobre el sistema nervioso y 
-                        el trauma fue crucial para comprender mis reacciones con compasión.</p>
-                    <button class="button" id="ver-más">
+                        el trauma fue crucial para comprender mis reacciones con compasión.
+                        <button class="ver-más">
                             ver más...
                     </button>
+                    </p>
+                    
                 </div>
                     
                 
@@ -267,7 +271,7 @@
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" width="100%" height="50px"><path fill="#FFFF" fill-opacity="1" d="M0,160L48,138.7C96,117,192,75,288,80C384,85,480,139,576,133.3C672,128,768,64,864,37.3C960,11,1056,21,1152,42.7C1248,64,1344,96,1392,112L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
         </div>
-        <div class="d5">5
+        <div class="d5">
             <div class="testimonios">
                 <h2>Testimonios</h2>
                 <div class="carrusel">
@@ -282,7 +286,7 @@
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" width="100%" height="50px"><path fill="#EAC9C2" fill-opacity="1" d="M0,64L48,101.3C96,139,192,213,288,202.7C384,192,480,96,576,69.3C672,43,768,85,864,122.7C960,160,1056,192,1152,192C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
         </div>
-
+    </div>
         <footer>
             <div class="social-icons">
                             
@@ -330,8 +334,6 @@
                     </li>
                 </ul>
         </footer>
-
-    </div>
 
     
 </body>

@@ -1,5 +1,5 @@
 .testimonios {
-    width: 1500px;
+    width: 90%;
     align-items: center;
     object-fit: contain;
 }
@@ -15,6 +15,7 @@
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
+    width: 88%;
 }
 
 .carrusel::-webkit-scrollbar {
@@ -29,6 +30,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
 }
 .zoom-image{
     height: 90%;
