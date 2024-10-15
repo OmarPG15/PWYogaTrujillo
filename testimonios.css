@@ -1,7 +1,11 @@
 .testimonios {
     width: 90%;
-    align-items: center;
+    /* align-items: center; */
+    /* align-content: center; */
+    place-content: center;
     object-fit: contain;
+    height: 100%;
+    display: flex;
 }
 .testimonios h2 {
     text-align: center;
@@ -15,14 +19,15 @@
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
-    width: 88%;
+    width: 100%;
+    /* position:initial; */
 }
 
 .carrusel::-webkit-scrollbar {
     display:none;
 }
 .cart {
-    padding-left: 35px;
+    /* padding-left: 35px; */
     scroll-snap-align: start;
     border-radius: 30px;
     min-height: 200px;
@@ -31,6 +36,9 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+}
+#CART1 {
+    padding-left: 1vw ;
 }
 .zoom-image{
     height: 90%;
@@ -41,3 +49,83 @@
 .zoom-image:hover {
     transform: scale(1.1);
 }
+
+/*flechas*/
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 6%;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+  }
+  
+  .wrapper .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrapper svg {
+    fill: green;
+  }
+  
+  .wrapper span:hover,
+  .wrapper svg:hover,
+  .wrapper .black:hover,
+  .wrapper .black:hover .tooltip,
+  .wrapper .black:hover .tooltip::before {
+    background: #222;
+    color: white;
+    fill: white;
+  }

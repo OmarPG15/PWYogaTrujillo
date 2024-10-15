@@ -587,7 +587,7 @@ body {
   display: flex;
   height: 100px;
 }
-.d3{
+/* .d3{
   padding-top: 20px;
   background-color: #FAEAEA;
   display: grid;
@@ -599,8 +599,8 @@ body {
 .d3 svg{
   display: flex;
   height: 100px;
-}
-.d4{
+} */
+.d3{
   padding-top: 20px;
   background-color: #F8F7F3;
   display: grid;
@@ -686,12 +686,12 @@ body {
   transform: translate(0);
   box-shadow: none;
 }
-.d4 svg{
+.d3 svg{
   display: flex;
   height: 100px;
   grid-column: 1/-1;
 }
-.d5{
+.d4{
   background-color: #FFFF;
   padding-top: 20px;
   display: grid;
@@ -706,7 +706,7 @@ body {
 .testimonios h2{
   font-size: 3vw;
 }
-.d5 svg{
+.d4 svg{
   display: flex;
   height: 100px;
 }
