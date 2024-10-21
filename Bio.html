@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="header.js"></script>
+    <script src="slider.js"></script>
+    <link rel="stylesheet" type="text/css" href="slider.css">
+    <link rel="stylesheet" type="text/css" href="testimonios.css">
+    <link rel="stylesheet" href="Bio.css">
+    <link rel="stylesheet" href="burger.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="button.css">
+    <title>Biografía</title>
+</head>
+<body>
+    <header id="header">
+        <div class="header-content">
+            <nav class="navbar">
+
+                <input type="checkbox" id="checkbox">
+                    <label for="checkbox" class="toggle">
+                        <div class="bars" id="bar1"></div>
+                        <div class="bars" id="bar2"></div>
+                        <div class="bars" id="bar3"></div>
+                    </label>
+
+                    <div class="logo">
+                        <a href="index.html#portada">
+                            <img src="Images/Brand1.png" alt="logo">
+                        </a>
+                    </div>
+                
+                <div id="men">
+                    <ul class="menu">
+                        <li>
+                            <a class="cel bg-c1 c1b" href="index.html">Clases</a>
+                                <ul class="submenu">
+                                    <li><a  href="#clase1">Presenciales</a></li>
+                                    <li><a href="#clase2">Virtuales</a></li>
+                                </ul>
+                        </li>           
+                        <li>
+                            <a class="cel bg-c1 c1b" href="#Experiencias">Experiencias</a>
+                            <ul class="submenu">
+                                <li><a href="#taller1">Taller al aire libre</a></li>
+                                <li><a href="#taller2">Retiros</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="cel bg-c1 c1b" href="#servicios">Servicios</a>
+                            <ul class="submenu">
+                                <li><a href="Servicios.html#somatico">Yoga somático</a></li>
+                                <li><a href="Servicios.html#postural">Yoga postural</a></li>
+                                <li><a href="Servicios.html#aura">Limpieza de aura</a></li>
+                            </ul>
+                        </li>
+                        <!-- <li>
+                            <a class="cel bg-c1 c1b" href="#">Contacto</a>
+                        </li> -->
+                        <li>
+                            <a class="cel bg-c1 c1b" href="#cursos">Cursos</a>
+                            <ul class="submenu">
+                                <li><a href="#taller1">Taller 1</a></li>
+                                <li><a href="#taller2">Taller 2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="cel bg-c1 c1b" href="#biog">Bio</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="tooltip-container">
+                    <div class="button-content">
+                        <span class="redes">Redes</span>
+                    </div>
+                    <div class="tooltip-content">
+                        <div class="social-icons">
+                        
+                        <a href="https://www.facebook.com/Yogaentrujillo/" class="social-icon facebook">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            height="24">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                            ></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/yogaentrujillo" class="social-icon instagram">
+                            <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            viewBox="0 0 448 512">
+                            <path 
+                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@yogaentrujillo" class="social-icon tiktok">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path 
+                                d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/>
+                            </svg>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+</div>
+<section class="olas">
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div>
+</section>
+</header>
+
+
+<section>
+    <div class="pagina">
+        <h1>Sobre mi</h1>
+        <div class="bio">
+            <img src="Images/Bio.jpeg" alt="logo">
+            <div class="texto">
+                <p> ¡Hola! Soy Carla, y antes que nada, quiero expresar mi agradecimiento
+                    por tu interés en esta práctica y por tomarte el tiempo para leer. Permíteme compartir un poco sobre mi viaje: <br> <br>
+    
+                    La práctica de yoga llegó a mi vida en un momento desafiante durante mis años universitarios. 
+                    Fue un bálsamo para mis tendencias ansiosas y me ayudó a encontrar equilibrio. Desde entonces, 
+                    me he sumergido en estudios y experiencias relacionadas con el desarrollo personal, energético y espiritual desde una edad temprana. 
+                    Descubrí que tenía una afinidad natural por estos campos, pero sentía que faltaba algo en mis prácticas y estudios espirituales. <br> <br>
+                    
+                    Fue entonces cuando me sumergí en la investigación del sistema nervioso y el trauma, lo cual resultó ser un gran avance. 
+                    Comprender mejor mi biología, me permitió abordar mis reacciones automáticas con compasión, sin idealizar ni exigirme en el proceso. <br> <br>
+    
+                    
+                    Es un verdadero honor para mí acompañarte en este viaje hacia la compasión y la aceptación de nuestra humanidad, tanto vulnerable como resiliente. <br><br>
+                    A continuación, te brindo un resumen de mis estudios en este camino: <br><br>
+                </p>
+                <ul class="lista-resumen">
+                    <li><i class="fa-solid fa-heart fa-xs"></i> Fundadora de la Escuela Yoga en Trujillo, donde organizo cursos, talleres y profesorados.</li>
+                    <li><i class="fa-solid fa-heart fa-xs"></i> Ingeniera Agroindustrial graduada de la Universidad Nacional de Trujillo, con certificación en nutrición consciente y alimentación viva por la escuela «Tree of Life» de Gabriel Cousens.</li>
+                    <li><i class="fa-solid fa-heart fa-xs"></i> Profesorado de Ashtanga Yoga Terapéutico en la escuela Taitokiu y medicina oriental (2012).</li>
+                    <li><i class="fa-solid fa-heart fa-xs"></i> Profesorado de Vinyasa Yoga 200 RYT avalado por el Yoga Alliance de la escuela Vinyasa Yoga Flow (Arequipa, Perú, 2014).</li>
+                    <li><i class="fa-solid fa-heart fa-xs"></i> Pranic Healing Básico, Avanzado, Psicoterapia, Cristales, Arhatic Yoga 1 y 2 en la escuela de Sanación Pranica y Arhatic Yoga del Maestro Master Choa Kok Sui (Lima, Perú).</li>
+                    <li><i class="fa-solid fa-heart fa-xs"></i> Thetaheling Básico y Avanzado del programa de Vianna Stibal (Lima, Perú).</li>
+                    <li><i class="fa-solid fa-heart fa-xs"></i> Profesorado de Yoga para niños y familias por la escuela Rainbow Kids Yoga (Colombia, 2016).</li>
+                    <li><i class="fa-solid fa-heart fa-xs"></i> Profesorado de Yoga de Radiant Child Yoga de Shakta Kaur Khalsa (Lima, Perú).</li>
+                    <li><i class="fa-solid fa-heart fa-xs"></i> Profesorado de Yoga 200 RYT avalado por el Yoga Alliance de la Asociación Internacional de Yoga Yoguismo (Perú, 2019).</li>
+                    <li><i class="fa-solid fa-heart fa-xs"></i> Especialidad en cadenas musculares y emociones de Fisiomsalud, fisioterapia y osteopatía (2022).</li>
+                    <li><i class="fa-solid fa-heart fa-xs"></i> Facilitadora de respiración ovárica y alquimia femenina del programa de Sajeeva Hurtado (2022).</li>
+                    <li><i class="fa-solid fa-heart fa-xs"></i> Taller de profundización de power yoga y meditación en el retiro de Gaby Zermeño (México, 2023).</li>
+                    <li><i class="fa-solid fa-heart fa-xs"></i> Yoga sensible al trauma y acercamiento somático con Belu Wellbeing (2023).</li>
+                    <li><i class="fa-solid fa-heart fa-xs"></i> Estudios de educación somática, trauma y embodiment en la Academia de coaching somático y la escuela de Ashley Meeder (2023).</li>
+                    <li><i class="fa-solid fa-heart fa-xs"></i> Cursos y talleres de autconocimiento, coaching y liberación corporal como Eneagrama y cuerpo vivo, 5 ritmos, danza primal, Grace coaching, Breathworking (Lima, 2018-2023).</li>
+                    <li><i class="fa-solid fa-heart fa-xs"></i> Asistente en el programa online «Descenso en tu cuerpo» de Mujer Alquimia con Lorena Cuendias (2023).</li>
+                    <li><i class="fa-solid fa-heart fa-xs"></i> En marzo de 2024, realicé el taller introductorio de T.R.E., técnicas de liberación del estrés y trauma.</li>
+                </ul>
+
+                <p>Estos estudios y experiencias han sido fundamentales en mi camino, así como en mi capacidad para guiar y apoyar a otros en su propio viaje hacia el bienestar y la autenticidad. Mientras sigo mi propio proceso de aprendizaje
+                    y crecimiento personal, comparto contigo todo lo que he encontrado útil en mi camino con compromiso, pasión y mucho cariño.</p>
+            </div>
+            
+            
+        </div>
+        
+    </div>
+</section>
+<footer>
+    <div class="olaf"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" width="100%" height="50px"><path fill="#EAC9C2" fill-opacity="1" d="M0,64L48,101.3C96,139,192,213,288,202.7C384,192,480,96,576,69.3C672,43,768,85,864,122.7C960,160,1056,192,1152,192C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg></div>
+    <div class="pie">
+        <div class="social-icons">
+                    
+            <a href="https://www.facebook.com/Yogaentrujillo/" class="social-icon facebook">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24">
+                <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                ></path>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/yogaentrujillo" class="social-icon instagram">
+                <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 448 512">
+                <path 
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                </svg>
+            </a>
+            <a href="https://www.tiktok.com/@yogaentrujillo" class="social-icon tiktok">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path 
+                    d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/>
+                </svg>
+            </a>
+            </div>
+            <ul class="men">
+                <li>
+                    <a href="#">Bio</a>
+                </li>
+                <li>
+                    <a href="#">Servicios</a>
+                </li>           
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+                <li>
+                    <a href="#">Contacto</a>
+                </li>
+                <li>
+                    <a href="#">Cursos</a>
+                </li>
+            </ul>
+    </div>
+    
+</footer>
+
+</body>
+</html>

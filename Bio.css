@@ -1,0 +1,68 @@
+.header-content {
+    background-color: #EAC9C2;
+} 
+.olas {
+    opacity: 1;
+}
+
+section {
+    display: flex ;
+    justify-content: space-evenly;
+}
+
+.pagina {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+
+    margin-top: 9vw;
+    background-color: #E5D39E;
+    padding: 5vw;
+    text-align:left;
+    color: #9d7378;
+    width: 60%;
+}
+.pagina h1 {
+    text-align: center;
+    font-size: 4vw;
+}
+.pagina p {
+    font-size: 100%;
+}
+.pagina ul{
+    list-style: none;
+}
+.imgclass {
+    display: inline-block;
+    vertical-align: top;
+    /* margin: .5vw 1vw; */
+    width: 20%;
+    
+    /* align-items: center; */
+} 
+/* .imgclass img{
+    width: 100%;
+    height: auto;
+} */
+.bio {
+    /* align-items: flex-start; */
+}
+
+.bio img {
+    /* vertical-align: top; */
+    width: 25%;
+    height: auto;
+    object-fit: contain;
+    float: left;
+    margin-right: 1vw;
+    /* margin-bottom: 0.5vw; */
+}
+.lista-resumen {
+    list-style-type: square;  /* Tipo de viñeta cuadrada */
+    padding-left: 20px;       /* Margen izquierdo para el texto */
+    line-height: 1.8;         /* Espaciado entre líneas */
+}
+
+.lista-resumen li {
+    margin-bottom: 10px;      /* Espacio entre los elementos de la lista */
+}

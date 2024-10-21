@@ -1,8 +1,8 @@
 .testimonios {
     width: 90%;
-    /* align-items: center; */
+    align-items: center;
     /* align-content: center; */
-    place-content: center;
+    /* place-content: center; */
     object-fit: contain;
     height: 100%;
     display: flex;
@@ -10,6 +10,33 @@
 .testimonios h2 {
     text-align: center;
 }
+
+.carrusel-container {
+  position: relative;
+  overflow: hidden; /* Asegura que los pseudo-elementos no se salgan del contenedor */
+}
+
+.carrusel-container::before,
+.carrusel-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 10%; /* Ajusta el ancho del degradado */
+  height: 100%;
+  pointer-events: none; /* No bloquea los clics */
+  z-index: 1; /* Asegúrate de que esté por encima del carrusel */
+}
+
+.carrusel-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* Degradado desde opaco a transparente */
+}
+
+.carrusel-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* Degradado desde opaco a transparente */
+}
+
 .carrusel {
     display: grid;
     grid-auto-flow: column;
@@ -38,7 +65,7 @@
     height: 100%;
 }
 #CART1 {
-    padding-left: 1vw ;
+    padding-left: 3vw ;
 }
 .zoom-image{
     height: 90%;
@@ -56,7 +83,7 @@
     list-style: none;
     height: 120px;
     width: 6%;
-    padding-top: 40px;
+    /* padding-top: 40px; */
     font-family: "Poppins", sans-serif;
     justify-content: center;
   }
@@ -65,15 +92,17 @@
     position: relative;
     background: #fff;
     border-radius: 50%;
-    margin: 10px;
-    width: 50px;
-    height: 50px;
+    margin: 1vw;
+    width: 4vw;
+    height: 4vw;
+    min-width: 30px;
+    min-height: 30px;
     font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 10px #EAA7A7;
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
@@ -86,7 +115,7 @@
     color: #fff;
     padding: 5px 8px;
     border-radius: 5px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 10px #EAA7A7;
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -113,11 +142,12 @@
   
   .wrapper .icon:hover span,
   .wrapper .icon:hover .tooltip {
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+    text-shadow: 0px -1px 0px #EAA7A7;
+
   }
   
   .wrapper svg {
-    fill: green;
+    fill: #9d7378;
   }
   
   .wrapper span:hover,
@@ -125,7 +155,11 @@
   .wrapper .black:hover,
   .wrapper .black:hover .tooltip,
   .wrapper .black:hover .tooltip::before {
-    background: #222;
+    background: #EAA7A7;
     color: white;
     fill: white;
+  }
+
+  .wrapper span:hover svg{
+    height: 2vw;
   }

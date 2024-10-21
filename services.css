@@ -4,12 +4,10 @@
 .olas {
     opacity: 1;
 }
-
 section {
     display: flex ;
     justify-content: space-evenly;
 }
-
 .pagina {
     display: flex;
     flex-direction: column;
@@ -17,25 +15,42 @@ section {
 
     margin-top: 9vw;
     background-color: #E5D39E;
-    padding: 5vw;
+    padding: 4vw;
     text-align:left;
     color: #9d7378;
 }
 .pagina h1 {
+    font-size: 3vw;
     text-align: center;
-    font-size: 4vw;
 }
-.pagina p {
-    font-size: 100%;
+.Ysom {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 2vw;
+    flex-direction: column;
+
 }
-.pagina ul{
-    list-style: none;
+.Ysom h1{
+    font-size: 2vw;
+    /* text-align: center; */
 }
 .imgclass {
-    margin: 2vw auto;
-    width: 70%;
+    /* margin: 2vw auto; */
+    width: 30%;
+    overflow: hidden;
+    
     /* align-items: center; */
 }
 .imgclass img{
     width: 100%;
+    object-fit: cover;
+}
+.somt {
+    display: flex;
+}
+.somt p {
+    padding: 2vw;
+}
+#postural {
+    margin-top: 2vw;
 }
