@@ -334,7 +334,7 @@ body {
   flex-direction: column;
   margin: 0px;
   font-family: 'Romman';
-  background-color: #f8f7f3; /* color de fondo */
+  background-color: #F5F2ED; /* color de fondo */
   min-height: 100%;
   width: 100vw;
   /* min-width: 100dvw; */
@@ -478,20 +478,22 @@ body {
   font-size: 38px;
 }
 .d1 h3 {
-  font-size: 25px;
+  font-size: 30px;
+  font-family: "Monterchi-Serif";
 }
 .d1 input{
   margin: 3vw 1vw 3vw 1vw;
   /* width: 100%; */
   padding: 0.875rem;
-  font-size: 1rem;
-  border: 1.5px solid #D5B75E;
+  font-size: 1.3rem;
+  border: 1.5px solid #E9C9C2;
   border-radius: 0.5rem;
-  box-shadow: 2.5px 3px 0 #D5B75E;
+  /* box-shadow: 2.5px 3px 0 #D5B75E; */
   outline: none;
   transition: ease 0.25s;
   width: 100%;
   font-family: "Monterchi-Serif";
+  height: 60px;
 }
 .d1 .input-group{
   display: flex;
@@ -508,9 +510,9 @@ body {
   justify-content: flex-start;
 
 }
-.d1 input:focus{
+/* .d1 input:focus{
   box-shadow: 5.5px 7px 0 #D5B75E;
-}
+} */
 .d2{
   background-color: #FFFF;
   padding-top: 20px;
@@ -697,6 +699,7 @@ body {
 }
 #bio{
   display: flex;
+  flex-direction: column;
   grid-column: 2;
   width: 90%;
   /* flex-direction: column; */
@@ -705,7 +708,8 @@ body {
   /* height: auto;
   width: 100%; */
   /* flex-wrap: wrap; */
-  font-size: 1.2vw;
+  font-size: 1.3vw;
+  font-family: "Monterchi-Serif";
 }
 /* inspired form gumroad website */
 .ver-más {
@@ -752,7 +756,7 @@ body {
   height: 500px;
   overflow: hidden;
 }
-.testimonios h2{
+.d4 h2{
   font-size: 3vw;
 }
 .d4 svg{
@@ -774,17 +778,36 @@ footer{
   height: 100%;
 }
 .pie {
+  /* font-family: "Monterchi-Serif"; */
   background-color: #EAC9C2;
   display: grid;
+  text-align: center;
 }
-footer .social-icons, 
-footer .men{
+.pie a{
+  text-decoration: none;
+  color: white;
+}
+.logopie{
+  display:flex;
+  width: 100%;
+  justify-content: center;
+  gap: 1vw;
+  
+}
+.reserva{
+  place-content: center;
+}
+footer .social-icons{
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 0;
+  margin: 20px 0px;
   flex-wrap: wrap;
+  gap:200px;
+}
+.contac{
+  margin-bottom: 3vw;
 }
 
 footer .men li {
@@ -992,5 +1015,14 @@ button:hover {
   border: none;
   border-top: 2px solid #ccc;
   margin: 40px 0;
+}
+
+/* .imgfooter{
+  width: 8%;
+} */
+.pie img{
+  width: 5%;
+  border-radius: 90%;
+  display: block;
 }
 

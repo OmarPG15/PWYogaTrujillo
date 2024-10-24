@@ -3,26 +3,28 @@
     padding: .5vw .7vw;
     border-radius: 10px;
     border: 0;
-    background-color:  #D5B75E;
+    background-color:  #EAC9C2;
     letter-spacing: 1.5px;
-    font-size: 1vw;
+    font-size: 1.3vw;
     transition: all 0.3s ease;
     /* box-shadow: #E9C9C2 0px 10px 0px 0px; */
     color: white;
-    font-weight:700;
+    font-weight: 500;
     cursor: pointer;
+    /* text-shadow:.5px .5px 1.5px black; */
     /* bottom: 100px; */
-    height: 40px;
+    height: auto;
     position: relative;
-    font-family: "Monterchi-Serif";
-    width: 90%;
+    font-family: "Romman";
+    width: 70%;
+    height: 50px;
   }
   
 .register:hover {
-    background-color: rgba(213, 183, 94, 0.7);
+    background-color: #EAC9C2;
     color: white;
     /* box-shadow: #9D7378 0px 7px 0px 0px; */
-  }
+}
   
 .register:active {
     background-color:#D5B75E;
@@ -31,15 +33,46 @@
     box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
     /* transform: translateY(5px); */
     transition: 200ms;
-  }
+}
+#vermas{
+    margin-top: 1vw;
+    width: 10vw;
+}
+#reserva{
+    background-color: #D5B75E;
+    overflow: hidden;
+    font-size: 1vw;
+    
+}
+.reservafoot{
+  background-color: #D5B75E;
+  font-family: "Romman";
+}
+.reservafoot:hover{
+  background-color: rgba(213, 183, 94, 0.5);
+}
+
   @media (max-width: 750px){
     .register {
       padding-top: 1.5vw;
       font-size: 3vh;
   }
-  }
+}
 
-  #vermas{
-    margin: 1vw 10vw;
-    width: 10vw;
+  
+  @media (max-width: 430px){
+    
+    #bio{
+      align-items: center;
+    }
+    #bio p{
+      padding: 3vw;
+      text-align: center;
+    }
+      
+    #vermas{
+      /* margin: 0vw 10vw; */
+      width: 100%;
+      font-size: 5vw;
+    }
   }

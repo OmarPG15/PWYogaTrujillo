@@ -1,3 +1,6 @@
+body{
+    background-color: white;
+}
 .header-content {
     background-color: #EAC9C2;
 } 
@@ -6,7 +9,7 @@
 }
 
 section {
-    display: flex ;
+    display: flex;
     justify-content: space-evenly;
 }
 
@@ -27,9 +30,11 @@ section {
     font-size: 4vw;
 }
 .pagina p {
+    font-family: "Monterchi-Serif";
     font-size: 100%;
 }
 .pagina ul{
+    font-family: "Monterchi-Serif";
     list-style: none;
 }
 .imgclass {

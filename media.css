@@ -1,8 +1,5 @@
 @media (max-width: 1449px){
     .header-content{
-        /* background-color: #EAC9C2; */
-    }
-    .header-content{
         height: 100%;
     }
     .logo{
@@ -208,16 +205,29 @@
     }
     .testimonios {
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
         justify-content: center;
+        /* width: 100%; */
     }
-    .testimonios h2 {
-        font-size: 7vw;
+    .carrusel-container {
+        width: 70%;
+    }
+    #left{
+        margin-right: 5vw;
+    }
+    #right{
+        margin-left: 5vw;
+    }
+    .d4 h2 {
+        font-size: 17vw;
         padding-bottom: 10vw;
         
     }
+    .tooltip {
+        opacity: 0;
+    }
     .carrusel {
-        width: 70%;
+        width: 100%;
     }
     .cart {
         /* padding: 5vw; */

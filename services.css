@@ -14,10 +14,13 @@ section {
     /* align-items: center; */
 
     margin-top: 9vw;
-    background-color: #E5D39E;
-    padding: 4vw;
-    text-align:left;
+    background-color: #fff;
+    /* padding: 0vw; */
+
+    /* text-align:left; */
     color: #9d7378;
+    width: 100%;
+    place-items: center;
 }
 .pagina h1 {
     font-size: 3vw;
@@ -25,21 +28,27 @@ section {
 }
 .Ysom {
     display: flex;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color:  #F6DEDC;
     padding: 2vw;
     flex-direction: column;
-
+    border-radius: 10%;
+    width: 80vw;
 }
 .Ysom h1{
     font-size: 2vw;
+    color: white;
+    text-shadow: 1px 1px 3px #9d7378;
     /* text-align: center; */
 }
 .imgclass {
     /* margin: 2vw auto; */
-    width: 30%;
+    width: 60%;
     overflow: hidden;
-    
+    margin-left: 2vw;
+    border-radius: 10%;
     /* align-items: center; */
+    /* max-width: 324.94px;
+    max-height: 345px; */
 }
 .imgclass img{
     width: 100%;
@@ -47,10 +56,27 @@ section {
 }
 .somt {
     display: flex;
+    place-items: center;
+}
+body {
+    background-color: white;
 }
 .somt p {
-    padding: 2vw;
+    font-family: "Monterchi-serif";
+    padding-right: 8vw;
+    padding-top: 0;
+    padding-left: 3vw;
+    border-radius: 50%;
+    font-size: 1.2vw;
+    text-align: justify;
+
 }
 #postural {
-    margin-top: 2vw;
+    margin-top: 3vw;
+}
+#postural .imgclass {
+    width: 80%;
+}
+#aura{
+    margin-top: 3vw;
 }

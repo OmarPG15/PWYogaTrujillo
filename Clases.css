@@ -14,18 +14,34 @@ section {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-
     margin-top: 9vw;
-    background-color: #E5D39E;
+    background-color: white;
     padding: 5vw;
     text-align:left;
     color: #9d7378;
+    gap: 4vw;
+}
+.presencial{
+    display: flex;
+    place-items: center;
+    font-size: 1.3vw;
+    background-color: #F6DEDC;
+    padding-right: 2vw;
+}
+.presencial ul{
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+body{
+    /* padding-top: 100px; */
+    background-color: #FFF;
 }
 .pagina h1 {
     text-align: center;
-    font-size: 4vw;
+    font-size: 3vw;
 }
 .pagina p {
+    font-family: "Monterchi-Serif";
     font-size: 100%;
 }
 .pagina ul{
@@ -33,7 +49,7 @@ section {
 }
 .imgclass {
     margin: 2vw auto;
-    width: 70%;
+    width: 30%;
     /* align-items: center; */
 }
 .imgclass img{

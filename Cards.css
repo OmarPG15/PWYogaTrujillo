@@ -4,7 +4,7 @@
     height: auto;
     background: white;
     padding: 3vw 0 3vw 0;
-    border-radius: 6px;
+    border-radius: 16px;
     /* margin: 5vw; */
     align-items: center;
     flex-direction: column;
@@ -14,7 +14,7 @@
     background-color: rgb(236, 236, 236);
     width: 70%;
     height: auto;
-    border-radius: 6px 6px 0 0;
+    border-radius: 36px;
     overflow: hidden;
   }
   .card-image img{
