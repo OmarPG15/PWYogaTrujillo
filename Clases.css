@@ -9,7 +9,9 @@ section {
     display: flex ;
     justify-content: space-evenly;
 }
-
+.Cl {
+    flex: 1;
+}
 .pagina {
     display: flex;
     flex-direction: column;
@@ -27,6 +29,8 @@ section {
     font-size: 1.3vw;
     background-color: #F6DEDC;
     padding-right: 2vw;
+    width: 100%;
+    border-radius: 5% / 10%;
 }
 .presencial ul{
     /* display: flex; */
@@ -42,16 +46,27 @@ body{
 }
 .pagina p {
     font-family: "Monterchi-Serif";
-    font-size: 100%;
+    font-size: 20px;
 }
 .pagina ul{
     list-style: none;
 }
+.texto{
+    height: 100%;
+    place-content: center;
+}
+.texto h1 {
+    font-size: 1.5vw;
+    /* flex-direction: top; */
+}
 .imgclass {
-    margin: 2vw auto;
+    margin: 5vw 3vw 5vw 5vw;
     width: 30%;
+    max-width: 390px;
+    /* margin-right: ; */
     /* align-items: center; */
 }
 .imgclass img{
     width: 100%;
+    border-radius: 10%;
 }

@@ -42,7 +42,8 @@
     font-weight: normal;
     color: #9D7378;
     padding: 7px;
-    font-size: 1vw;
+    font-size: 1.3vw;
+    font-family: "Monterchi-Serif";
   }
   
   .heading:hover {

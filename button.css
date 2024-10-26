@@ -21,7 +21,7 @@
   }
   
 .register:hover {
-    background-color: #EAC9C2;
+    background-color: rgba(234, 201, 194, .7);
     color: white;
     /* box-shadow: #9D7378 0px 7px 0px 0px; */
 }
@@ -43,6 +43,9 @@
     overflow: hidden;
     font-size: 1vw;
     
+}
+#masinfo {
+  width: 50%;
 }
 .reservafoot{
   background-color: #D5B75E;
