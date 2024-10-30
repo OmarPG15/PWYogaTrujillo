@@ -32,13 +32,14 @@ header {
   left: 0;
   right: 0;
   padding-bottom: 0px;
-  transition: background-color 0.1s ease;
+  /* transition: background-color 0.1s ease; */
   z-index:10;
   font-family: "Romman";
 }
 .header-content{
-  height: 100px;
+  height: 90px;
   width: 100dvw; 
+  background-color: #EAC9C2;
 }
 .logo{
   display: flex;
@@ -51,18 +52,14 @@ header {
 .logo img{
   height: 100%;
 }
-header.abajo .header-content{
+/* header.abajo .header-content{
   background-color: #EAC9C2;
   transition: background-color 1s;
   
-}
-.olas.abajo{
+} */
+/* .olas.abajo{
   opacity:1;
   transition: 1s;
-}
-/* #navmenu {
-  left: -300;
-  position: fixed;
 } */
   
 .navbar {
@@ -101,6 +98,23 @@ header.abajo .header-content{
     display: inline-block;
     position: relative;
   }
+  .menu a {
+    text-decoration: none;
+    color: #FFFF;
+    font-size: 1.2vw;
+    padding: .2vw .5vw;
+    background-color: transparent;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+  } 
+.menu li:hover .submenu {
+    display: block; /* Mostrar la sublista al pasar el mouse sobre el li */
+}
+.menu a:hover {
+    background-color: whitesmoke;
+    opacity: 0.5;
+    color: #9d7378;
+  }
 .submenu {
     display: none; /* Ocultar la sublista por defecto */
     position: absolute; /* Posicionar la sublista */
@@ -135,23 +149,7 @@ header.abajo .header-content{
   border-radius: 10%;
 } */
   
-.menu a {
-    text-decoration: none;
-    color: #FFFF;
-    font-size: 28.5px;
-    padding: 10px 20px;
-    background-color: transparent;
-    border-radius: 50px;
-    transition: background-color 0.3s ease;
-  } 
-.menu li:hover .submenu {
-    display: block; /* Mostrar la sublista al pasar el mouse sobre el li */
-}
-.menu a:hover {
-    background-color: whitesmoke;
-    opacity: 0.5;
-    color: #9d7378;
-  }
+
 
 /* Container Styles */
 .tooltip-container {
@@ -162,8 +160,9 @@ header.abajo .header-content{
   margin-right: 50px;
 }
 .tooltip-container:hover .button-content{
-  background-color: transparent;
-  animation: none;
+  background-color: whitesmoke;
+    opacity: 0.5;
+    color: #9d7378;
 }
 /* Button Styles */
 .button-content {
@@ -172,21 +171,21 @@ header.abajo .header-content{
   justify-content: center;
   background-color: transparent;
   color: white;
-  padding: 10px 20px;
+  padding: 7px 14px;
   border-radius: 50px;
   cursor: pointer;
-  transition:
+  /* transition:
     background 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
     transform 0.3s ease,
-    box-shadow 0.4s ease;
+    box-shadow 0.4s ease; */
   position: relative;
   z-index: 10;
   overflow: hidden;
 }
 
 .redes {
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 500;
   /* margin-right: 12px; */
   white-space: nowrap;
   transition: letter-spacing 0.3s ease;
@@ -299,7 +298,7 @@ header.abajo .header-content{
   background: linear-gradient(135deg, #EAA7A7, #E9C9C2, #eac9c2);
 }
 /* Animation for Pulse Effect */
-@keyframes pulse {
+/* @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 white;
   }
@@ -309,11 +308,11 @@ header.abajo .header-content{
   100% {
     box-shadow: 0 0 0 0 rgba(110, 142, 251, 0);
   }
-}
+} */
 
-.button-content {
+/* .button-content {
   animation: pulse 3s infinite;
-}
+} */
 header.tooltip-container{
   position:relative;
   width: 100%;
@@ -368,22 +367,17 @@ body {
   height: 100%; 
   object-fit: cover; 
   margin: 0px ; 
-  mask-image: linear-gradient(#9d7378 90%, transparent);
+  position: fixed;
+  z-index: 0;
+  bottom: 90px;
 }
-
-/* @media (max-width: 480px) {
-
-  .large-image img{
-    height: 40vh; 
-  }
-}  */
 .olas{
   position: relative;
   width: 100%;
   height: 70px;
   background: transparent ;
   overflow: hidden;
-  opacity: 0;
+  opacity: 1;
 }
 
 .olas .wave{
@@ -442,30 +436,37 @@ body {
     background-position-x: 1000px;
   }
 }
-/* :root{
-    --border-color: linear-gradient(
-        to right,
-        #EAA7A7,
-        #D5B75E
-    );
-    --card-color: #FFFFFF;
-} */
-/* body */
 
 .contenido{
   display: grid;
   flex: 1;
   width: 100%;
+  z-index: 2;
+  margin-top: 465px;
+}
+.frase {
+  text-align: center;
+  font-size: 1.5vw;
+  color:   white;
+  text-shadow: 1px 2px 5px #9d7378;
+  width: 50%;
+  padding-left: 10vw;
+  padding-bottom: 8vw;
+}
+.frase h3 {
+  font-family: "Monterchi-Serif";
+  margin-top: .5vw;
+  font-size: 1.4vw;
 }
 .d1{
   font-size: 20px;
-  padding-top: 30px;
+  padding-top: 160px;
   background-color: #f8f7f3;
   display: grid;
   place-items: center;
   color:#9d7378;
   width: 100dvw;
-  
+  mask-image: linear-gradient(to top, #f8f7f3 80%, transparent 90%);
   /* overflow: hidden; */
   /* mask-image: linear-gradient(#f8f7f3 90%, transparent); */
 }
@@ -665,13 +666,12 @@ body {
   grid-template-columns: 0.7fr 1fr;
   place-items: center;
   width: 80%;
-  height: 30vw;
+  height: 20vw;
   
 }
 .sobre-mi h2{
-  grid-column: 1/-1;
-  text-align: center;
-  font-size: 3vw;
+  text-align: start;
+  font-size: 2vw;
 }
 .imgnsm{
   display: flex;
@@ -697,7 +697,7 @@ body {
   width: 90%;
 }
 #bio p {
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   font-family: "Monterchi-Serif";
 }
 /* inspired form gumroad website */
@@ -755,20 +755,19 @@ body {
 footer{
   background-color: transparent;
   height: 200px;
-  /* display: grid; */
   justify-content: center;
   flex-direction: column;
+  z-index: 2;
 }
 .olaf {
   width: 100%;
-  height: 80px;
+  height: 60px;
   background-color: white;
 }
 .olaf svg {
   height: 100%;
 }
 .pie {
-  /* font-family: "Monterchi-Serif"; */
   background-color: #EAC9C2;
   display: grid;
   text-align: center;
@@ -778,12 +777,22 @@ footer{
   text-decoration: none;
   color: white;
 }
+
 .logopie{
-  display:flex;
-  width: 100%;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  /* max-height: 150px; */
+  height: 8vw;
+  width: 100%;
+  overflow: hidden;
 }
+.logopie img {
+  width: 20%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; 
+}
+
 .reserva{
   place-content: center;
 }
@@ -792,10 +801,11 @@ footer .social-icons{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1vw 0px;
+  margin-bottom: 1vw;
   flex-wrap: wrap;
   gap:10vw;
   width: 100%;
+  
 }
 footer .social-icons i{
   font-size: 1.2vw;
@@ -1021,11 +1031,5 @@ button:hover {
 }
 
 
-.pie img{
-  width: 15%;
-  /* border-radius: 50%; */
-  display: block;
-  min-width: 50px;
-  /* background-color: white; */
-}
+
 
