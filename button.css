@@ -44,7 +44,15 @@
   font-size: 1vw; 
 }
 #masinfo {
-  width: 50%;
+  font-family: "Romman";
+  display: inline-block;
+  margin: 0 auto;
+  background-color: #EAA7A7;
+  border-radius: 15% / 50%;
+  font-size: 1.5rem;
+}
+#masinfo:hover {
+  background-color:  #E9C9C2;
 }
 
   @media (max-width: 750px){
@@ -68,6 +76,7 @@
     #vermas{
       /* margin: 0vw 10vw; */
       width: 100%;
-      font-size: 5vw;
+      font-size: 4vw;
+      padding: 1vw 2vw;
     }
   }

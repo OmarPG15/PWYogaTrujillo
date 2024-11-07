@@ -35,9 +35,10 @@ header {
   /* transition: background-color 0.1s ease; */
   z-index:10;
   font-family: "Romman";
+  width: 100%;
 }
 .header-content{
-  height: 90px;
+  height: 11vh;
   width: 100dvw; 
   background-color: #EAC9C2;
 }
@@ -47,7 +48,7 @@ header {
   height: 100px;
   width: auto;
   object-fit: cover;
-  margin: 0px;
+  margin-top: 11px;
 }
 .logo img{
   height: 100%;
@@ -70,7 +71,23 @@ header {
   padding: 10px;
   padding-bottom: 5px;
   height: 100%;
-} 
+}
+.SI {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vw;
+  flex-wrap: wrap;
+  gap:10vw;
+  width: 100%;
+}
+.SI a{
+  color:white;
+}
+.SI i {
+  font-size: large;
+}
 .social-icons img {
     width: 30px;
     height: 30px;
@@ -92,21 +109,26 @@ header {
     flex-grow: 1; 
     /* float:inline-end; */
   }
-  
+.menu i {
+  transition: transform 0.3s ease;
+}
 .menu li {
-    margin-right: 10px;
-    display: inline-block;
-    position: relative;
-  }
-  .menu a {
-    text-decoration: none;
-    color: #FFFF;
-    font-size: 1.2vw;
-    padding: .2vw .5vw;
-    background-color: transparent;
-    border-radius: 50px;
-    transition: background-color 0.3s ease;
-  } 
+  display: inline-block;
+  position: relative;
+  margin-right: 1vw;
+}
+.menu a {
+  text-decoration: none;
+  color: #FFFF;
+  font-size: 1.2vw;
+  padding: .2vw .5vw;
+  background-color: transparent;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+} 
+.menu-link i {
+  display: none;
+}
 .menu li:hover .submenu {
     display: block; /* Mostrar la sublista al pasar el mouse sobre el li */
 }
@@ -115,11 +137,13 @@ header {
     opacity: 0.5;
     color: #9d7378;
   }
+
 .submenu {
     display: none; /* Ocultar la sublista por defecto */
     position: absolute; /* Posicionar la sublista */
-    left: 0; /* Alinear la sublista a la izquierda */
-    top: 100%; /* Colocar la sublista justo debajo del enlace */
+    left: 50%;
+    transform: translateX(-50%); /* Alinear la sublista a la izquierda */
+    top: 70%; /* Colocar la sublista justo debajo del enlace */
     background-color: transparent; /* Fondo blanco para la sublista */
     margin-top: .6vw;
     /* border: 1px solid #ccc; Borde para la sublista */
@@ -198,7 +222,7 @@ header {
 /* Tooltip Styles */
 .tooltip-content {
   position: absolute;
-  top: 102%;
+  top: 70%;
   left: 50%;
   transform: translateX(-50%) scale(0.8);
   background: transparent;
@@ -217,10 +241,11 @@ header {
   background: transparent;
 }
 
-.tooltip-container:hover .tooltip-content {
+.tooltip-container:hover .tooltip-content, 
+.tooltip-container.active .tooltip-content {
   opacity: 1;
   visibility: visible;
-  transform: translateX(-50%) scale(1);
+  transform: translateX(-50%) scale(0.7);
   pointer-events: auto;
   
 }
@@ -371,6 +396,9 @@ body {
   z-index: 0;
   bottom: 90px;
 }
+.portada {
+  width: 100vw;
+}
 .olas{
   position: relative;
   width: 100%;
@@ -442,16 +470,20 @@ body {
   flex: 1;
   width: 100%;
   z-index: 2;
-  margin-top: 465px;
+  margin-top:75vh;
+  
 }
 .frase {
+  top:45vh;
+  position: absolute;
   text-align: center;
   font-size: 1.5vw;
   color:   white;
   text-shadow: 1px 2px 5px #9d7378;
   width: 50%;
   padding-left: 10vw;
-  padding-bottom: 8vw;
+  padding-bottom: 18vh;
+  z-index: 3;
 }
 .frase h3 {
   font-family: "Monterchi-Serif";
@@ -459,8 +491,9 @@ body {
   font-size: 1.4vw;
 }
 .d1{
+  position: sticky;
   font-size: 20px;
-  padding-top: 160px;
+  padding-top: 16vh;
   background-color: #f8f7f3;
   display: grid;
   place-items: center;
@@ -805,7 +838,6 @@ footer .social-icons{
   flex-wrap: wrap;
   gap:10vw;
   width: 100%;
-  
 }
 footer .social-icons i{
   font-size: 1.2vw;

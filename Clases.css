@@ -23,16 +23,22 @@ section {
     color: #9d7378;
     gap: 4vw;
 }
-.presencial{
+.carta{
     display: flex;
-    place-items: center;
+    /* place-items: center; */
     font-size: 1.3vw;
-    background-color: #F6DEDC;
+    background-color: #F5F2ED;
     padding-right: 2vw;
     width: 100%;
     border-radius: 5% / 10%;
 }
-.presencial ul{
+#medio {
+    background-color: #F6DEDC;
+}
+#empresas {
+    text-align: center;
+}
+.carta ul{
     /* display: flex; */
     /* flex-direction: column; */
 }
@@ -42,7 +48,7 @@ body{
 }
 .pagina h1 {
     text-align: center;
-    font-size: 3vw;
+    font-size: 3rem;
 }
 .pagina p {
     font-family: "Monterchi-Serif";
@@ -54,15 +60,24 @@ body{
 .texto{
     height: 100%;
     place-content: center;
+    padding: 2vw 2vw;
+    text-align: center;
+    width: 100%;
+}
+.texto p {
+    text-align: justify;
+    font-size: 1.5rem;
+    text-align: center;
 }
 .texto h1 {
-    font-size: 1.5vw;
+    font-size: 2.1rem;
     /* flex-direction: top; */
 }
 .imgclass {
-    margin: 5vw 3vw 5vw 5vw;
-    width: 30%;
-    max-width: 390px;
+    margin: 3vw 3vw 3vw 5vw;
+    width: 50%;
+    max-width: 450px;
+    min-width: 277px;
     /* margin-right: ; */
     /* align-items: center; */
 }

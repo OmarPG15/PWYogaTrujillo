@@ -16,56 +16,78 @@
     <link rel="stylesheet" href="burger.css">
     <link rel="stylesheet" href="media.css">
     <link rel="stylesheet" href="button.css">
-    <link rel="stylesheet" href="experiencias.css">
+    <!-- <link rel="stylesheet" href="experiencias.css"> -->
     <title>Talleres al aire libre</title>
 </head>
 <body>
     <header id="header">
+        
         <div class="header-content">
-            <nav class="navbar">
+            
+            <div class="circ">
+                <label class="burger" for="burger">
+                    <input type="checkbox" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            
 
-                <input type="checkbox" id="checkbox">
-                    <label for="checkbox" class="toggle">
-                        <div class="bars" id="bar1"></div>
-                        <div class="bars" id="bar2"></div>
-                        <div class="bars" id="bar3"></div>
-                    </label>
-
-                    <div class="logo">
-                        <a href="index.html#portada">
-                            <img src="Images/Brand1.webp" alt="logo">
-                        </a>
-                    </div>
+            <nav id="nav" class="navbar">
+                <div class="SI">
+                            
+                    <a href="https://www.facebook.com/Yogaentrujillo/" class=" facebook">
+                        <i class="fa-brands fa-facebook"></i> 
+                    </a>
+                    <a href="https://www.instagram.com/yogaentrujillo" class="instagram">
+                        <i class="fa-brands fa-instagram"></i> 
+                    </a>
+                    <a href="https://www.tiktok.com/@yogaentrujillo" class="tiktok">
+                        <i class="fa-brands fa-tiktok"></i> 
+                    </a>
+        
+                    <a href="https://www.youtube.com/@espaciocompasivoconcarlacastro/featured" class="youtube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+                <div class="logo">
+                    <a href="#portada">
+                        <img src="Images/Logo/portada-superior.webp" alt="logo">
+                    </a>
+                </div>
                 
                 <div id="men">
                     <ul class="menu">
                         <li>
-                            <a class="cel bg-c1 c1b" href="index.html">Clases</a>
+                            <a  class="menu-link" href="#clases">Clases <i class="fas fa-angle-right"></i></a>
                                 <ul class="submenu">
                                     <li><a  href="Clases.html#presencial">Presenciales</a></li>
-                                    <li><a href="Clases.html#virtual">Virtuales</a></li>
+                                    <li><a href="Clases.html#medio">Virtuales</a></li>
+                                    <li><a href="Clases.html#empresas">Familias y empresas</a></li>
                                 </ul>
                         </li>           
                         <li>
-                            <a class="cel bg-c1 c1b" href="#Experiencias">Experiencias</a>
+                            <a class="menu-link" href="#Experiencias">Experiencias<i class="fas fa-angle-right"></i></a>
                             <ul class="submenu">
-                                <li><a href="#AireLibre">Taller al aire libre</a></li>
-                                <li><a href="#Retiros">Retiros</a></li>
+                                <li><a href="Experiencias.html#playa">Playa</a></li>
+                                <li><a href="Experiencias.html#medio">Retiro anual</a></li>
+                                <li><a href="Experiencias.html#ProxTaller">Talleres</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a class="cel bg-c1 c1b" href="#servicios">Servicios</a>
+                            <a class="menu-link" href="#servicios">Servicios<i class="fas fa-angle-right"></i></a>
                             <ul class="submenu">
-                                <li><a href="Servicios.html#somatico">Yoga somático</a></li>
-                                <li><a href="Servicios.html#postural">Yoga postural</a></li>
-                                <li><a href="Servicios.html#aura">Limpieza de aura</a></li>
+                                <li><a href="Servicios.html#personalizado">Yoga personalizado</a></li>
+                                <li><a href="Servicios.html#medio">Limpieza de aura</a></li>
+                                <li><a href="Servicios.html#ceremonia">Ceremonia holística</a></li>
                             </ul>
                         </li>
                         <li>
                             <a class="cel bg-c1 c1b" href="#cursos">Cursos</a>
                         </li>
                         <li>
-                            <a class="cel bg-c1 c1b" href="index.html#biog">Bio</a>
+                            <a class="cel bg-c1 c1b" href="#biog">Bio</a>
                         </li>
                         <li>
                             <a class="cel bg-c1 c1b" href="https://cuerpotraumayespiritualidad.blogspot.com">Blog</a>
@@ -110,54 +132,72 @@
                 </div>
             </nav>
         </div>
-</div>
-<section class="olas">
-    <div class="wave wave1"></div>
-    <div class="wave wave2"></div>
-    <div class="wave wave3"></div>
-</section>
-</header>
+    </div>
+    <section class="olas">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+    </section>
+    </header>
 
 
 <section class="Cl">
     <div class="pagina">
         <h1>Experiencias</h1>
-        <div id="AireLibre" class="presencial">
+
+        <div id="playa" class="carta">
             <div class="imgclass">
-                <img src="Images/Talleres/talleres.webp" alt="logo">
+                <img src="Images/Experiencias/Taller.webp" alt="logo">
             </div>
             <div class="texto">
-                <h1>Talleres al aire libre</h1>
-                <p> <i class="fa-solid fa-heart fa-xs"></i>
-    
-                    Los talleres de yoga al aire libre combinan la práctica de yoga con la naturaleza, 
-                    ofreciendo un entorno tranquilo en parques o playas. Permiten una conexión más profunda
-                    con el cuerpo y la mente, promoviendo relajación y bienestar en un ambiente abierto y revitalizante.<br><br>
-                    <a href="Talleres.html"><button id="masinfo" class="register">
-                        más información</button></a>
+                <h1>Taller de yoga en la playa - Temporada Verano</h1>
+                <p> Regálate un espacio para conectar con la naturaleza, renovar tu energía, y meditar en
+                    gratitud junto al mar. Estos talleres te invitan a danzar la vida y a recargarte con la
+                    poderosa energía de la naturaleza: las olas, el sol y la brisa marina, en una comunidad
+                    cálida y llena de alegría.<br><br>
+                    Además de prácticas de yoga y ejercicios de regulación emocional, encontrarás
+                    dinámicas interactivas y de conexión con los demás, como la danza circular, para
+                    abrirnos juntos a la celebración y al bienestar. Es un momento perfecto para compartir,
+                    hacer amigos y vivir una experiencia única en la playa.<br><br>
+                    ¡Ven a disfrutar el verano de una forma renovadora y plena! <br><br>
                 </p>
+                <a href="Bio.html"><button id="masinfo" >
+                más información</button></a>
             </div>
-            
-            
         </div>
-        <div id="retiros" class="presencial">
-            
+
+        <div id="medio" class="carta">
             <div class="imgclass">
-                <img src="Images/Retiro/R7.png" alt="logo">
+                <img src="Images/Experiencias/Retiros.webp" alt="logo">
             </div>
             <div class="texto">
-                <h1>Retiros</h1>
-                <p> 
-                
-                    <i class="fa-solid fa-heart fa-xs"></i> Sesiones virtuales de Yoga, meditación y acercamiento somático.<br>
+                <h1>Retiro anual - Temporada Otoño</h1>
+                <p>Sumérgete en un día completo de actividades en un entorno sereno y natural. Este
+                    retiro es una oportunidad para desconectar del estrés, aprender técnicas prácticas que
+                    te ayudarán a regular tus emociones y descansar profundamente la mente y el cuerpo.
+                    Rodeados de exuberante vegetación, nos enfocaremos en recargar energías, armonizar
+                    los sentidos y abrirnos a la paz interior.<br><br>
         
-                    Mejorar tu postura, regula tu sistema nervioso y cultiva la autocompasión 
-                    con prácticas suaves y conscientes.<br><br>
-                    <a href="Talleres.html"><button id="masinfo" class="register">
-                        más información</button></a>
+                    Durante esta experiencia, podrás conectarte con personas afines en un ambiente de
+                    respeto y alegría, mientras compartimos alimentos saludables.<br><br>
+                    Fecha: por confirmarse <br>
+                    ¡Únete y regálate un día de renovación profunda en un ambiente lleno de paz! <br><br>
                     </p>
+                    <a href="Bio.html"><button id="masinfo" >
+                        más información</button></a>
             </div>
-            
+        </div>
+
+        <div id="ProxTaller" class="carta">
+            <div class="imgclass">
+                <img src="Images/Experiencias/ProxTaller.webp" alt="logo">
+            </div>
+            <div class="texto">
+                <h1>Próximo taller - Temporada Primavera</h1>
+                <p>Estén atentos a nuestras próximas novedades.<br><br></p>
+                    <a href="Bio.html"><button id="masinfo" >
+                        más información</button></a>
+            </div>
         </div>
         
     </div>
