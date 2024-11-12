@@ -12,6 +12,7 @@
     <script src="header.js"></script>
     <script src="slider.js"></script>
     <script src="carrusel.js"></script>
+    <script src="burger.js" defer></script>
     <link rel="stylesheet" type="text/css" href="slider.css">
     <link rel="stylesheet" type="text/css" href="testimonios.css">
     <link rel="stylesheet" href="Cards.css">
@@ -83,7 +84,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a class="cel bg-c1 c1b" href="../PWYogaTrujillo/Tienda/index.html">Cursos</a>
+                                <a class="cel bg-c1 c1b" href="#cursos">Cursos</a>
                             </li>
                             <li>
                                 <a class="cel bg-c1 c1b" href="#biog">Bio</a>
@@ -144,8 +145,12 @@
         <!-- <div class="estrella">
             <img src="Images/star.png" alt="Estrella">
         </div> -->
+        <div class="frase">
+            <h2>Espacio sensible y compasivo</h2>
+            <h3>Yoga | Prácticas somáticas | Terapia energética</h3>
+        </div>
         <div class="large-image"> 
-            <img src="Images/Portada.webp" alt="Imagen Grande" class="portada">
+            <img src="Images/Portada.webp" alt="Imagen Grande" class="portada" loading="lazy">
         </div>
     </div>
     
@@ -156,6 +161,7 @@
                 <img src="Images/Brand1.png" alt="logo">
             </div>
         </nav> -->
+        
         <div class="d1">
             <h2>¿Quieres ser parte de nuestra comunidad?</h2>
             <h3>Registrate y recibe un ebook gratis</h3>
@@ -173,19 +179,21 @@
             <div id="clases" class="clases">
                 <div class="card">
                         <div class="card-image">
-                            <a href="Clases.html"><img src="Images/Clases/presencial.webp" alt="clases"></a>
+                            <a href="Clases.html"><img src="Images/Clases/clases.webp" alt="clases"></a>
                         </div>
-                    <div class="category"> Clases </div>
-                    <div class="heading"> ¿Listo para encontrar calma y equilibrio en tu vida? 
+                    <div class="category"> Clases grupales</div>
+                    <div class="heading"> Aprende yoga, meditación y ejercicios somáticos en
+                        comunidad, familia o entorno laboral.    
                         <!-- <div class="author"> By <span class="name">Abi</span> 4 days ago</div> -->
                     </div>
                 </div>
             </div>
             <div id="Experiencias" class="Experiencias">
                 <div class="card">
-                    <div class="card-image"><a href="Experiencias.html"><img src="Images/Retiro/R2.webp" alt="clases"></a></div>
+                    <div class="card-image"><a href="Experiencias.html"><img src="Images/Experiencias/experiencias.webp" alt="clases"></a></div>
                     <div class="category"> Experiencias </div>
-                    <div class="heading"> Proximos talleres de yoga en la playa.
+                    <div class="heading">  Transforma,  conecta y renueva cuerpo, mente y alma 
+                        en nuestros talleres de temporada y retiros anuales
                         <!-- <div class="author"> By <span class="name">Abi</span> 4 days ago</div> -->
                     </div>
                 </div>
@@ -193,9 +201,10 @@
             
             <div id="servicios" class="servicios">
                 <div class="card">
-                    <div class="card-image"><a href="Servicios.html"><img src="Images/Servicios/S2.webp" alt="clases"></a></div>
-                    <div class="category"> Servicios </div>
-                    <div class="heading"> Sesiones personalizadas que se ajustan a tus necesidades.
+                    <div class="card-image"><a href="Servicios.html"><img src="Images/Servicios/servicios.webp" alt="clases"></a></div>
+                    <div class="category"> Servicios personalizados</div>
+                    <div class="heading"> Sesiones diseñadas para tu bienestar físico, mental,
+                        energético y espiritual.
                     </div>
                 </div>             
             </div>
@@ -203,12 +212,13 @@
             <div id="cursos" class="cursos">
                 <div class="card">
                     <div class="card-image">
-                        <a href="../PWYogaTrujillo/Tienda/index.html">
+                        <a href="CursosWordpress/index.html">
                             <img src="Images/Retiro/R11.webp" alt="clases">
                         </a>                   
                     </div>
-                    <div class="category"> Cursos virtuales </div>
-                    <div class="heading"> Sesiones virtuales de Yoga, meditación y acercamiento somático.
+                    <div class="category"> Cursos a tu ritmo</div>
+                    <div class="heading"> Descubre recursos para tu bienestar y
+                        autocompasión desde la comodidad de tu hogar.
                     </div>
                 </div>
             </div>
@@ -237,11 +247,12 @@
         </div>
         <div id="biog" class="d3">
             <div class="sobre-mi">
-                <h2>Sobre mi</h2>
+                
                 <div class="imgnsm">
                     <img src="Images/Bio.webp" alt="">
                 </div>
                 <div id="bio">
+                    <h2>Sobre mi</h2>
                     <p>Hola, soy Carla. Agradezco tu interés en mi práctica. 
                         Comencé mi viaje en el yoga durante mis años universitarios, 
                         lo que me ayudó a enfrentar mis ansiedades y encontrar equilibrio. 
@@ -307,33 +318,30 @@
             
             <div class="pie">
                 <div class="logopie">
-                    <img src="Images/Logo/Logow.webp" alt="">
-
-                <a class="reserva" href="https://api.whatsapp.com/send?phone=51993895915&text=Buen%20día%2C%20deseo%20más%20información%20de%20las%20clases%20de%20yoga"><button class="reservafoot">
-                    Reserva tu sesión</button></a>
+                    <img src="Images/Logo/logo inferior.webp" alt="">
                 </div>
                 
 
                 <div class="social-icons">
                             
                     <a href="https://www.facebook.com/Yogaentrujillo/" class=" facebook"> <i></i>
-                        <i class="fa-brands fa-facebook"></i> <span>Yogaentrujillo</span>
+                        <i class="fa-brands fa-facebook"></i> <span>Yoga en trujillo</span>
                     </a>
                     <a href="https://www.instagram.com/yogaentrujillo" class="instagram">
-                        <i class="fa-brands fa-instagram"></i> <span>Yogaentrujillo</span>
+                        <i class="fa-brands fa-instagram"></i> <span>yogaentrujillo</span>
                     </a>
                     <a href="https://www.tiktok.com/@yogaentrujillo" class="tiktok">
-                        <i class="fa-brands fa-tiktok"></i> <span>Yogaentrujillo</span>
+                        <i class="fa-brands fa-tiktok"></i> <span>yogaentrujillo</span>
                     </a>
 
                     <a href="https://www.youtube.com/@espaciocompasivoconcarlacastro/featured" class="youtube">
-                        <i class="fa-brands fa-youtube"></i> <span>Yogaentrujillo</span>
+                        <i class="fa-brands fa-youtube"></i> <span>Yoga en Trujillo Perú</span>
                     </a>
                 </div>
                     <div class="contac">
-                        <a href=""><i class="fas fa-envelope"></i>  <span>YogaTrujillo@hotmail.com | </span></a>
+                        <a href=""><i class="fas fa-envelope"></i>  <span>yogatrujillo@hotmail.com | </span></a>
                         
-                        <a href=""><i class="fas fa-phone"></i> +51 993 895 915</a>
+                        <a href=""><i class="fa-brands fa-whatsapp"></i> +51 993 895 915</a>
                     </div>
             </div>
             

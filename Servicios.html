@@ -13,7 +13,8 @@
     <link rel="stylesheet" type="text/css" href="slider.css">
     <link rel="stylesheet" type="text/css" href="testimonios.css">
     <!-- <link rel="stylesheet" href="Clases.css"> -->
-    <link rel="stylesheet" href="services.css">
+    <!-- <link rel="stylesheet" href="services.css"> -->
+    <link rel="stylesheet" href="Clases.css">
     <link rel="stylesheet" href="burger.css">
     <link rel="stylesheet" href="media.css">
     <link rel="stylesheet" href="button.css">
@@ -22,51 +23,73 @@
 </head>
 <body>
     <header id="header">
+        
         <div class="header-content">
-            <nav class="navbar">
+            
+            <div class="circ">
+                <label class="burger" for="burger">
+                    <input type="checkbox" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            
 
-                <input type="checkbox" id="checkbox">
-                    <label for="checkbox" class="toggle">
-                        <div class="bars" id="bar1"></div>
-                        <div class="bars" id="bar2"></div>
-                        <div class="bars" id="bar3"></div>
-                    </label>
-
+            <nav id="nav" class="navbar">
+                <div class="SI">
+                            
+                    <a href="https://www.facebook.com/Yogaentrujillo/" class=" facebook">
+                        <i class="fa-brands fa-facebook"></i> 
+                    </a>
+                    <a href="https://www.instagram.com/yogaentrujillo" class="instagram">
+                        <i class="fa-brands fa-instagram"></i> 
+                    </a>
+                    <a href="https://www.tiktok.com/@yogaentrujillo" class="tiktok">
+                        <i class="fa-brands fa-tiktok"></i> 
+                    </a>
+        
+                    <a href="https://www.youtube.com/@espaciocompasivoconcarlacastro/featured" class="youtube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
                 <div class="logo">
-                    <a href="index.html#portada">
-                        <img src="Images/Brand1.webp" alt="logo">
+                    <a href="#portada">
+                        <img src="Images/Logo/portada-superior.webp" alt="logo">
                     </a>
                 </div>
                 
                 <div id="men">
                     <ul class="menu">
                         <li>
-                            <a class="cel bg-c1 c1b" href="index.html">Clases</a>
+                            <a  class="menu-link" href="#clases">Clases <i class="fas fa-angle-right"></i></a>
                                 <ul class="submenu">
                                     <li><a  href="Clases.html#presencial">Presenciales</a></li>
-                                    <li><a href="Clases.html#virtual">Virtuales</a></li>
+                                    <li><a href="Clases.html#medio">Virtuales</a></li>
+                                    <li><a href="Clases.html#empresas">Familias y empresas</a></li>
                                 </ul>
                         </li>           
                         <li>
-                            <a class="cel bg-c1 c1b" href="#Experiencias">Experiencias</a>
+                            <a class="menu-link" href="#Experiencias">Experiencias<i class="fas fa-angle-right"></i></a>
                             <ul class="submenu">
-                                <li><a href="Experiencias.html#AireLibre">Taller al aire libre</a></li>
-                                <li><a href="Experiencias.html#Retiros">Retiros</a></li>
+                                <li><a href="Experiencias.html#playa">Playa</a></li>
+                                <li><a href="Experiencias.html#medio">Retiro anual</a></li>
+                                <li><a href="Experiencias.html#ProxTaller">Talleres</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a class="cel bg-c1 c1b" href="#servicios">Servicios</a>
+                            <a class="menu-link" href="#servicios">Servicios<i class="fas fa-angle-right"></i></a>
                             <ul class="submenu">
-                                <li><a href="#somatico">Yoga somático</a></li>
-                                    <li><a href="#postural">Yoga postural</a></li>
-                                    <li><a href="#aura">Limpieza de aura</a></li>
+                                <li><a href="Servicios.html#personalizado">Yoga personalizado</a></li>
+                                <li><a href="Servicios.html#medio">Limpieza de aura</a></li>
+                                <li><a href="Servicios.html#ceremonia">Ceremonia holística</a></li>
                             </ul>
                         </li>
                         <li>
                             <a class="cel bg-c1 c1b" href="#cursos">Cursos</a>
                         </li>
                         <li>
-                            <a class="cel bg-c1 c1b" href="index.html#biog">Bio</a>
+                            <a class="cel bg-c1 c1b" href="#biog">Bio</a>
                         </li>
                         <li>
                             <a class="cel bg-c1 c1b" href="https://cuerpotraumayespiritualidad.blogspot.com">Blog</a>
@@ -111,80 +134,81 @@
                 </div>
             </nav>
         </div>
-</div>
-<section class="olas">
-    <div class="wave wave1"></div>
-    <div class="wave wave2"></div>
-    <div class="wave wave3"></div>
-</section>
-</header>
+    </div>
+    <section class="olas">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+    </section>
+    </header>
 
 
 <section>
     <div class="pagina">
         <h1>Servicios</h1> 
-        <div  class="Ysom">
-            <h1>Yoga somático</h1>
-            <div class="somt">
-                <div class="imgclass"><img src="Images/Servicios/S1.webp" alt="logo">
-                </div>
+
+        <div id="personalizado" class="carta">
+            <div class="imgclass">
+                <img src="Images/Servicios/YPersonalizado.webp" alt="logo">
+            </div>
+            <div class="texto">
+                <h1>Yoga personalizado</h1>
                 <p>Las sesiones personalizadas de yoga suave con enfoque somático,
-                    son prácticas suaves y amables con tu experiencia actual. <br>
+                    son prácticas suaves y amables con tu experiencia actual y adaptado
+                    a tu estructura y actitud psicofísica. <br>
                     <br>
-                    Con ejercicios regulación del sistema nervioso para gestionar las emociones, prácticas de respiración, 
-                    relajación y movimientos conscientes para volver a conectar amablemente con tu cuerpo, y meditaciones para armonizar la energía. <br><br>
+                    Con ejercicios de regulación del sistema nervioso para gestionar las emociones, prácticas
+                    de respiración, relajación y movimientos conscientes para volver a conectar
+                    amablemente con tu cuerpo, y meditaciones para armonizar la energía. <br><br>
                     
-                    Ideal: para fibromialgia, ansiedad, depresión, estrés crónico, alta sensibilidad y todo aquel que desee iniciar un camino de conexión interna. <br><br>
+                    Ideal: para fibromialgia, ansiedad, depresión, estrés crónico, alta sensibilidad y todo
+                    aquel que desee iniciar un camino de conexión interna. <br><br>
                     
-                    Las sesiones personalizadas se dan de forma virtual  <br> <br>
-                    
-                    Duración: 1 hora aprox  <br> <br>
-                    
-                    Inversión: S/.80.</p>
+                    Las sesiones personalizadas se dan en vivo de forma virtual o presencial en Trujillo.<br> <br>
+                    </p>
+                    <a href="Bio.html"><button id="masinfo" >
+                        más información</button></a>
+            </div>
+        </div>
+        <div id="medio" class="carta">
+            <div class="imgclass">
+                <img src="Images/Servicios/LAura.webp" alt="logo">
+            </div>
+            <div class="texto">
+                <h1>Limpieza de aura</h1>
+                <p>En la limpieza de aura con cristales en base a la Sanación Pránica, se alinea los
+                    chakras y se remueve la energía estancada o densa en distintas áreas del aura,
+                    dejándote con una sensación de ligereza, calma y vitalidad. <br>
+                    <br>
+                    La sesión tiene una duración de aproximadamente 1 hora y puede realizarse en vivo,
+                    de manera virtual o presencial en Trujillo. <br><br>
+                    Al remover energías que ya no necesitas, esta práctica apoya y acelera el proceso
+                    natural de sanación del cuerpo, dejándote con una sensación de equilibrio, armonía  y
+                    renovación.<br><br></p>
+                    <a href="Bio.html"><button id="masinfo" >
+                        más información</button></a>
             </div>
         </div>
 
-        <div id="postural" class="Ysom">
-            <h1>Yoga postural</h1>
-            <div class="somt">
-                <div class="imgclass"><img src="Images/Servicios/S2.webp" alt="logo">
-                </div>
-                <p>Las sesiones personalizadas de yoga en base a las cadenas musculares y emociones, 
-                    se basan en estiramientos específicos según el estudio de tu biotipo postural. <br>
-                    <br>
-                    Se realizarán ejercicios para equilibrar las tendencias posturales, junto a prácticas somáticas, 
-                    de respiración y visualización específicas para acompañar y transformar suavemente las emociones que nos llevan a una tendencia postural no sana, 
-                    evitando así lesiones a futuro o contrarrestando las actuales. <br>
-                    Ideal para todos los que desean realizar una práctica más profunda y específica según el análisis postural. <br><br>
-                    
-                    
-                    Las sesiones personalizadas se dan de forma virtual en vivo.  <br> <br>
-                    
-                    Duración: 1 hora aprox <br> <br>
-                    
-                    Inversión: <br>
-                    - Primera sesión: S/.80.</p>
-                    
+        <div id="ceremonia" class="carta">
+            <div class="imgclass">
+                <img src="Images/Servicios/CeremoniaCum.webp" alt="logo">
             </div>
-        </div>
-
-        <div id="aura" class="Ysom">
-            <h1>Limpieza de aura</h1>
-            <div class="somt">
-                <div class="imgclass"><img src="Images/Servicios/S3.webp" alt="logo">
-                </div>
-                <p>La limpieza de aura se basa en un armonización de tu campo energético con cristales; 
-                    se alinean los chacras y se retira energía de congestión o densa estancada 
-                    en las diferentes partes del aura, lo que ayuda a sentirte más ligera, con mucha calma y más vital <br>
+            <div class="texto">
+                <h1>Ceremonia holística de cumpleaños</h1>
+                <p> Tu cumpleaños es un momento poderoso, alineado con la energía solar, ideal para
+                    manifestar deseos y sembrar intenciones. Este es el tiempo perfecto para renovar tu
+                    energía y atraer todo lo que quieres en el nuevo ciclo que comienza. <br>
                     <br>
                     
-                    La sesión dura: 1 hora aprox <br> <br>
+                    Al celebrar con una ceremonia espiritual, canalizamos bendiciones en un espacio
+                    íntimo y sagrado, agradeciendo el presente y proyectando intenciones para el futuro.<br> <br>
                     
-                    Inversión: S/.100<br> <br>
-                    La sesión se realiza virtual en vivo<br> <br>
-                
-                    Indicaciones: la limpieza virtual, se daría en un espacio de tu casa, 
-                    despejado dónde no te interrumpan y te puedas relajar, considera que estarás recostad@ una gran parte de la sesión.</p>
+                    Esta experiencia puede ser contigo mismo, y tus guías espirituales, o rodeado de
+                    quienes más amas. Dale a tu cumpleaños un significado profundo y abierto a recibir
+                    todo lo bueno que está por venir.<br> <br></p>
+                    <a href="Bio.html"><button id="masinfo" >
+                        más información</button></a>
             </div>
         </div>
 

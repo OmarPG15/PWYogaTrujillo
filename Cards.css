@@ -28,7 +28,7 @@
   }
   
   .category {
-    font-size: 1.7vw;
+    font-size: 2vw;
     font-weight: 600;
     color: #9D7378;
     padding: 10px 7px 0;
@@ -42,8 +42,9 @@
     font-weight: normal;
     color: #9D7378;
     padding: 7px;
-    font-size: 1.3vw;
+    font-size: 1.1vw;
     font-family: "Monterchi-Serif";
+    text-align: center;
   }
   
   .heading:hover {

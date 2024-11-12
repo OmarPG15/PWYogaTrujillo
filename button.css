@@ -27,32 +27,32 @@
 }
   
 .register:active {
-    background-color:#D5B75E;
-    /*50, 168, 80*/
-    color:white;
-    box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
-    /* transform: translateY(5px); */
-    transition: 200ms;
+  background-color:#D5B75E;
+  color:white;
+  transition: 200ms;
 }
 #vermas{
-    margin-top: 1vw;
-    width: 10vw;
+  margin-top: 1vw;
+  width: 10vw;
+}
+#vermas:active {
+  background-color:#EAA7A7;
 }
 #reserva{
-    background-color: #D5B75E;
-    overflow: hidden;
-    font-size: 1vw;
-    
+  background-color: #D5B75E;
+  overflow: hidden;
+  font-size: 1vw; 
 }
 #masinfo {
-  width: 50%;
-}
-.reservafoot{
-  background-color: #D5B75E;
   font-family: "Romman";
+  display: inline-block;
+  margin: 0 auto;
+  background-color: #EAA7A7;
+  border-radius: 15% / 50%;
+  font-size: 1.5rem;
 }
-.reservafoot:hover{
-  background-color: rgba(213, 183, 94, 0.5);
+#masinfo:hover {
+  background-color:  #E9C9C2;
 }
 
   @media (max-width: 750px){
@@ -76,6 +76,7 @@
     #vermas{
       /* margin: 0vw 10vw; */
       width: 100%;
-      font-size: 5vw;
+      font-size: 4vw;
+      padding: 1vw 2vw;
     }
   }
