@@ -38,10 +38,7 @@ section {
 #empresas {
     text-align: center;
 }
-.carta ul{
-    /* display: flex; */
-    /* flex-direction: column; */
-}
+
 body{
     /* padding-top: 100px; */
     background-color: #FFF;
@@ -68,6 +65,9 @@ body{
     text-align: justify;
     font-size: 1.5rem;
     text-align: center;
+}
+.number-font {
+    font-family: "Georgia";
 }
 .texto h1 {
     font-size: 2.1rem;

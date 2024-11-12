@@ -143,8 +143,8 @@ header {
     position: absolute; /* Posicionar la sublista */
     left: 50%;
     transform: translateX(-50%); /* Alinear la sublista a la izquierda */
-    top: 70%; /* Colocar la sublista justo debajo del enlace */
-    background-color: transparent; /* Fondo blanco para la sublista */
+    top: 80%; /* Colocar la sublista justo debajo del enlace */
+    background-color: rgba(234, 201, 194, 0.5); /* Fondo blanco para la sublista */
     margin-top: .6vw;
     /* border: 1px solid #ccc; Borde para la sublista */
     border-radius: 10%;
@@ -389,16 +389,16 @@ body {
 }
 .large-image .portada{
   width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
-  margin: 0px ; 
+  height: auto; 
+  object-fit: contain; 
+  margin: 0; 
   position: fixed;
   z-index: 0;
-  bottom: 90px;
+  /* bottom: 90px; */
 }
-.portada {
+/* .portada {
   width: 100vw;
-}
+} */
 .olas{
   position: relative;
   width: 100%;

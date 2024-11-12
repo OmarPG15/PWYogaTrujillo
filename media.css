@@ -212,8 +212,21 @@
 @media(max-width: 430px) {
     .olas-abajo{
         height: 10vw;
+        
     }
-    
+    .large-image {
+        /* overflow:visible; */
+        /* right: 10%;
+        height: 50vh; */
+    }
+    .large-image .portada{
+        /* height: 100%; */
+        top: 0%;
+        /* height: 50%; */
+        width: 150%;
+        transform: translateX(-110px);
+        /* position: relative; */
+    }
     
     .menu li {
         
@@ -226,16 +239,16 @@
         left: 0vw;
     }
     .frase {
-        top:15vh;
+        top:13vh;
         padding-left: 0vw;
-        width: 100%;
-        font-size: larger;
+        width: 60%;
+        font-size: 3vw;
     }
     .frase h3{
-        font-size: large;
+        font-size: 3vw;
     }
     .contenido {
-        margin-top: 46vw;
+        margin-top: 20vh;
     }
     .d1 input {
         font-size: large;
@@ -289,13 +302,15 @@
     }
     
     .imgnsm {
-        display: none;
         height: 60vw;
         width: 50vw;
         justify-content: initial;
+        
     }
     .imgnsm img {
+        mask-image: none;
         width: 100%;
+        border-radius: 10%;
     }
     .ver-más {
         font-size: 2vw;
@@ -340,7 +355,15 @@
         width: 100%;
     }
     /*Clases*/
-
+    
+    .carta {
+        display: grid;
+        border-radius: 10% / 5%;
+        
+    }
+    .carta .imgclass{
+        width: 90%;
+    }
     .pagina {
         padding-top: 20vw;
         height: auto;
