@@ -705,6 +705,7 @@ body {
 .sobre-mi h2{
   text-align: start;
   font-size: 2vw;
+  padding-bottom: 2vw;
 }
 .imgnsm{
   display: flex;
@@ -732,6 +733,11 @@ body {
 #bio p {
   font-size: 1.1vw;
   font-family: "Monterchi-Serif";
+}
+#bio a{
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
 }
 /* inspired form gumroad website */
 .ver-más {

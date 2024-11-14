@@ -1,13 +1,14 @@
-.card {
+.card a{
     display: flex;
     width: auto;
     height: auto;
     background: white;
-    padding: 3vw 0 3vw 0;
+    padding: 3vw 0vw 3vw 0vw;
     border-radius: 16px;
     /* margin: 5vw; */
     align-items: center;
     flex-direction: column;
+    text-decoration: none;
   }
   
   .card-image {
@@ -41,7 +42,7 @@
   .heading {
     font-weight: normal;
     color: #9D7378;
-    padding: 7px;
+    padding: 7px 7vw 7px 7vw;
     font-size: 1.1vw;
     font-family: "Monterchi-Serif";
     text-align: center;

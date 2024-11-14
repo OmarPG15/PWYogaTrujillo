@@ -92,17 +92,17 @@
 @media(max-width: 757px){
     header {
         height: 100%;   
-        width: 60%;
+        width: 10%;
     }
     .header-content{
         /* height: 100px; */
         height: 100%;
-        width: 100%;
+        width: 10%;
         /* left: -100%; */
     }
     .navbar{
-        left: -100%;
-        width: 100%;
+        left: -100vw;
+        width: 60vw;
         padding-top: 0px;
         padding-bottom: 0;
         flex-direction: column;
@@ -226,10 +226,6 @@
         width: 150%;
         transform: translateX(-110px);
         /* position: relative; */
-    }
-    
-    .menu li {
-        
     }
     .menu a:hover {
         background-color: transparent;
@@ -359,7 +355,7 @@
     .carta {
         display: grid;
         border-radius: 10% / 5%;
-        
+        padding: 2vw;
     }
     .carta .imgclass{
         width: 90%;
@@ -367,7 +363,7 @@
     .pagina {
         padding-top: 20vw;
         height: auto;
-        
+        gap:30px;
     }
     .olaf {
         width: 100%;

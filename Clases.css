@@ -35,9 +35,6 @@ section {
 #medio {
     background-color: #F6DEDC;
 }
-#empresas {
-    text-align: center;
-}
 
 body{
     /* padding-top: 100px; */
@@ -64,7 +61,7 @@ body{
 .texto p {
     text-align: justify;
     font-size: 1.5rem;
-    text-align: center;
+    /* text-align: center; */
 }
 .number-font {
     font-family: "Georgia";
@@ -85,3 +82,10 @@ body{
     width: 100%;
     border-radius: 10%;
 }
+
+#primero, #medio, #tercero {
+    scroll-margin-top: 250px;
+}
+
+/*playa*/
+
