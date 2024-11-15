@@ -85,3 +85,18 @@ body{
     width: 100%;
     border-radius: 10%;
 }
+
+.help-urls{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.helo-urls a{
+    color: #9D7378;
+    font-weight: bold;
+}
+.help-urls a+a{
+    margin-left: 30px;
+
+}
