@@ -95,6 +95,12 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
+    font-family: 'Monterchi-Serif';
+  src: url('Fonts/Monterchi-Serif-Book-trial.ttf') format('truetype'),
+        url('Fonts/Monterchi-Serif-Extrabold-trial.ttf') format('truetype'),
+        url('Fonts/Monterchi-Serif-Thin-trial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 .helo-urls a{
     color: #9D7378;

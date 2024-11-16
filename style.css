@@ -252,9 +252,10 @@ header {
 
 /* Social Icons Styles */
 .social-icons {
+  margin: 0%;
   display: flex;
   justify-content: space-between;
-  gap: 4px;
+  gap: 20px;
 }
 .social-icon {
   display: flex;

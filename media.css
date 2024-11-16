@@ -206,6 +206,12 @@
     footer .social-icons span{
         display: none;
     }
+    .help-urls {
+        justify-content: center; /* Asegura que los elementos se centren horizontalmente */
+        align-items: center; /* Centra los elementos verticalmente */
+        text-align: center; /* Asegura que el texto dentro se alinee al centro */
+        padding: 10px; /* Agrega espacio si es necesario */
+    }
     
     
 } 
@@ -385,6 +391,7 @@
     footer{
         height: auto;
     }
+    
     
 
 }
