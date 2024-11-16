@@ -3,7 +3,7 @@ document.getElementById("burger").addEventListener("change", function() {
     if (this.checked) {
         navbar.style.left = "0";
     } else {
-        navbar.style.left = "-100%"; /* Regresa la navbar a su posición original */
+        navbar.style.left = "-100vw"; /* Regresa la navbar a su posición original */
     }
 });
 document.querySelectorAll(".menu-link").forEach(link => {

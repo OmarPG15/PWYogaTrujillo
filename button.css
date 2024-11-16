@@ -50,6 +50,7 @@
   background-color: #EAA7A7;
   border-radius: 15% / 50%;
   font-size: 1.5rem;
+  margin-bottom: 2vw;
 }
 #masinfo:hover {
   background-color:  #E9C9C2;
@@ -78,5 +79,8 @@
       width: 100%;
       font-size: 4vw;
       padding: 1vw 2vw;
+    }
+    #masinfo{
+      margin-bottom: 10px;
     }
   }

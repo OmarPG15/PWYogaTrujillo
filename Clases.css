@@ -35,13 +35,7 @@ section {
 #medio {
     background-color: #F6DEDC;
 }
-#empresas {
-    text-align: center;
-}
-.carta ul{
-    /* display: flex; */
-    /* flex-direction: column; */
-}
+
 body{
     /* padding-top: 100px; */
     background-color: #FFF;
@@ -67,7 +61,10 @@ body{
 .texto p {
     text-align: justify;
     font-size: 1.5rem;
-    text-align: center;
+    /* text-align: center; */
+}
+.number-font {
+    font-family: "Georgia";
 }
 .texto h1 {
     font-size: 2.1rem;
@@ -85,6 +82,13 @@ body{
     width: 100%;
     border-radius: 10%;
 }
+
+#primero, #medio, #tercero {
+    scroll-margin-top: 250px;
+}
+
+/*playa*/
+
 
 .help-urls{
     display: flex;
