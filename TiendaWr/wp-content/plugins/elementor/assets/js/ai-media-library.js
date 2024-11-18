@@ -2500,146 +2500,6 @@ exports.translateLanguages = translateLanguages;
 
 /***/ }),
 
-/***/ "../modules/ai/assets/js/editor/ai-excerpt.js":
-/*!****************************************************!*\
-  !*** ../modules/ai/assets/js/editor/ai-excerpt.js ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "../node_modules/@babel/runtime/helpers/typeof.js");
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = void 0;
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ "../node_modules/@babel/runtime/regenerator/index.js"));
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "../node_modules/@babel/runtime/helpers/asyncToGenerator.js"));
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "../node_modules/@babel/runtime/helpers/slicedToArray.js"));
-var _useUserInfo2 = _interopRequireDefault(__webpack_require__(/*! ./hooks/use-user-info */ "../modules/ai/assets/js/editor/hooks/use-user-info.js"));
-var _useExcerptPrompt2 = _interopRequireDefault(__webpack_require__(/*! ./hooks/use-excerpt-prompt */ "../modules/ai/assets/js/editor/hooks/use-excerpt-prompt.js"));
-var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "react"));
-var _element = __webpack_require__(/*! @wordpress/element */ "../node_modules/@wordpress/element/build-module/index.js");
-var _app = _interopRequireDefault(__webpack_require__(/*! ./app */ "../modules/ai/assets/js/editor/app.js"));
-var _i18n = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "../node_modules/prop-types/index.js"));
-var _requestsIds = __webpack_require__(/*! ./context/requests-ids */ "../modules/ai/assets/js/editor/context/requests-ids.js");
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-var AIExcerpt = function AIExcerpt(_ref) {
-  var onClose = _ref.onClose,
-    currExcerpt = _ref.currExcerpt,
-    updateExcerpt = _ref.updateExcerpt,
-    postTextualContent = _ref.postTextualContent;
-  var _useUserInfo = (0, _useUserInfo2.default)(true),
-    isLoadingUserInfo = _useUserInfo.isLoading,
-    isConnected = _useUserInfo.isConnected,
-    isGetStarted = _useUserInfo.isGetStarted,
-    connectUrl = _useUserInfo.connectUrl,
-    fetchData = _useUserInfo.fetchData,
-    hasSubscription = _useUserInfo.hasSubscription,
-    credits = _useUserInfo.credits,
-    initialUsagePercentage = _useUserInfo.usagePercentage;
-  var _useExcerptPrompt = (0, _useExcerptPrompt2.default)({
-      result: currExcerpt,
-      credits: credits
-    }),
-    newExcerpt = _useExcerptPrompt.data,
-    error = _useExcerptPrompt.error,
-    send = _useExcerptPrompt.send;
-  var _useRequestIds = (0, _requestsIds.useRequestIds)(),
-    updateUsagePercentage = _useRequestIds.updateUsagePercentage,
-    usagePercentage = _useRequestIds.usagePercentage;
-  var _useState = (0, _react.useState)(false),
-    _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-    isInitUsageDone = _useState2[0],
-    setIsInitUsageDone = _useState2[1];
-  (0, _element.useEffect)(function () {
-    if (!isInitUsageDone && !isLoadingUserInfo && (initialUsagePercentage || 0 === initialUsagePercentage)) {
-      updateUsagePercentage(initialUsagePercentage);
-      setIsInitUsageDone(true);
-    }
-  }, [isLoadingUserInfo, initialUsagePercentage, isInitUsageDone, updateUsagePercentage]);
-  var generateExcerptOnce = (0, _react.useRef)(false);
-  var _useState3 = (0, _react.useState)(true),
-    _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-    isLoadingCombined = _useState4[0],
-    setIsLoadingCombined = _useState4[1];
-  var initHook = function initHook() {
-    return {
-      isLoading: isLoadingCombined,
-      isConnected: isConnected,
-      isGetStarted: isGetStarted,
-      connectUrl: connectUrl,
-      fetchData: fetchData,
-      hasSubscription: hasSubscription,
-      credits: credits,
-      usagePercentage: usagePercentage
-    };
-  };
-  var fetchAiExcerpt = (0, _element.useCallback)( /*#__PURE__*/(0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-    return _regenerator.default.wrap(function _callee$(_context) {
-      while (1) switch (_context.prev = _context.next) {
-        case 0:
-          if (!(send && postTextualContent)) {
-            _context.next = 4;
-            break;
-          }
-          generateExcerptOnce.current = true;
-          _context.next = 4;
-          return send({
-            content: postTextualContent
-          }).finally(function () {
-            setIsLoadingCombined(false);
-          });
-        case 4:
-        case "end":
-          return _context.stop();
-      }
-    }, _callee);
-  })), [postTextualContent, send]);
-  (0, _element.useEffect)(function () {
-    if (!generateExcerptOnce.current && isConnected && isGetStarted) {
-      fetchAiExcerpt();
-    }
-  }, [fetchAiExcerpt, isConnected, isGetStarted]);
-  (0, _element.useEffect)(function () {
-    if (!isLoadingUserInfo && (!isConnected || !isGetStarted)) {
-      setIsLoadingCombined(false);
-    }
-  }, [isConnected, isGetStarted, isLoadingUserInfo]);
-  var isRTL = elementorCommon.config.isRTL;
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_app.default, {
-    type: 'text',
-    getControlValue: function getControlValue() {
-      return newExcerpt.result ? newExcerpt : currExcerpt;
-    },
-    setControlValue: function setControlValue(value) {
-      return updateExcerpt(value);
-    },
-    onClose: onClose,
-    isRTL: isRTL,
-    additionalOptions: {
-      loadingTitle: (0, _i18n.__)('Analyzing your post to craft an excerpt...', 'elementor'),
-      useCustomInit: initHook,
-      initError: error,
-      initRetry: fetchAiExcerpt
-    }
-  }));
-};
-AIExcerpt.propTypes = {
-  onClose: _propTypes.default.func.isRequired,
-  updateExcerpt: _propTypes.default.func.isRequired,
-  currExcerpt: _propTypes.default.string.isRequired,
-  postTextualContent: _propTypes.default.string.isRequired
-};
-var _default = AIExcerpt;
-exports["default"] = _default;
-
-/***/ }),
-
 /***/ "../modules/ai/assets/js/editor/api/index.js":
 /*!***************************************************!*\
   !*** ../modules/ai/assets/js/editor/api/index.js ***!
@@ -6193,88 +6053,6 @@ var useDeletePromptHistoryItem = function useDeletePromptHistoryItem() {
   };
 };
 var _default = useDeletePromptHistoryItem;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "../modules/ai/assets/js/editor/hooks/use-excerpt-prompt.js":
-/*!******************************************************************!*\
-  !*** ../modules/ai/assets/js/editor/hooks/use-excerpt-prompt.js ***!
-  \******************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = void 0;
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ "../node_modules/@babel/runtime/regenerator/index.js"));
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "../node_modules/@babel/runtime/helpers/asyncToGenerator.js"));
-var _api = __webpack_require__(/*! ../api */ "../modules/ai/assets/js/editor/api/index.js");
-var _usePrompt = _interopRequireDefault(__webpack_require__(/*! ./use-prompt */ "../modules/ai/assets/js/editor/hooks/use-prompt.js"));
-var useExcerptPrompt = function useExcerptPrompt(initialValue) {
-  return (0, _usePrompt.default)( /*#__PURE__*/function () {
-    var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(payload) {
-      return _regenerator.default.wrap(function _callee$(_context) {
-        while (1) switch (_context.prev = _context.next) {
-          case 0:
-            return _context.abrupt("return", (0, _api.getExcerpt)(payload));
-          case 1:
-          case "end":
-            return _context.stop();
-        }
-      }, _callee);
-    }));
-    return function (_x) {
-      return _ref.apply(this, arguments);
-    };
-  }(), initialValue);
-};
-var _default = useExcerptPrompt;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "../modules/ai/assets/js/editor/hooks/use-featured-image-prompt.js":
-/*!*************************************************************************!*\
-  !*** ../modules/ai/assets/js/editor/hooks/use-featured-image-prompt.js ***!
-  \*************************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = void 0;
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ "../node_modules/@babel/runtime/regenerator/index.js"));
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "../node_modules/@babel/runtime/helpers/asyncToGenerator.js"));
-var _api = __webpack_require__(/*! ../api */ "../modules/ai/assets/js/editor/api/index.js");
-var _useImagePrompt = _interopRequireDefault(__webpack_require__(/*! ../pages/form-media/hooks/use-image-prompt */ "../modules/ai/assets/js/editor/pages/form-media/hooks/use-image-prompt.js"));
-var useFeaturedImagePrompt = function useFeaturedImagePrompt(initialValue) {
-  return (0, _useImagePrompt.default)( /*#__PURE__*/function () {
-    var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(payload) {
-      return _regenerator.default.wrap(function _callee$(_context) {
-        while (1) switch (_context.prev = _context.next) {
-          case 0:
-            return _context.abrupt("return", (0, _api.getFeaturedImage)(payload));
-          case 1:
-          case "end":
-            return _context.stop();
-        }
-      }, _callee);
-    }));
-    return function (_x) {
-      return _ref.apply(this, arguments);
-    };
-  }(), initialValue);
-};
-var _default = useFeaturedImagePrompt;
 exports["default"] = _default;
 
 /***/ }),
@@ -17664,406 +17442,6 @@ function wrapContainer(container, wrapper) {
 
 /***/ }),
 
-/***/ "../modules/ai/assets/js/gutenberg/edit-text-with-ai.js":
-/*!**************************************************************!*\
-  !*** ../modules/ai/assets/js/gutenberg/edit-text-with-ai.js ***!
-  \**************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-/* provided dependency */ var PropTypes = __webpack_require__(/*! prop-types */ "../node_modules/prop-types/index.js");
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports.EditTextWithAi = void 0;
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "../node_modules/@babel/runtime/helpers/slicedToArray.js"));
-var _element = __webpack_require__(/*! @wordpress/element */ "../node_modules/@wordpress/element/build-module/index.js");
-var _i18n = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-var _textWithAi = __webpack_require__(/*! ./text-with-ai */ "../modules/ai/assets/js/gutenberg/text-with-ai.js");
-var _icons = __webpack_require__(/*! @elementor/icons */ "@elementor/icons");
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-var ToolbarButton = wp.components.ToolbarButton;
-var BlockControls = wp.blockEditor.BlockControls;
-var EditTextWithAi = function EditTextWithAi(props) {
-  var _useState = (0, _element.useState)(false),
-    _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-    shouldRenderAiApp = _useState2[0],
-    setShouldRenderAiApp = _useState2[1];
-  var BlockEdit = props.blockEdit;
-  var supportedBlocks = ['core/paragraph', 'core/heading'];
-  if (!supportedBlocks.includes(props.name)) {
-    return /*#__PURE__*/_react.default.createElement(BlockEdit, props);
-  }
-  if (shouldRenderAiApp) {
-    return /*#__PURE__*/_react.default.createElement(_textWithAi.AiText, {
-      onClose: function onClose() {
-        return setShouldRenderAiApp(false);
-      },
-      blockName: props.name,
-      initialValue: props.attributes.content ? String(props.attributes.content) : '',
-      blockClientId: props.clientId
-    });
-  }
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(BlockControls, null, /*#__PURE__*/_react.default.createElement(ToolbarButton, {
-    icon: /*#__PURE__*/_react.default.createElement(_icons.AIIcon, {
-      color: "secondary"
-    }),
-    label: (0, _i18n.__)('Edit with Elementor AI', 'elementor'),
-    onClick: function onClick() {
-      return setShouldRenderAiApp(true);
-    }
-  })), /*#__PURE__*/_react.default.createElement(BlockEdit, props));
-};
-exports.EditTextWithAi = EditTextWithAi;
-EditTextWithAi.propTypes = {
-  name: PropTypes.string,
-  blockEdit: PropTypes.func,
-  attributes: PropTypes.object,
-  clientId: PropTypes.string
-};
-
-/***/ }),
-
-/***/ "../modules/ai/assets/js/gutenberg/excerpt.js":
-/*!****************************************************!*\
-  !*** ../modules/ai/assets/js/gutenberg/excerpt.js ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = void 0;
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "../node_modules/@babel/runtime/helpers/slicedToArray.js"));
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-var _element = __webpack_require__(/*! @wordpress/element */ "../node_modules/@wordpress/element/build-module/index.js");
-var _requestsIds = __webpack_require__(/*! ../editor/context/requests-ids */ "../modules/ai/assets/js/editor/context/requests-ids.js");
-var _i18n = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-var _styles = __webpack_require__(/*! ./styles */ "../modules/ai/assets/js/gutenberg/styles.js");
-var _aiExcerpt = _interopRequireDefault(__webpack_require__(/*! ../editor/ai-excerpt */ "../modules/ai/assets/js/editor/ai-excerpt.js"));
-var _postTextUtils = __webpack_require__(/*! ./post-text-utils */ "../modules/ai/assets/js/gutenberg/post-text-utils.js");
-var _wp$data = wp.data,
-  useSelect = _wp$data.useSelect,
-  useDispatch = _wp$data.useDispatch;
-var GenerateExcerptWithAI = function GenerateExcerptWithAI() {
-  var _useState = (0, _element.useState)(false),
-    _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-    isOpen = _useState2[0],
-    setIsOpen = _useState2[1];
-  var currExcerpt = useSelect(function (select) {
-    var _select;
-    return (_select = select('core/editor')) === null || _select === void 0 ? void 0 : _select.getEditedPostAttribute('excerpt');
-  }, []);
-  var _useDispatch = useDispatch('core/editor'),
-    editPost = _useDispatch.editPost;
-  var postTextualContent = (0, _postTextUtils.useGutenbergPostText)();
-  var handleButtonClick = function handleButtonClick() {
-    setIsOpen(true);
-  };
-  var handleClose = function handleClose() {
-    setIsOpen(false);
-  };
-  return /*#__PURE__*/_react.default.createElement("div", {
-    style: {
-      paddingTop: '0.6em'
-    }
-  }, /*#__PURE__*/_react.default.createElement(_requestsIds.RequestIdsProvider, null, /*#__PURE__*/_react.default.createElement(_styles.Icon, {
-    className: 'eicon-ai'
-  }), /*#__PURE__*/_react.default.createElement(_styles.AiLink, {
-    onClick: handleButtonClick
-  }, (0, _i18n.__)('Generate with Elementor AI', 'elementor')), isOpen && /*#__PURE__*/_react.default.createElement(_aiExcerpt.default, {
-    onClose: handleClose,
-    currExcerpt: currExcerpt,
-    updateExcerpt: function updateExcerpt(res) {
-      return editPost({
-        excerpt: res
-      });
-    },
-    postTextualContent: postTextualContent
-  })));
-};
-var _default = GenerateExcerptWithAI;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "../modules/ai/assets/js/gutenberg/featured-image.js":
-/*!***********************************************************!*\
-  !*** ../modules/ai/assets/js/gutenberg/featured-image.js ***!
-  \***********************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = void 0;
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "../node_modules/@babel/runtime/helpers/slicedToArray.js"));
-var _requestsIds = __webpack_require__(/*! ../editor/context/requests-ids */ "../modules/ai/assets/js/editor/context/requests-ids.js");
-var _i18n = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-var _components = __webpack_require__(/*! ../media-library/components */ "../modules/ai/assets/js/media-library/components.js");
-var _postTextUtils = __webpack_require__(/*! ./post-text-utils */ "../modules/ai/assets/js/gutenberg/post-text-utils.js");
-var _styles = __webpack_require__(/*! ./styles */ "../modules/ai/assets/js/gutenberg/styles.js");
-var _element = __webpack_require__(/*! @wordpress/element */ "../node_modules/@wordpress/element/build-module/index.js");
-var _useFeaturedImagePrompt = _interopRequireDefault(__webpack_require__(/*! ../editor/hooks/use-featured-image-prompt */ "../modules/ai/assets/js/editor/hooks/use-featured-image-prompt.js"));
-var useDispatch = wp.data.useDispatch;
-var GenerateFeaturedImageWithAI = function GenerateFeaturedImageWithAI() {
-  var FEATURED_IMAGE_RATIO = '4:3';
-  var _useDispatch = useDispatch('core/editor'),
-    editPost = _useDispatch.editPost;
-  var _useState = (0, _element.useState)(false),
-    _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-    isOpen = _useState2[0],
-    setIsOpen = _useState2[1];
-  var handleButtonClick = function handleButtonClick() {
-    setIsOpen(true);
-  };
-  var handleClose = function handleClose() {
-    setIsOpen(false);
-  };
-  var postTextualContent = (0, _postTextUtils.useGutenbergPostText)();
-  return /*#__PURE__*/_react.default.createElement("div", {
-    style: {
-      paddingTop: '0.6em'
-    }
-  }, /*#__PURE__*/_react.default.createElement(_requestsIds.RequestIdsProvider, null, /*#__PURE__*/_react.default.createElement(_styles.Icon, {
-    className: 'eicon-ai'
-  }), /*#__PURE__*/_react.default.createElement(_styles.AiLink, {
-    onClick: handleButtonClick
-  }, (0, _i18n.__)('Generate with Elementor AI', 'elementor')), isOpen && /*#__PURE__*/_react.default.createElement(_components.AIMediaGenerateApp, {
-    onClose: handleClose,
-    predefinedPrompt: postTextualContent,
-    textToImageHook: _useFeaturedImagePrompt.default,
-    setControlValue: function setControlValue(value) {
-      editPost({
-        featured_media: value === null || value === void 0 ? void 0 : value.id
-      });
-    },
-    initialSettings: {
-      aspectRatio: FEATURED_IMAGE_RATIO
-    }
-  })));
-};
-var _default = GenerateFeaturedImageWithAI;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "../modules/ai/assets/js/gutenberg/post-text-utils.js":
-/*!************************************************************!*\
-  !*** ../modules/ai/assets/js/gutenberg/post-text-utils.js ***!
-  \************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports.useGutenbergPostText = void 0;
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "../node_modules/@babel/runtime/helpers/slicedToArray.js"));
-var _element = __webpack_require__(/*! @wordpress/element */ "../node_modules/@wordpress/element/build-module/index.js");
-var useSelect = wp.data.useSelect;
-var useGutenbergPostText = function useGutenbergPostText() {
-  var postContent = useSelect(function (select) {
-    var _select;
-    return (_select = select('core/editor')) === null || _select === void 0 ? void 0 : _select.getEditedPostContent();
-  }, []);
-  var title = useSelect(function (select) {
-    var _select2;
-    return (_select2 = select('core/editor')) === null || _select2 === void 0 ? void 0 : _select2.getEditedPostAttribute('title');
-  }, []);
-  var _useState = (0, _element.useState)(''),
-    _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-    postTextualContent = _useState2[0],
-    setPostTextualContent = _useState2[1];
-  (0, _element.useEffect)(function () {
-    var tempDiv = document.createElement('div');
-    tempDiv.innerHTML = postContent;
-    var extractedText = [title];
-    function extractTextRecursively(element, extractedTextRec) {
-      element.childNodes.forEach(function (node) {
-        if (node.nodeType === Node.TEXT_NODE) {
-          var text = node.textContent.trim();
-          if (text) {
-            extractedTextRec.push(text);
-          }
-        } else if (node.nodeType === Node.ELEMENT_NODE) {
-          extractTextRecursively(node, extractedTextRec);
-        }
-      });
-    }
-    extractTextRecursively(tempDiv, extractedText);
-    setPostTextualContent(extractedText.join('\n').trim());
-  }, [postContent, title]);
-  return postTextualContent;
-};
-exports.useGutenbergPostText = useGutenbergPostText;
-
-/***/ }),
-
-/***/ "../modules/ai/assets/js/gutenberg/styles.js":
-/*!***************************************************!*\
-  !*** ../modules/ai/assets/js/gutenberg/styles.js ***!
-  \***************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports.Icon = exports.AiLink = void 0;
-var _taggedTemplateLiteral2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/taggedTemplateLiteral */ "../node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js"));
-var _styledComponents = _interopRequireDefault(__webpack_require__(/*! styled-components */ "../node_modules/styled-components/dist/styled-components.browser.esm.js"));
-var _templateObject, _templateObject2;
-var Icon = _styledComponents.default.i(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2.default)(["\n  padding-inline-end: 0.5em;\n  cursor: pointer;\n  color: #C00BB9;\n"])));
-exports.Icon = Icon;
-var AiLink = _styledComponents.default.a(_templateObject2 || (_templateObject2 = (0, _taggedTemplateLiteral2.default)(["\n  color: #C00BB9;\n  cursor: pointer;\n  font-family: inherit;\n  font-size: inherit;\n  &:hover {\n    text-decoration: underline;\n    color: #C00BB9;\n  }\n"])));
-exports.AiLink = AiLink;
-
-/***/ }),
-
-/***/ "../modules/ai/assets/js/gutenberg/text-with-ai.js":
-/*!*********************************************************!*\
-  !*** ../modules/ai/assets/js/gutenberg/text-with-ai.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports.GenerateTextWithAi = exports.AiText = void 0;
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "../node_modules/@babel/runtime/helpers/slicedToArray.js"));
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "../node_modules/@babel/runtime/helpers/defineProperty.js"));
-var _element = __webpack_require__(/*! @wordpress/element */ "../node_modules/@wordpress/element/build-module/index.js");
-var _requestsIds = __webpack_require__(/*! ../editor/context/requests-ids */ "../modules/ai/assets/js/editor/context/requests-ids.js");
-var _styles = __webpack_require__(/*! ./styles */ "../modules/ai/assets/js/gutenberg/styles.js");
-var _i18n = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-var _app = _interopRequireDefault(__webpack_require__(/*! ../editor/app */ "../modules/ai/assets/js/editor/app.js"));
-var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "../node_modules/prop-types/index.js"));
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-var _wp$data = wp.data,
-  useDispatch = _wp$data.useDispatch,
-  useSelect = _wp$data.useSelect;
-var createBlock = wp.blocks.createBlock;
-var AiText = function AiText(_ref) {
-  var onClose = _ref.onClose,
-    blockName = _ref.blockName,
-    _ref$initialValue = _ref.initialValue,
-    initialValue = _ref$initialValue === void 0 ? '' : _ref$initialValue,
-    _ref$blockClientId = _ref.blockClientId,
-    blockClientId = _ref$blockClientId === void 0 ? '' : _ref$blockClientId;
-  var _useDispatch = useDispatch('core/block-editor'),
-    replaceBlocks = _useDispatch.replaceBlocks,
-    insertBlocks = _useDispatch.insertBlocks;
-  var insertTextIntoParagraph = function insertTextIntoParagraph(text) {
-    if (paragraphBlock) {
-      var updatedBlock = _objectSpread(_objectSpread({}, paragraphBlock), {}, {
-        attributes: _objectSpread(_objectSpread({}, paragraphBlock.attributes), {}, {
-          content: text
-        })
-      });
-      replaceBlocks(paragraphBlock.clientId, updatedBlock);
-    } else {
-      var newBlock = createBlock(blockName, {
-        content: text
-      });
-      insertBlocks(newBlock);
-    }
-  };
-  var isRTL = elementorCommon.config.isRTL;
-  var _useSelect = useSelect(function () {
-      var _wp$data$select;
-      var currentBlocks = (_wp$data$select = wp.data.select('core/block-editor')) === null || _wp$data$select === void 0 ? void 0 : _wp$data$select.getBlocks();
-      var foundParagraphBlock = currentBlocks.find(function (block) {
-        return blockName === block.name && blockClientId === block.clientId;
-      });
-      return {
-        blocks: currentBlocks,
-        paragraphBlock: foundParagraphBlock
-      };
-    }, []),
-    paragraphBlock = _useSelect.paragraphBlock;
-  var appType = 'core/paragraph' === blockName ? 'textarea' : 'text';
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_app.default, {
-    type: appType,
-    getControlValue: function getControlValue() {
-      return initialValue;
-    },
-    setControlValue: function setControlValue(value) {
-      insertTextIntoParagraph(value);
-    },
-    onClose: onClose,
-    isRTL: isRTL,
-    additionalOptions: {
-      hideAiContext: true
-    }
-  }));
-};
-exports.AiText = AiText;
-AiText.propTypes = {
-  onClose: _propTypes.default.func.isRequired,
-  blockName: _propTypes.default.string.isRequired,
-  initialValue: _propTypes.default.string,
-  blockClientId: _propTypes.default.string
-};
-var GenerateTextWithAi = function GenerateTextWithAi(_ref2) {
-  var blockName = _ref2.blockName,
-    blockClientId = _ref2.blockClientId;
-  var _useState = (0, _element.useState)(false),
-    _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-    isOpen = _useState2[0],
-    setIsOpen = _useState2[1];
-  var handleButtonClick = function handleButtonClick() {
-    setIsOpen(true);
-  };
-  var handleClose = function handleClose() {
-    setIsOpen(false);
-  };
-  return /*#__PURE__*/_react.default.createElement("div", {
-    style: {
-      paddingTop: '0.6em'
-    }
-  }, /*#__PURE__*/_react.default.createElement(_requestsIds.RequestIdsProvider, null, /*#__PURE__*/_react.default.createElement(_styles.Icon, {
-    className: 'eicon-ai'
-  }), /*#__PURE__*/_react.default.createElement(_styles.AiLink, {
-    onClick: handleButtonClick
-  }, (0, _i18n.__)('Generate with Elementor AI', 'elementor')), isOpen && /*#__PURE__*/_react.default.createElement(AiText, {
-    onClose: handleClose,
-    blockName: blockName,
-    blockClientId: blockClientId
-  })));
-};
-exports.GenerateTextWithAi = GenerateTextWithAi;
-GenerateTextWithAi.propTypes = {
-  blockName: _propTypes.default.string.isRequired,
-  blockClientId: _propTypes.default.string.isRequired
-};
-
-/***/ }),
-
 /***/ "../modules/ai/assets/js/media-library/components.js":
 /*!***********************************************************!*\
   !*** ../modules/ai/assets/js/media-library/components.js ***!
@@ -18135,6 +17513,226 @@ AIMediaEditApp.propTypes = {
   onClose: _propTypes.default.func.isRequired,
   imageId: _propTypes.default.string
 };
+
+/***/ }),
+
+/***/ "../modules/ai/assets/js/media-library/edit-button.js":
+/*!************************************************************!*\
+  !*** ../modules/ai/assets/js/media-library/edit-button.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "../node_modules/@babel/runtime/helpers/typeof.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "../node_modules/@babel/runtime/helpers/slicedToArray.js"));
+var _taggedTemplateLiteral2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/taggedTemplateLiteral */ "../node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js"));
+var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "react"));
+var _requestsIds = __webpack_require__(/*! ../editor/context/requests-ids */ "../modules/ai/assets/js/editor/context/requests-ids.js");
+var _styledComponents = _interopRequireDefault(__webpack_require__(/*! styled-components */ "../node_modules/styled-components/dist/styled-components.browser.esm.js"));
+var _i18n = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+var _utils = __webpack_require__(/*! ./utils */ "../modules/ai/assets/js/media-library/utils.js");
+var _components = __webpack_require__(/*! ./components */ "../modules/ai/assets/js/media-library/components.js");
+var _templateObject, _templateObject2;
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+var Icon = _styledComponents.default.i(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2.default)(["\n\tcolor: var(--e-a-color-primary-bold);\n\tpadding-inline-end: 0.5em;\n\tcursor: pointer;\n"])));
+var StyledButton = _styledComponents.default.a(_templateObject2 || (_templateObject2 = (0, _taggedTemplateLiteral2.default)(["\n\tfont: inherit;\n\tdisplay: inline-block;\n\tfont-size: 13px;\n\tline-height: 2.15384615;\n\tpadding: 0 10px;\n\tcursor: pointer;\n\tborder-width: 1px;\n\tborder-style: solid;\n\tborder-radius: 3px;\n\tbackground: #f6f7f7;\n\tcolor: var(--e-a-color-primary-bold);\n\n\t&:hover {\n\t\tcolor: var(--e-a-color-primary-bold);\n\t\tbackground: #eeefef;\n\t}\n"])));
+var AIMediaEditAppButtonWrapper = function AIMediaEditAppButtonWrapper() {
+  var _useState = (0, _react.useState)(false),
+    _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+    isOpen = _useState2[0],
+    setIsOpen = _useState2[1];
+  var _useState3 = (0, _react.useState)(_utils.getImageId),
+    _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
+    imageId = _useState4[0],
+    setImageId = _useState4[1];
+  var handleClick = function handleClick() {
+    setImageId((0, _utils.getImageId)());
+    setIsOpen(true);
+  };
+  var handleClose = function handleClose() {
+    var _wp$media$frame, _wp$media$frame$contr, _wp$media$frame$contr2, _wp$media$frame$contr3;
+    (_wp$media$frame = wp.media.frame) === null || _wp$media$frame === void 0 ? void 0 : (_wp$media$frame$contr = _wp$media$frame.controller) === null || _wp$media$frame$contr === void 0 ? void 0 : (_wp$media$frame$contr2 = _wp$media$frame$contr.content) === null || _wp$media$frame$contr2 === void 0 ? void 0 : (_wp$media$frame$contr3 = _wp$media$frame$contr2.get().collection) === null || _wp$media$frame$contr3 === void 0 ? void 0 : _wp$media$frame$contr3._requery(true); // Refresh the media library
+    setIsOpen(false);
+  };
+  return /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      marginLeft: '0.5em'
+    }
+  }, /*#__PURE__*/_react.default.createElement(_requestsIds.RequestIdsProvider, null, /*#__PURE__*/_react.default.createElement(StyledButton, {
+    onClick: handleClick
+  }, /*#__PURE__*/_react.default.createElement(Icon, {
+    className: 'eicon-ai'
+  }), (0, _i18n.__)('Edit with Elementor AI', 'elementor')), isOpen && /*#__PURE__*/_react.default.createElement(_components.AIMediaEditApp, {
+    onClose: handleClose,
+    imageId: imageId
+  })));
+};
+var _default = AIMediaEditAppButtonWrapper;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "../modules/ai/assets/js/media-library/edit-link.js":
+/*!**********************************************************!*\
+  !*** ../modules/ai/assets/js/media-library/edit-link.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "../node_modules/@babel/runtime/helpers/typeof.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "../node_modules/@babel/runtime/helpers/slicedToArray.js"));
+var _taggedTemplateLiteral2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/taggedTemplateLiteral */ "../node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js"));
+var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "react"));
+var _requestsIds = __webpack_require__(/*! ../editor/context/requests-ids */ "../modules/ai/assets/js/editor/context/requests-ids.js");
+var _styledComponents = _interopRequireDefault(__webpack_require__(/*! styled-components */ "../node_modules/styled-components/dist/styled-components.browser.esm.js"));
+var _i18n = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+var _utils = __webpack_require__(/*! ./utils */ "../modules/ai/assets/js/media-library/utils.js");
+var _components = __webpack_require__(/*! ./components */ "../modules/ai/assets/js/media-library/components.js");
+var _templateObject;
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+var ImageLink = _styledComponents.default.a(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2.default)(["\n\t&& {\n\t\tcolor: var(--e-a-color-primary-bold);\n\t\tcursor: pointer;\n\t\tfont-size: inherit;\n\t\tdisplay: inline-block;\n\n\t\t&:hover {\n\t\t\tcolor: var(--e-a-color-primary-bold);\n\t\t}\n\t}\n"])));
+var AIMediaEditAppLinkWrapper = function AIMediaEditAppLinkWrapper() {
+  var _useState = (0, _react.useState)(false),
+    _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+    isOpen = _useState2[0],
+    setIsOpen = _useState2[1];
+  var _useState3 = (0, _react.useState)(_utils.getImageId),
+    _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
+    imageId = _useState4[0],
+    setImageId = _useState4[1];
+  var handleClick = function handleClick() {
+    setImageId((0, _utils.getImageId)());
+    setIsOpen(true);
+  };
+  var handleClose = function handleClose() {
+    var _wp$media$frame, _wp$media$frame$conte, _wp$media$frame$conte2;
+    (_wp$media$frame = wp.media.frame) === null || _wp$media$frame === void 0 ? void 0 : (_wp$media$frame$conte = _wp$media$frame.content) === null || _wp$media$frame$conte === void 0 ? void 0 : (_wp$media$frame$conte2 = _wp$media$frame$conte.get().collection) === null || _wp$media$frame$conte2 === void 0 ? void 0 : _wp$media$frame$conte2._requery(true); // Refresh the media library
+    setIsOpen(false);
+  };
+  return /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      paddingTop: '0.2em'
+    }
+  }, /*#__PURE__*/_react.default.createElement(_requestsIds.RequestIdsProvider, null, /*#__PURE__*/_react.default.createElement(ImageLink, {
+    onClick: handleClick
+  }, (0, _i18n.__)('Edit with Elementor AI', 'elementor')), isOpen && /*#__PURE__*/_react.default.createElement(_components.AIMediaEditApp, {
+    onClose: handleClose,
+    imageId: imageId
+  })));
+};
+var _default = AIMediaEditAppLinkWrapper;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "../modules/ai/assets/js/media-library/generate.js":
+/*!*********************************************************!*\
+  !*** ../modules/ai/assets/js/media-library/generate.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "../node_modules/@babel/runtime/helpers/typeof.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "../node_modules/@babel/runtime/helpers/slicedToArray.js"));
+var _taggedTemplateLiteral2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/taggedTemplateLiteral */ "../node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js"));
+var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "react"));
+var _requestsIds = __webpack_require__(/*! ../editor/context/requests-ids */ "../modules/ai/assets/js/editor/context/requests-ids.js");
+var _styledComponents = _interopRequireDefault(__webpack_require__(/*! styled-components */ "../node_modules/styled-components/dist/styled-components.browser.esm.js"));
+var _i18n = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+var _components = __webpack_require__(/*! ./components */ "../modules/ai/assets/js/media-library/components.js");
+var _templateObject, _templateObject2;
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+var Icon = _styledComponents.default.i(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2.default)(["\n\tpadding-right: 0.5em;\n\tcursor: pointer;\n"])));
+var StyledButton = _styledComponents.default.a(_templateObject2 || (_templateObject2 = (0, _taggedTemplateLiteral2.default)(["\n\tcolor: var(--e-a-color-primary-bold);\n\tcursor: pointer;\n\tfont: inherit;\n\tdisplay: inline-block;\n\tposition: relative;\n\ttop: -3px;\n\tmargin-left: 4px;\n\tborder: 1px solid var(--e-a-color-primary-bold);\n\tborder-radius: 3px;\n\tline-height: 2.15384615;\n\tpadding: 0 10px;\n\tbackground: #f6f7f7;\n\n\t&:hover {\n\t\tcolor: var(--e-a-color-primary-bold);\n\t\tbackground: #eeefef;\n\t}\n"])));
+var AIMediaGenerateAppWrapper = function AIMediaGenerateAppWrapper() {
+  var _useState = (0, _react.useState)(false),
+    _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+    isOpen = _useState2[0],
+    setIsOpen = _useState2[1];
+  var handleClick = function handleClick() {
+    setIsOpen(true);
+  };
+  var handleClose = function handleClose() {
+    var _wp$media$frame, _wp$media$frame$conte, _wp$media$frame$conte2, _wp$media$frame$conte3;
+    (_wp$media$frame = wp.media.frame) === null || _wp$media$frame === void 0 ? void 0 : (_wp$media$frame$conte = _wp$media$frame.content) === null || _wp$media$frame$conte === void 0 ? void 0 : (_wp$media$frame$conte2 = _wp$media$frame$conte.get()) === null || _wp$media$frame$conte2 === void 0 ? void 0 : (_wp$media$frame$conte3 = _wp$media$frame$conte2.collection) === null || _wp$media$frame$conte3 === void 0 ? void 0 : _wp$media$frame$conte3._requery(true); // Refresh the media library.
+    setIsOpen(false);
+  };
+  return /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      padding: '0.5em'
+    }
+  }, /*#__PURE__*/_react.default.createElement(_requestsIds.RequestIdsProvider, null, /*#__PURE__*/_react.default.createElement(StyledButton, {
+    onClick: handleClick
+  }, /*#__PURE__*/_react.default.createElement(Icon, {
+    className: 'eicon-ai'
+  }), (0, _i18n.__)('Generate with Elementor AI', 'elementor')), isOpen && /*#__PURE__*/_react.default.createElement(_components.AIMediaGenerateApp, {
+    onClose: handleClose,
+    setControlValue: function setControlValue() {}
+  })));
+};
+var _default = AIMediaGenerateAppWrapper;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "../modules/ai/assets/js/media-library/utils.js":
+/*!******************************************************!*\
+  !*** ../modules/ai/assets/js/media-library/utils.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.getImageIdByUrl = exports.getImageId = void 0;
+var getImageId = function getImageId() {
+  var _wp$media, _wp$media$frames, _wp$media$frames$edit, _wp$media$frames$edit2, _wp$media$frames$edit3;
+  var imageId = (_wp$media = wp.media) === null || _wp$media === void 0 ? void 0 : (_wp$media$frames = _wp$media.frames) === null || _wp$media$frames === void 0 ? void 0 : (_wp$media$frames$edit = _wp$media$frames.edit) === null || _wp$media$frames$edit === void 0 ? void 0 : (_wp$media$frames$edit2 = _wp$media$frames$edit.model) === null || _wp$media$frames$edit2 === void 0 ? void 0 : (_wp$media$frames$edit3 = _wp$media$frames$edit2.id) === null || _wp$media$frames$edit3 === void 0 ? void 0 : _wp$media$frames$edit3.toString();
+  if (imageId) {
+    return imageId;
+  }
+
+  // In case the image is not in the current frame, we need to find it from the media library
+  return getImageIdByUrl();
+};
+exports.getImageId = getImageId;
+var getImageIdByUrl = function getImageIdByUrl() {
+  var _document$getElementB, _wp$media$frame, _wp$media$frame$conte, _wp$media$frame$conte2, _wp$media$frame$conte3;
+  var imageUrl = (_document$getElementB = document.getElementById('attachment-details-copy-link')) === null || _document$getElementB === void 0 ? void 0 : _document$getElementB.value;
+  var images = (_wp$media$frame = wp.media.frame) === null || _wp$media$frame === void 0 ? void 0 : (_wp$media$frame$conte = _wp$media$frame.content) === null || _wp$media$frame$conte === void 0 ? void 0 : (_wp$media$frame$conte2 = _wp$media$frame$conte.get()) === null || _wp$media$frame$conte2 === void 0 ? void 0 : (_wp$media$frame$conte3 = _wp$media$frame$conte2.collection) === null || _wp$media$frame$conte3 === void 0 ? void 0 : _wp$media$frame$conte3.models;
+  var image = Array.isArray(images) && images.find(function (img) {
+    return img.attributes.url === imageUrl;
+  });
+  return image ? image.attributes.id.toString() : null;
+};
+exports.getImageIdByUrl = getImageIdByUrl;
 
 /***/ }),
 
@@ -52473,165 +52071,95 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
-/*!**************************************************!*\
-  !*** ../modules/ai/assets/js/gutenberg/index.js ***!
-  \**************************************************/
+/*!******************************************************!*\
+  !*** ../modules/ai/assets/js/media-library/index.js ***!
+  \******************************************************/
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "../node_modules/@babel/runtime/helpers/extends.js"));
-var _element = __webpack_require__(/*! @wordpress/element */ "../node_modules/@wordpress/element/build-module/index.js");
-var _excerpt = _interopRequireDefault(__webpack_require__(/*! ./excerpt */ "../modules/ai/assets/js/gutenberg/excerpt.js"));
-var _featuredImage = _interopRequireDefault(__webpack_require__(/*! ./featured-image */ "../modules/ai/assets/js/gutenberg/featured-image.js"));
-var _textWithAi = __webpack_require__(/*! ./text-with-ai */ "../modules/ai/assets/js/gutenberg/text-with-ai.js");
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-var _editTextWithAi = __webpack_require__(/*! ./edit-text-with-ai */ "../modules/ai/assets/js/gutenberg/edit-text-with-ai.js");
+var _generate = _interopRequireDefault(__webpack_require__(/*! ./generate */ "../modules/ai/assets/js/media-library/generate.js"));
+var _element = __webpack_require__(/*! @wordpress/element */ "../node_modules/@wordpress/element/build-module/index.js");
+var _editButton = _interopRequireDefault(__webpack_require__(/*! ./edit-button */ "../modules/ai/assets/js/media-library/edit-button.js"));
+var _editLink = _interopRequireDefault(__webpack_require__(/*! ./edit-link */ "../modules/ai/assets/js/media-library/edit-link.js"));
 var _requestsIds = __webpack_require__(/*! ../editor/context/requests-ids */ "../modules/ai/assets/js/editor/context/requests-ids.js");
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-(function () {
-  'use strict';
-
-  window.EDITOR_SESSION_ID = (0, _requestsIds.getUniqueId)('wp-gutenberg-session');
-  // Wait for the Gutenberg editor to initialize
-  wp.domReady(function () {
-    // Define a function to add the custom link to the excerpt panel
-    var addGenerateExcerptWithAI = function addGenerateExcerptWithAI() {
-      // Get the excerpt panel
-      var excerptPanel = document.querySelector('.editor-post-excerpt');
-      // Check if the excerpt panel exists and the custom link hasn't been added
-      if (excerptPanel && !document.querySelector('.e-excerpt-ai')) {
-        var _elementorCommon, _elementorCommon$ajax;
-        var rootElement = document.createElement('div');
-        rootElement.classList.add('e-excerpt-ai');
-        excerptPanel.appendChild(rootElement);
-        var urlSearchParams = new URLSearchParams(window.location.search);
-        (_elementorCommon = elementorCommon) === null || _elementorCommon === void 0 ? void 0 : (_elementorCommon$ajax = _elementorCommon.ajax) === null || _elementorCommon$ajax === void 0 ? void 0 : _elementorCommon$ajax.addRequestConstant('editor_post_id', urlSearchParams === null || urlSearchParams === void 0 ? void 0 : urlSearchParams.get('post'));
-        var root = (0, _element.createRoot)(rootElement);
-        root.render( /*#__PURE__*/_react.default.createElement(_excerpt.default, null));
-      }
-    };
-    var addGenerateFeaturedImageWithAI = function addGenerateFeaturedImageWithAI() {
-      var featuredImagePanel = document.querySelector('.editor-post-featured-image');
-      if (featuredImagePanel && !document.querySelector('.e-featured-image-ai')) {
-        var _elementorCommon2, _elementorCommon2$aja;
-        var rootElement = document.createElement('div');
-        rootElement.classList.add('e-featured-image-ai');
-        featuredImagePanel.appendChild(rootElement);
-        var postId = wp.data.select('core/editor').getCurrentPostId();
-        (_elementorCommon2 = elementorCommon) === null || _elementorCommon2 === void 0 ? void 0 : (_elementorCommon2$aja = _elementorCommon2.ajax) === null || _elementorCommon2$aja === void 0 ? void 0 : _elementorCommon2$aja.addRequestConstant('editor_post_id', postId);
-        var root = (0, _element.createRoot)(rootElement);
-        root.render( /*#__PURE__*/_react.default.createElement(_featuredImage.default, null));
-      }
-    };
-    var addTextWithAI = function addTextWithAI(blockName, blockClientId) {
-      var textPanel = document.querySelector('.block-editor-block-card__description, .block-editor-block-card__content');
-      if (textPanel && !document.querySelector(".e-text-ai[data-client-id=\"".concat(blockClientId, "\"]"))) {
-        removeAiIndicator();
-        var rootElement = document.createElement('div');
-        rootElement.classList.add('e-text-ai');
-        rootElement.setAttribute('data-client-id', blockClientId);
-        textPanel.appendChild(rootElement);
-        var root = (0, _element.createRoot)(rootElement);
-        root.render( /*#__PURE__*/_react.default.createElement(_textWithAi.GenerateTextWithAi, {
-          blockName: blockName,
-          blockClientId: blockClientId
-        }));
-      }
-    };
-    var removeAiIndicator = function removeAiIndicator() {
-      var textPanel = document.querySelector('.e-text-ai');
-      if (textPanel) {
-        textPanel.remove();
-      }
-    };
-    var addAiIndicator = function addAiIndicator(panelName, functionAddAi) {
-      var _wp$data$select;
-      var isSidebarEnabled = (_wp$data$select = wp.data.select('core/edit-post')) === null || _wp$data$select === void 0 ? void 0 : _wp$data$select.isEditorPanelEnabled(panelName);
-      if (isSidebarEnabled) {
-        setTimeout(function () {
-          functionAddAi();
-        }, 1);
-      }
-    };
-    var addAiIndicatorToTextBlock = function addAiIndicatorToTextBlock(blockNames) {
-      var _wp$data$select2;
-      var selectedBlock = (_wp$data$select2 = wp.data.select('core/block-editor')) === null || _wp$data$select2 === void 0 ? void 0 : _wp$data$select2.getSelectedBlock();
-      if (selectedBlock && blockNames.some(function (name) {
-        return selectedBlock.name.includes(name);
-      })) {
-        addTextWithAI(selectedBlock.name, selectedBlock.clientId);
-      } else {
-        removeAiIndicator();
-      }
-    };
-    wp.data.subscribe(function () {
-      addAiIndicator('post-excerpt', addGenerateExcerptWithAI);
-      addAiIndicator('featured-image', addGenerateFeaturedImageWithAI);
-      addAiIndicatorToTextBlock(['paragraph', 'heading']);
-    });
-    var observer = new MutationObserver(function (mutationsList) {
-      var _iterator = _createForOfIteratorHelper(mutationsList),
-        _step;
-      try {
-        for (_iterator.s(); !(_step = _iterator.n()).done;) {
-          var mutation = _step.value;
-          if ('childList' === mutation.type) {
-            if (document.querySelector('.editor-post-excerpt')) {
-              addGenerateExcerptWithAI();
-            }
-          }
-        }
-      } catch (err) {
-        _iterator.e(err);
-      } finally {
-        _iterator.f();
-      }
-    });
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-    window.addEventListener('beforeunload', function () {
-      observer.disconnect();
-    });
+var isMediaLibrary = function isMediaLibrary() {
+  return window.location.href.includes('/upload.php');
+};
+var insertStyleTag = function insertStyleTag() {
+  var style = document.createElement('style');
+  // Make sure the dropdowns in the images feature appear above the AI modal, image hover is not overlapping,
+  // and the generate button placed correctly.
+  style.appendChild(document.createTextNode("\n\t\t#e-image-ai-attachment-details,\n\t\t#e-image-ai-media-library {\n\t\t\tdisplay: inline-block;\n\t\t}\n\t\t#e-form-media * {\n\t\t\tbox-sizing: border-box;\n\t\t}\n\t\t#menu- {\n\t\t\tz-index: 180000;\n\t\t}\n\t"));
+  document.head.appendChild(style);
+};
+var renderComponent = function renderComponent(containerId, Component) {
+  var container = document.getElementById(containerId);
+  if (container) {
+    var root = (0, _element.createRoot)(container);
+    root.render( /*#__PURE__*/_react.default.createElement(Component, null));
+  }
+};
+var addEventListener = function addEventListener(eventName, containerId, Component) {
+  window.addEventListener(eventName, function () {
+    setTimeout(function () {
+      return renderComponent(containerId, Component);
+    }, 1);
   });
-})(jQuery);
-(function (wp) {
-  var addFilter = wp.hooks.addFilter;
-  var addAiButtonToToolbar = function addAiButtonToToolbar(BlockEdit) {
-    return function (props) {
-      return /*#__PURE__*/_react.default.createElement(_editTextWithAi.EditTextWithAi, (0, _extends2.default)({}, props, {
-        blockEdit: BlockEdit
-      }));
-    };
-  };
-  addFilter('editor.BlockEdit', 'elementor-ai-toolbar-button', addAiButtonToToolbar);
-})(window.wp);
-(function () {
-  'use strict';
-
-  var setElementorWpAiCurrentContext = function setElementorWpAiCurrentContext() {
-    var selectedBlock = wp.data.select('core/block-editor').getSelectedBlock();
-    if (selectedBlock) {
-      var blockName = 'core/heading' === selectedBlock.name ? 'heading' : selectedBlock.name;
-      window.elementorWpAiCurrentContext = {
-        widgetType: blockName,
-        controlName: blockName
-      };
-    } else {
-      window.elementorWpAiCurrentContext = null;
+};
+(function (_wp, _wp$media, _wp$media$view, _wp$media$view$Attach, _wp2, _wp2$media, _wp2$media$view, _wp2$media$view$Attac, _wp2$media$view$Attac2) {
+  if (isMediaLibrary()) {
+    window.EDITOR_SESSION_ID = (0, _requestsIds.getUniqueId)('wp-media-lib-session');
+    var mediaLibrary = document.querySelector('.page-title-action');
+    if (mediaLibrary) {
+      var container = document.createElement('div');
+      container.id = 'e-image-ai-media-library';
+      mediaLibrary.insertAdjacentElement('afterend', container);
+      renderComponent('e-image-ai-media-library', _generate.default);
     }
-  };
-  wp.data.subscribe(setElementorWpAiCurrentContext);
-  var clearElementorAiCurrentContext = function clearElementorAiCurrentContext() {
-    window.elementorWpAiCurrentContext = null;
-  };
-  window.addEventListener('beforeunload', clearElementorAiCurrentContext);
+  }
+  if ((_wp = wp) !== null && _wp !== void 0 && (_wp$media = _wp.media) !== null && _wp$media !== void 0 && (_wp$media$view = _wp$media.view) !== null && _wp$media$view !== void 0 && (_wp$media$view$Attach = _wp$media$view.Attachment) !== null && _wp$media$view$Attach !== void 0 && _wp$media$view$Attach.Details) {
+    wp.media.view.Attachment.Details = wp.media.view.Attachment.Details.extend({
+      template: function template(view) {
+        var html = wp.media.template('attachment-details')(view);
+        var content = document.createElement('div');
+        content.innerHTML = html;
+        var compatMeta = content.querySelector('.dimensions');
+        if (!compatMeta) {
+          return content.innerHTML;
+        }
+        var container = document.createElement('div');
+        container.id = 'e-image-ai-insert-media';
+        compatMeta.insertAdjacentElement('beforeend', container);
+        window.dispatchEvent(new CustomEvent('renderInsertMediaEvent'));
+        return content.innerHTML;
+      }
+    });
+  }
+  if ((_wp2 = wp) !== null && _wp2 !== void 0 && (_wp2$media = _wp2.media) !== null && _wp2$media !== void 0 && (_wp2$media$view = _wp2$media.view) !== null && _wp2$media$view !== void 0 && (_wp2$media$view$Attac = _wp2$media$view.Attachment) !== null && _wp2$media$view$Attac !== void 0 && (_wp2$media$view$Attac2 = _wp2$media$view$Attac.Details) !== null && _wp2$media$view$Attac2 !== void 0 && _wp2$media$view$Attac2.TwoColumn) {
+    wp.media.view.Attachment.Details.TwoColumn = wp.media.view.Attachment.Details.TwoColumn.extend({
+      template: function template(view) {
+        var html = wp.media.template('attachment-details-two-column')(view);
+        var content = document.createElement('div');
+        content.innerHTML = html;
+        var details = content.querySelector('.attachment-actions');
+        if (!details) {
+          return content.innerHTML;
+        }
+        var container = document.createElement('div');
+        container.id = 'e-image-ai-attachment-details';
+        details.appendChild(container);
+        window.dispatchEvent(new CustomEvent('renderAttachmentsDetailsEvent'));
+        return content.innerHTML;
+      }
+    });
+  }
+  addEventListener('renderInsertMediaEvent', 'e-image-ai-insert-media', _editLink.default);
+  addEventListener('renderAttachmentsDetailsEvent', 'e-image-ai-attachment-details', _editButton.default);
+  insertStyleTag();
 })();
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=ai-gutenberg.js.map
+//# sourceMappingURL=ai-media-library.js.map

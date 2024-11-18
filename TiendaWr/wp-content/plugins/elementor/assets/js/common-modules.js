@@ -2084,260 +2084,6 @@ var autoBatchEnhancer = function (options) {
 
 /***/ }),
 
-/***/ "../app/assets/js/loader/commands/close.js":
-/*!*************************************************!*\
-  !*** ../app/assets/js/loader/commands/close.js ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = exports.Close = void 0;
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "../node_modules/@babel/runtime/helpers/classCallCheck.js"));
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "../node_modules/@babel/runtime/helpers/createClass.js"));
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "../node_modules/@babel/runtime/helpers/inherits.js"));
-var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
-var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "../node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-var Close = /*#__PURE__*/function (_$e$modules$CommandBa) {
-  (0, _inherits2.default)(Close, _$e$modules$CommandBa);
-  var _super = _createSuper(Close);
-  function Close() {
-    (0, _classCallCheck2.default)(this, Close);
-    return _super.apply(this, arguments);
-  }
-  (0, _createClass2.default)(Close, [{
-    key: "apply",
-    value: function apply() {
-      if (!this.component.close()) {
-        return false;
-      }
-      this.component.iframe.remove();
-      this.component.iframe = null;
-      return true;
-    }
-  }]);
-  return Close;
-}($e.modules.CommandBase);
-exports.Close = Close;
-var _default = Close;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "../app/assets/js/loader/commands/index.js":
-/*!*************************************************!*\
-  !*** ../app/assets/js/loader/commands/index.js ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-Object.defineProperty(exports, "Close", ({
-  enumerable: true,
-  get: function get() {
-    return _close.Close;
-  }
-}));
-Object.defineProperty(exports, "Load", ({
-  enumerable: true,
-  get: function get() {
-    return _load.Load;
-  }
-}));
-Object.defineProperty(exports, "Open", ({
-  enumerable: true,
-  get: function get() {
-    return _open.Open;
-  }
-}));
-var _close = __webpack_require__(/*! ./close */ "../app/assets/js/loader/commands/close.js");
-var _load = __webpack_require__(/*! ./load */ "../app/assets/js/loader/commands/load.js");
-var _open = __webpack_require__(/*! ./open */ "../app/assets/js/loader/commands/open.js");
-
-/***/ }),
-
-/***/ "../app/assets/js/loader/commands/load.js":
-/*!************************************************!*\
-  !*** ../app/assets/js/loader/commands/load.js ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = exports.Load = void 0;
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "../node_modules/@babel/runtime/helpers/classCallCheck.js"));
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "../node_modules/@babel/runtime/helpers/createClass.js"));
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "../node_modules/@babel/runtime/helpers/inherits.js"));
-var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
-var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "../node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-var Load = /*#__PURE__*/function (_$e$modules$CommandBa) {
-  (0, _inherits2.default)(Load, _$e$modules$CommandBa);
-  var _super = _createSuper(Load);
-  function Load() {
-    (0, _classCallCheck2.default)(this, Load);
-    return _super.apply(this, arguments);
-  }
-  (0, _createClass2.default)(Load, [{
-    key: "apply",
-    value: function apply(args) {
-      var component = this.component;
-      if (!component.iframe) {
-        component.iframe = document.createElement('iframe');
-        component.iframe.className = 'elementor-app-iframe';
-        component.iframe.style.cssText = '' + 'display: none;' + 'width: 100%;' + 'height: 100%;' + 'position: fixed;' + 'top: 0;' + 'left: 0;' + 'z-index: 99999; /* Over WP Admin Bar */' + 'background-color: rgba(0, 0, 0, 0.8);';
-        document.body.appendChild(component.iframe);
-      }
-      if (args.url === component.iframe.src) {
-        return;
-      }
-      component.iframe.src = args.url;
-    }
-  }]);
-  return Load;
-}($e.modules.CommandBase);
-exports.Load = Load;
-var _default = Load;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "../app/assets/js/loader/commands/open.js":
-/*!************************************************!*\
-  !*** ../app/assets/js/loader/commands/open.js ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = exports.Open = void 0;
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "../node_modules/@babel/runtime/helpers/classCallCheck.js"));
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "../node_modules/@babel/runtime/helpers/createClass.js"));
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "../node_modules/@babel/runtime/helpers/inherits.js"));
-var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
-var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "../node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-var Open = /*#__PURE__*/function (_$e$modules$CommandBa) {
-  (0, _inherits2.default)(Open, _$e$modules$CommandBa);
-  var _super = _createSuper(Open);
-  function Open() {
-    (0, _classCallCheck2.default)(this, Open);
-    return _super.apply(this, arguments);
-  }
-  (0, _createClass2.default)(Open, [{
-    key: "apply",
-    value: function apply(args) {
-      $e.route('app', args);
-      return true;
-    }
-  }]);
-  return Open;
-}($e.modules.CommandBase);
-exports.Open = Open;
-var _default = Open;
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "../app/assets/js/loader/component.js":
-/*!********************************************!*\
-  !*** ../app/assets/js/loader/component.js ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "../node_modules/@babel/runtime/helpers/typeof.js");
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = void 0;
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "../node_modules/@babel/runtime/helpers/classCallCheck.js"));
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "../node_modules/@babel/runtime/helpers/createClass.js"));
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "../node_modules/@babel/runtime/helpers/inherits.js"));
-var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
-var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "../node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
-var _componentBase = _interopRequireDefault(__webpack_require__(/*! elementor-api/modules/component-base */ "../modules/web-cli/assets/js/modules/component-base.js"));
-var commands = _interopRequireWildcard(__webpack_require__(/*! ./commands/ */ "../app/assets/js/loader/commands/index.js"));
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-var Component = /*#__PURE__*/function (_ComponentModalBase) {
-  (0, _inherits2.default)(Component, _ComponentModalBase);
-  var _super = _createSuper(Component);
-  function Component() {
-    (0, _classCallCheck2.default)(this, Component);
-    return _super.apply(this, arguments);
-  }
-  (0, _createClass2.default)(Component, [{
-    key: "getNamespace",
-    value: function getNamespace() {
-      return 'app';
-    }
-  }, {
-    key: "defaultRoutes",
-    value: function defaultRoutes() {
-      var _this = this;
-      return {
-        '': function _(args) {
-          args.url = args.url || elementorAppConfig.menu_url;
-          $e.run('app/load', args);
-          _this.iframe.style.display = '';
-          document.body.style.overflow = 'hidden';
-        }
-      };
-    }
-  }, {
-    key: "defaultCommands",
-    value: function defaultCommands() {
-      return this.importCommands(commands);
-    }
-  }, {
-    key: "defaultShortcuts",
-    value: function defaultShortcuts() {
-      return {
-        '': {
-          keys: 'ctrl+shift+e'
-        },
-        close: {
-          keys: 'esc',
-          scopes: [this.getNamespace()]
-        }
-      };
-    }
-  }]);
-  return Component;
-}(_componentBase.default);
-exports["default"] = Component;
-
-/***/ }),
-
 /***/ "../assets/dev/js/editor/utils/is-instanceof.js":
 /*!******************************************************!*\
   !*** ../assets/dev/js/editor/utils/is-instanceof.js ***!
@@ -2520,6 +2266,71 @@ var ArgsObject = /*#__PURE__*/function (_InstanceType) {
   return ArgsObject;
 }(_instanceType.default);
 exports["default"] = ArgsObject;
+
+/***/ }),
+
+/***/ "../assets/dev/js/modules/imports/force-method-implementation.js":
+/*!***********************************************************************!*\
+  !*** ../assets/dev/js/modules/imports/force-method-implementation.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = exports.ForceMethodImplementation = void 0;
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "../node_modules/@babel/runtime/helpers/createClass.js"));
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "../node_modules/@babel/runtime/helpers/classCallCheck.js"));
+var _assertThisInitialized2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "../node_modules/@babel/runtime/helpers/assertThisInitialized.js"));
+var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "../node_modules/@babel/runtime/helpers/inherits.js"));
+var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
+var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "../node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
+var _wrapNativeSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/wrapNativeSuper */ "../node_modules/@babel/runtime/helpers/wrapNativeSuper.js"));
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+// TODO: Wrong location used as `elementorModules.ForceMethodImplementation(); should be` `elementorUtils.forceMethodImplementation()`;
+var ForceMethodImplementation = /*#__PURE__*/function (_Error) {
+  (0, _inherits2.default)(ForceMethodImplementation, _Error);
+  var _super = _createSuper(ForceMethodImplementation);
+  function ForceMethodImplementation() {
+    var _this;
+    var info = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    var args = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    (0, _classCallCheck2.default)(this, ForceMethodImplementation);
+    _this = _super.call(this, "".concat(info.isStatic ? 'static ' : '').concat(info.fullName, "() should be implemented, please provide '").concat(info.functionName || info.fullName, "' functionality."), args);
+
+    // Allow to pass custom properties to the error.
+    if (Object.keys(args).length) {
+      // eslint-disable-next-line no-console
+      console.error(args);
+    }
+    Error.captureStackTrace((0, _assertThisInitialized2.default)(_this), ForceMethodImplementation);
+    return _this;
+  }
+  return (0, _createClass2.default)(ForceMethodImplementation);
+}( /*#__PURE__*/(0, _wrapNativeSuper2.default)(Error));
+exports.ForceMethodImplementation = ForceMethodImplementation;
+var _default = function _default(args) {
+  var stack = Error().stack,
+    caller = stack.split('\n')[2].trim(),
+    callerName = caller.startsWith('at new') ? 'constructor' : caller.split(' ')[1],
+    info = {};
+  info.functionName = callerName;
+  info.fullName = callerName;
+  if (info.functionName.includes('.')) {
+    var parts = info.functionName.split('.');
+    info.className = parts[0];
+    info.functionName = parts[1];
+  } else {
+    info.isStatic = true;
+  }
+  throw new ForceMethodImplementation(info, args);
+};
+exports["default"] = _default;
 
 /***/ }),
 
@@ -2769,6 +2580,600 @@ Module.extend = function (properties) {
   return child;
 };
 module.exports = Module;
+
+/***/ }),
+
+/***/ "../assets/dev/js/modules/imports/utils/masonry.js":
+/*!*********************************************************!*\
+  !*** ../assets/dev/js/modules/imports/utils/masonry.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _viewModule = _interopRequireDefault(__webpack_require__(/*! ../view-module */ "../assets/dev/js/modules/imports/view-module.js"));
+var _default = _viewModule.default.extend({
+  getDefaultSettings: function getDefaultSettings() {
+    return {
+      container: null,
+      items: null,
+      columnsCount: 3,
+      verticalSpaceBetween: 30
+    };
+  },
+  getDefaultElements: function getDefaultElements() {
+    return {
+      $container: jQuery(this.getSettings('container')),
+      $items: jQuery(this.getSettings('items'))
+    };
+  },
+  run: function run() {
+    var heights = [],
+      distanceFromTop = this.elements.$container.position().top,
+      settings = this.getSettings(),
+      columnsCount = settings.columnsCount;
+    distanceFromTop += parseInt(this.elements.$container.css('margin-top'), 10);
+    this.elements.$items.each(function (index) {
+      var row = Math.floor(index / columnsCount),
+        $item = jQuery(this),
+        itemHeight = $item[0].getBoundingClientRect().height + settings.verticalSpaceBetween;
+      if (row) {
+        var itemPosition = $item.position(),
+          indexAtRow = index % columnsCount,
+          pullHeight = itemPosition.top - distanceFromTop - heights[indexAtRow];
+        pullHeight -= parseInt($item.css('margin-top'), 10);
+        pullHeight *= -1;
+        $item.css('margin-top', pullHeight + 'px');
+        heights[indexAtRow] += itemHeight;
+      } else {
+        heights.push(itemHeight);
+      }
+    });
+  }
+});
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "../assets/dev/js/modules/imports/utils/scroll.js":
+/*!********************************************************!*\
+  !*** ../assets/dev/js/modules/imports/utils/scroll.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "../node_modules/@babel/runtime/helpers/classCallCheck.js"));
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "../node_modules/@babel/runtime/helpers/createClass.js"));
+// Moved from elementor pro: 'assets/dev/js/frontend/utils'
+var Scroll = /*#__PURE__*/function () {
+  function Scroll() {
+    (0, _classCallCheck2.default)(this, Scroll);
+  }
+  (0, _createClass2.default)(Scroll, null, [{
+    key: "scrollObserver",
+    value:
+    /**
+     * @param {Object}      obj
+     * @param {number}      obj.sensitivity - Value between 0-100 - Will determine the intersection trigger points on the element
+     * @param {Function}    obj.callback    - Will be triggered on each intersection point between the element and the viewport top/bottom
+     * @param {string}      obj.offset      - Offset between the element intersection points and the viewport, written like in CSS: '-50% 0 -25%'
+     * @param {HTMLElement} obj.root        - The element that the events will be relative to, if 'null' will be relative to the viewport
+     */
+    function scrollObserver(obj) {
+      var lastScrollY = 0;
+
+      // Generating thresholds points along the animation height
+      // More thresholds points = more trigger points of the callback
+      var buildThresholds = function buildThresholds() {
+        var sensitivityPercentage = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+        var thresholds = [];
+        if (sensitivityPercentage > 0 && sensitivityPercentage <= 100) {
+          var increment = 100 / sensitivityPercentage;
+          for (var i = 0; i <= 100; i += increment) {
+            thresholds.push(i / 100);
+          }
+        } else {
+          thresholds.push(0);
+        }
+        return thresholds;
+      };
+      var options = {
+        root: obj.root || null,
+        rootMargin: obj.offset || '0px',
+        threshold: buildThresholds(obj.sensitivity)
+      };
+      function handleIntersect(entries) {
+        var currentScrollY = entries[0].boundingClientRect.y,
+          isInViewport = entries[0].isIntersecting,
+          intersectionScrollDirection = currentScrollY < lastScrollY ? 'down' : 'up',
+          scrollPercentage = Math.abs(parseFloat((entries[0].intersectionRatio * 100).toFixed(2)));
+        obj.callback({
+          sensitivity: obj.sensitivity,
+          isInViewport: isInViewport,
+          scrollPercentage: scrollPercentage,
+          intersectionScrollDirection: intersectionScrollDirection
+        });
+        lastScrollY = currentScrollY;
+      }
+      return new IntersectionObserver(handleIntersect, options);
+    }
+
+    /**
+     * @param {jQuery.Element} $element
+     * @param {Object}         offsetObj
+     * @param {number}         offsetObj.start - Offset start value in percentages
+     * @param {number}         offsetObj.end   - Offset end value in percentages
+     */
+  }, {
+    key: "getElementViewportPercentage",
+    value: function getElementViewportPercentage($element) {
+      var offsetObj = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      var elementOffset = $element[0].getBoundingClientRect(),
+        offsetStart = offsetObj.start || 0,
+        offsetEnd = offsetObj.end || 0,
+        windowStartOffset = window.innerHeight * offsetStart / 100,
+        windowEndOffset = window.innerHeight * offsetEnd / 100,
+        y1 = elementOffset.top - window.innerHeight,
+        y2 = elementOffset.top + windowStartOffset + $element.height(),
+        startPosition = 0 - y1 + windowStartOffset,
+        endPosition = y2 - y1 + windowEndOffset,
+        percent = Math.max(0, Math.min(startPosition / endPosition, 1));
+      return parseFloat((percent * 100).toFixed(2));
+    }
+
+    /**
+     * @param {Object} offsetObj
+     * @param {number} offsetObj.start - Offset start value in percentages
+     * @param {number} offsetObj.end   - Offset end value in percentages
+     * @param {number} limitPageHeight - Will limit the page height calculation
+     */
+  }, {
+    key: "getPageScrollPercentage",
+    value: function getPageScrollPercentage() {
+      var offsetObj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      var limitPageHeight = arguments.length > 1 ? arguments[1] : undefined;
+      var offsetStart = offsetObj.start || 0,
+        offsetEnd = offsetObj.end || 0,
+        initialPageHeight = limitPageHeight || document.documentElement.scrollHeight - document.documentElement.clientHeight,
+        heightOffset = initialPageHeight * offsetStart / 100,
+        pageRange = initialPageHeight + heightOffset + initialPageHeight * offsetEnd / 100,
+        scrollPos = document.documentElement.scrollTop + document.body.scrollTop + heightOffset;
+      return scrollPos / pageRange * 100;
+    }
+  }]);
+  return Scroll;
+}();
+exports["default"] = Scroll;
+
+/***/ }),
+
+/***/ "../assets/dev/js/modules/imports/view-module.js":
+/*!*******************************************************!*\
+  !*** ../assets/dev/js/modules/imports/view-module.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _module = _interopRequireDefault(__webpack_require__(/*! ./module */ "../assets/dev/js/modules/imports/module.js"));
+var _default = _module.default.extend({
+  elements: null,
+  getDefaultElements: function getDefaultElements() {
+    return {};
+  },
+  bindEvents: function bindEvents() {},
+  onInit: function onInit() {
+    this.initElements();
+    this.bindEvents();
+  },
+  initElements: function initElements() {
+    this.elements = this.getDefaultElements();
+  }
+});
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "../assets/dev/js/modules/modules.js":
+/*!*******************************************!*\
+  !*** ../assets/dev/js/modules/modules.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _module = _interopRequireDefault(__webpack_require__(/*! ./imports/module */ "../assets/dev/js/modules/imports/module.js"));
+var _viewModule = _interopRequireDefault(__webpack_require__(/*! ./imports/view-module */ "../assets/dev/js/modules/imports/view-module.js"));
+var _argsObject = _interopRequireDefault(__webpack_require__(/*! ./imports/args-object */ "../assets/dev/js/modules/imports/args-object.js"));
+var _masonry = _interopRequireDefault(__webpack_require__(/*! ./imports/utils/masonry */ "../assets/dev/js/modules/imports/utils/masonry.js"));
+var _scroll = _interopRequireDefault(__webpack_require__(/*! ./imports/utils/scroll */ "../assets/dev/js/modules/imports/utils/scroll.js"));
+var _forceMethodImplementation = _interopRequireDefault(__webpack_require__(/*! ./imports/force-method-implementation */ "../assets/dev/js/modules/imports/force-method-implementation.js"));
+var _default = window.elementorModules = {
+  Module: _module.default,
+  ViewModule: _viewModule.default,
+  ArgsObject: _argsObject.default,
+  ForceMethodImplementation: _forceMethodImplementation.default,
+  utils: {
+    Masonry: _masonry.default,
+    Scroll: _scroll.default
+  }
+};
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "../core/common/assets/js/views/modal/header.js":
+/*!******************************************************!*\
+  !*** ../core/common/assets/js/views/modal/header.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "../node_modules/@babel/runtime/helpers/classCallCheck.js"));
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "../node_modules/@babel/runtime/helpers/createClass.js"));
+var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "../node_modules/@babel/runtime/helpers/inherits.js"));
+var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
+var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "../node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+var _default = /*#__PURE__*/function (_Marionette$LayoutVie) {
+  (0, _inherits2.default)(_default, _Marionette$LayoutVie);
+  var _super = _createSuper(_default);
+  function _default() {
+    (0, _classCallCheck2.default)(this, _default);
+    return _super.apply(this, arguments);
+  }
+  (0, _createClass2.default)(_default, [{
+    key: "className",
+    value: function className() {
+      return 'elementor-templates-modal__header';
+    }
+  }, {
+    key: "getTemplate",
+    value: function getTemplate() {
+      return '#tmpl-elementor-templates-modal__header';
+    }
+  }, {
+    key: "regions",
+    value: function regions() {
+      return {
+        logoArea: '.elementor-templates-modal__header__logo-area',
+        tools: '#elementor-template-library-header-tools',
+        menuArea: '.elementor-templates-modal__header__menu-area'
+      };
+    }
+  }, {
+    key: "ui",
+    value: function ui() {
+      return {
+        closeModal: '.elementor-templates-modal__header__close'
+      };
+    }
+  }, {
+    key: "events",
+    value: function events() {
+      return {
+        'click @ui.closeModal': 'onCloseModalClick'
+      };
+    }
+  }, {
+    key: "templateHelpers",
+    value: function templateHelpers() {
+      return {
+        closeType: this.getOption('closeType')
+      };
+    }
+  }, {
+    key: "onCloseModalClick",
+    value: function onCloseModalClick() {
+      this._parent._parent._parent.hideModal();
+      if (this.isFloatingButtonLibraryClose()) {
+        $e.internal('document/save/set-is-modified', {
+          status: false
+        });
+        window.location.href = elementor.config.admin_floating_button_admin_url;
+      }
+    }
+  }, {
+    key: "isFloatingButtonLibraryClose",
+    value: function isFloatingButtonLibraryClose() {
+      var _elementor$config, _elementor$config2, _elementor$config2$do;
+      return window.elementor && ((_elementor$config = elementor.config) === null || _elementor$config === void 0 ? void 0 : _elementor$config.admin_floating_button_admin_url) && 'floating-buttons' === ((_elementor$config2 = elementor.config) === null || _elementor$config2 === void 0 ? void 0 : (_elementor$config2$do = _elementor$config2.document) === null || _elementor$config2$do === void 0 ? void 0 : _elementor$config2$do.type) && (this.$el.closest('.dialog-lightbox-widget-content').find('.elementor-template-library-template-floating_button').length || this.$el.closest('.dialog-lightbox-widget-content').find('#elementor-template-library-preview').length || this.$el.closest('.dialog-lightbox-widget-content').find('#elementor-template-library-templates-empty').length);
+    }
+  }]);
+  return _default;
+}(Marionette.LayoutView);
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "../core/common/assets/js/views/modal/layout.js":
+/*!******************************************************!*\
+  !*** ../core/common/assets/js/views/modal/layout.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "../node_modules/@babel/runtime/helpers/classCallCheck.js"));
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "../node_modules/@babel/runtime/helpers/createClass.js"));
+var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "../node_modules/@babel/runtime/helpers/inherits.js"));
+var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
+var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "../node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
+var _header = _interopRequireDefault(__webpack_require__(/*! ./header */ "../core/common/assets/js/views/modal/header.js"));
+var _logo = _interopRequireDefault(__webpack_require__(/*! ./logo */ "../core/common/assets/js/views/modal/logo.js"));
+var _loading = _interopRequireDefault(__webpack_require__(/*! ./loading */ "../core/common/assets/js/views/modal/loading.js"));
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+var _default = /*#__PURE__*/function (_Marionette$LayoutVie) {
+  (0, _inherits2.default)(_default, _Marionette$LayoutVie);
+  var _super = _createSuper(_default);
+  function _default() {
+    (0, _classCallCheck2.default)(this, _default);
+    return _super.apply(this, arguments);
+  }
+  (0, _createClass2.default)(_default, [{
+    key: "el",
+    value: function el() {
+      return this.getModal().getElements('widget');
+    }
+  }, {
+    key: "regions",
+    value: function regions() {
+      return {
+        modalHeader: '.dialog-header',
+        modalContent: '.dialog-lightbox-content',
+        modalLoading: '.dialog-lightbox-loading'
+      };
+    }
+  }, {
+    key: "initialize",
+    value: function initialize() {
+      this.modalHeader.show(new _header.default(this.getHeaderOptions()));
+    }
+  }, {
+    key: "getModal",
+    value: function getModal() {
+      if (!this.modal) {
+        this.initModal();
+      }
+      return this.modal;
+    }
+  }, {
+    key: "initModal",
+    value: function initModal() {
+      var modalOptions = {
+        className: 'elementor-templates-modal',
+        closeButton: false,
+        draggable: false,
+        hide: {
+          onOutsideClick: false,
+          onEscKeyPress: false
+        }
+      };
+      jQuery.extend(true, modalOptions, this.getModalOptions());
+      this.modal = elementorCommon.dialogsManager.createWidget('lightbox', modalOptions);
+      this.modal.getElements('message').append(this.modal.addElement('content'), this.modal.addElement('loading'));
+      if (modalOptions.draggable) {
+        this.draggableModal();
+      }
+    }
+  }, {
+    key: "showModal",
+    value: function showModal() {
+      this.getModal().show();
+    }
+  }, {
+    key: "hideModal",
+    value: function hideModal() {
+      this.getModal().hide();
+    }
+  }, {
+    key: "draggableModal",
+    value: function draggableModal() {
+      var $modalWidgetContent = this.getModal().getElements('widgetContent');
+      $modalWidgetContent.draggable({
+        containment: 'parent',
+        stop: function stop() {
+          $modalWidgetContent.height('');
+        }
+      });
+      $modalWidgetContent.css('position', 'absolute');
+    }
+  }, {
+    key: "getModalOptions",
+    value: function getModalOptions() {
+      return {};
+    }
+  }, {
+    key: "getLogoOptions",
+    value: function getLogoOptions() {
+      return {};
+    }
+  }, {
+    key: "getHeaderOptions",
+    value: function getHeaderOptions() {
+      return {
+        closeType: 'normal'
+      };
+    }
+  }, {
+    key: "getHeaderView",
+    value: function getHeaderView() {
+      return this.modalHeader.currentView;
+    }
+  }, {
+    key: "showLoadingView",
+    value: function showLoadingView() {
+      this.modalLoading.show(new _loading.default());
+      this.modalLoading.$el.show();
+      this.modalContent.$el.hide();
+    }
+  }, {
+    key: "hideLoadingView",
+    value: function hideLoadingView() {
+      this.modalContent.$el.show();
+      this.modalLoading.$el.hide();
+    }
+  }, {
+    key: "showLogo",
+    value: function showLogo() {
+      this.getHeaderView().logoArea.show(new _logo.default(this.getLogoOptions()));
+    }
+  }]);
+  return _default;
+}(Marionette.LayoutView);
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "../core/common/assets/js/views/modal/loading.js":
+/*!*******************************************************!*\
+  !*** ../core/common/assets/js/views/modal/loading.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "../node_modules/@babel/runtime/helpers/classCallCheck.js"));
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "../node_modules/@babel/runtime/helpers/createClass.js"));
+var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "../node_modules/@babel/runtime/helpers/inherits.js"));
+var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
+var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "../node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+var _default = /*#__PURE__*/function (_Marionette$ItemView) {
+  (0, _inherits2.default)(_default, _Marionette$ItemView);
+  var _super = _createSuper(_default);
+  function _default() {
+    (0, _classCallCheck2.default)(this, _default);
+    return _super.apply(this, arguments);
+  }
+  (0, _createClass2.default)(_default, [{
+    key: "id",
+    value: function id() {
+      return 'elementor-template-library-loading';
+    }
+  }, {
+    key: "getTemplate",
+    value: function getTemplate() {
+      return '#tmpl-elementor-template-library-loading';
+    }
+  }]);
+  return _default;
+}(Marionette.ItemView);
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "../core/common/assets/js/views/modal/logo.js":
+/*!****************************************************!*\
+  !*** ../core/common/assets/js/views/modal/logo.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "../node_modules/@babel/runtime/helpers/classCallCheck.js"));
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "../node_modules/@babel/runtime/helpers/createClass.js"));
+var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "../node_modules/@babel/runtime/helpers/inherits.js"));
+var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
+var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "../node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+var _default = /*#__PURE__*/function (_Marionette$ItemView) {
+  (0, _inherits2.default)(_default, _Marionette$ItemView);
+  var _super = _createSuper(_default);
+  function _default() {
+    (0, _classCallCheck2.default)(this, _default);
+    return _super.apply(this, arguments);
+  }
+  (0, _createClass2.default)(_default, [{
+    key: "getTemplate",
+    value: function getTemplate() {
+      return '#tmpl-elementor-templates-modal__header__logo';
+    }
+  }, {
+    key: "className",
+    value: function className() {
+      return 'elementor-templates-modal__header__logo';
+    }
+  }, {
+    key: "events",
+    value: function events() {
+      return {
+        click: 'onClick'
+      };
+    }
+  }, {
+    key: "templateHelpers",
+    value: function templateHelpers() {
+      return {
+        title: this.getOption('title')
+      };
+    }
+  }, {
+    key: "onClick",
+    value: function onClick() {
+      var clickCallback = this.getOption('click');
+      if (clickCallback) {
+        clickCallback();
+      }
+    }
+  }]);
+  return _default;
+}(Marionette.ItemView);
+exports["default"] = _default;
 
 /***/ }),
 
@@ -3198,6 +3603,175 @@ exports["default"] = CommandInfra;
  * @type {Object}
  */
 (0, _defineProperty2.default)(CommandInfra, "registerConfig", null);
+
+/***/ }),
+
+/***/ "../modules/web-cli/assets/js/modules/commands/close.js":
+/*!**************************************************************!*\
+  !*** ../modules/web-cli/assets/js/modules/commands/close.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = exports.Close = void 0;
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "../node_modules/@babel/runtime/helpers/classCallCheck.js"));
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "../node_modules/@babel/runtime/helpers/createClass.js"));
+var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "../node_modules/@babel/runtime/helpers/inherits.js"));
+var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
+var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "../node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
+var _commandBase = _interopRequireDefault(__webpack_require__(/*! elementor-api/modules/command-base */ "../modules/web-cli/assets/js/modules/command-base.js"));
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+var Close = /*#__PURE__*/function (_CommandBase) {
+  (0, _inherits2.default)(Close, _CommandBase);
+  var _super = _createSuper(Close);
+  function Close() {
+    (0, _classCallCheck2.default)(this, Close);
+    return _super.apply(this, arguments);
+  }
+  (0, _createClass2.default)(Close, [{
+    key: "apply",
+    value: function apply() {
+      this.component.close();
+    }
+  }]);
+  return Close;
+}(_commandBase.default);
+exports.Close = Close;
+var _default = Close;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "../modules/web-cli/assets/js/modules/commands/index.js":
+/*!**************************************************************!*\
+  !*** ../modules/web-cli/assets/js/modules/commands/index.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+Object.defineProperty(exports, "Close", ({
+  enumerable: true,
+  get: function get() {
+    return _close.Close;
+  }
+}));
+Object.defineProperty(exports, "Open", ({
+  enumerable: true,
+  get: function get() {
+    return _open.Open;
+  }
+}));
+Object.defineProperty(exports, "Toggle", ({
+  enumerable: true,
+  get: function get() {
+    return _toggle.Toggle;
+  }
+}));
+var _close = __webpack_require__(/*! ./close */ "../modules/web-cli/assets/js/modules/commands/close.js");
+var _open = __webpack_require__(/*! ./open */ "../modules/web-cli/assets/js/modules/commands/open.js");
+var _toggle = __webpack_require__(/*! ./toggle */ "../modules/web-cli/assets/js/modules/commands/toggle.js");
+
+/***/ }),
+
+/***/ "../modules/web-cli/assets/js/modules/commands/open.js":
+/*!*************************************************************!*\
+  !*** ../modules/web-cli/assets/js/modules/commands/open.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = exports.Open = void 0;
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "../node_modules/@babel/runtime/helpers/classCallCheck.js"));
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "../node_modules/@babel/runtime/helpers/createClass.js"));
+var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "../node_modules/@babel/runtime/helpers/inherits.js"));
+var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
+var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "../node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
+var _commandBase = _interopRequireDefault(__webpack_require__(/*! elementor-api/modules/command-base */ "../modules/web-cli/assets/js/modules/command-base.js"));
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+var Open = /*#__PURE__*/function (_CommandBase) {
+  (0, _inherits2.default)(Open, _CommandBase);
+  var _super = _createSuper(Open);
+  function Open() {
+    (0, _classCallCheck2.default)(this, Open);
+    return _super.apply(this, arguments);
+  }
+  (0, _createClass2.default)(Open, [{
+    key: "apply",
+    value: function apply() {
+      $e.route(this.component.getNamespace());
+    }
+  }]);
+  return Open;
+}(_commandBase.default);
+exports.Open = Open;
+var _default = Open;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "../modules/web-cli/assets/js/modules/commands/toggle.js":
+/*!***************************************************************!*\
+  !*** ../modules/web-cli/assets/js/modules/commands/toggle.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = exports.Toggle = void 0;
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "../node_modules/@babel/runtime/helpers/classCallCheck.js"));
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "../node_modules/@babel/runtime/helpers/createClass.js"));
+var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "../node_modules/@babel/runtime/helpers/inherits.js"));
+var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
+var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "../node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
+var _commandBase = _interopRequireDefault(__webpack_require__(/*! elementor-api/modules/command-base */ "../modules/web-cli/assets/js/modules/command-base.js"));
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+var Toggle = /*#__PURE__*/function (_CommandBase) {
+  (0, _inherits2.default)(Toggle, _CommandBase);
+  var _super = _createSuper(Toggle);
+  function Toggle() {
+    (0, _classCallCheck2.default)(this, Toggle);
+    return _super.apply(this, arguments);
+  }
+  (0, _createClass2.default)(Toggle, [{
+    key: "apply",
+    value: function apply() {
+      if (this.component.isOpen) {
+        this.component.close();
+      } else {
+        $e.route(this.component.getNamespace());
+      }
+    }
+  }]);
+  return Toggle;
+}(_commandBase.default);
+exports.Toggle = Toggle;
+var _default = Toggle;
+exports["default"] = _default;
 
 /***/ }),
 
@@ -3796,6 +4370,137 @@ var ComponentBase = /*#__PURE__*/function (_Module) {
   return ComponentBase;
 }(_module.default);
 exports["default"] = ComponentBase;
+
+/***/ }),
+
+/***/ "../modules/web-cli/assets/js/modules/component-modal-base.js":
+/*!********************************************************************!*\
+  !*** ../modules/web-cli/assets/js/modules/component-modal-base.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "../node_modules/@babel/runtime/helpers/typeof.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "../node_modules/@babel/runtime/helpers/classCallCheck.js"));
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "../node_modules/@babel/runtime/helpers/createClass.js"));
+var _get2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/get */ "../node_modules/@babel/runtime/helpers/get.js"));
+var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "../node_modules/@babel/runtime/helpers/inherits.js"));
+var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
+var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "../node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
+var _componentBase = _interopRequireDefault(__webpack_require__(/*! ./component-base */ "../modules/web-cli/assets/js/modules/component-base.js"));
+var commands = _interopRequireWildcard(__webpack_require__(/*! ./commands/ */ "../modules/web-cli/assets/js/modules/commands/index.js"));
+var _forceMethodImplementation = _interopRequireDefault(__webpack_require__(/*! ../utils/force-method-implementation */ "../modules/web-cli/assets/js/utils/force-method-implementation.js"));
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+var ComponentModalBase = /*#__PURE__*/function (_ComponentBase) {
+  (0, _inherits2.default)(ComponentModalBase, _ComponentBase);
+  var _super = _createSuper(ComponentModalBase);
+  function ComponentModalBase() {
+    (0, _classCallCheck2.default)(this, ComponentModalBase);
+    return _super.apply(this, arguments);
+  }
+  (0, _createClass2.default)(ComponentModalBase, [{
+    key: "registerAPI",
+    value: function registerAPI() {
+      var _this = this;
+      (0, _get2.default)((0, _getPrototypeOf2.default)(ComponentModalBase.prototype), "registerAPI", this).call(this);
+      $e.shortcuts.register('esc', {
+        scopes: [this.getNamespace()],
+        callback: function callback() {
+          return _this.close();
+        }
+      });
+    }
+  }, {
+    key: "defaultCommands",
+    value: function defaultCommands() {
+      return this.importCommands(commands);
+    }
+  }, {
+    key: "defaultRoutes",
+    value: function defaultRoutes() {
+      return {
+        '': function _() {/* Nothing to do, it's already rendered. */}
+      };
+    }
+  }, {
+    key: "open",
+    value: function open() {
+      var _this2 = this;
+      if (!this.layout) {
+        var layout = this.getModalLayout();
+        this.layout = new layout({
+          component: this
+        });
+        this.layout.getModal().on('hide', function () {
+          return _this2.close();
+        });
+      }
+      this.layout.showModal();
+      return true;
+    }
+  }, {
+    key: "close",
+    value: function close() {
+      if (!(0, _get2.default)((0, _getPrototypeOf2.default)(ComponentModalBase.prototype), "close", this).call(this)) {
+        return false;
+      }
+      this.layout.getModal().hide();
+      return true;
+    }
+  }, {
+    key: "getModalLayout",
+    value: function getModalLayout() {
+      (0, _forceMethodImplementation.default)();
+    }
+  }]);
+  return ComponentModalBase;
+}(_componentBase.default);
+exports["default"] = ComponentModalBase;
+
+/***/ }),
+
+/***/ "../modules/web-cli/assets/js/modules/hook-break.js":
+/*!**********************************************************!*\
+  !*** ../modules/web-cli/assets/js/modules/hook-break.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "../node_modules/@babel/runtime/helpers/createClass.js"));
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "../node_modules/@babel/runtime/helpers/classCallCheck.js"));
+var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "../node_modules/@babel/runtime/helpers/inherits.js"));
+var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
+var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "../node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
+var _wrapNativeSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/wrapNativeSuper */ "../node_modules/@babel/runtime/helpers/wrapNativeSuper.js"));
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+var HookBreak = /*#__PURE__*/function (_Error) {
+  (0, _inherits2.default)(HookBreak, _Error);
+  var _super = _createSuper(HookBreak);
+  function HookBreak() {
+    (0, _classCallCheck2.default)(this, HookBreak);
+    return _super.call(this, 'HookBreak');
+  }
+  return (0, _createClass2.default)(HookBreak);
+}( /*#__PURE__*/(0, _wrapNativeSuper2.default)(Error));
+exports["default"] = HookBreak;
 
 /***/ }),
 
@@ -5878,50 +6583,56 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
-/*!**************************************!*\
-  !*** ../app/assets/js/app-loader.js ***!
-  \**************************************/
+/*!*******************************************!*\
+  !*** ../core/common/assets/js/modules.js ***!
+  \*******************************************/
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "../node_modules/@babel/runtime/helpers/classCallCheck.js"));
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "../node_modules/@babel/runtime/helpers/createClass.js"));
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "../node_modules/@babel/runtime/helpers/defineProperty.js"));
-var _component = _interopRequireDefault(__webpack_require__(/*! ./loader/component */ "../app/assets/js/loader/component.js"));
-var AppLoader = /*#__PURE__*/function () {
-  function AppLoader() {
-    (0, _classCallCheck2.default)(this, AppLoader);
-    (0, _defineProperty2.default)(this, "selector", 'a.elementor-app-link, .elementor-app-link .ab-item');
-    $e.components.register(new _component.default());
-    window.addEventListener('DOMContentLoaded', this.onLoad.bind(this));
-  }
-  (0, _createClass2.default)(AppLoader, [{
-    key: "onLoad",
-    value: function onLoad() {
-      var links = document.querySelectorAll(this.selector);
-      if (!links.length) {
-        return;
-      }
-      links.forEach(function (link) {
-        link.addEventListener('click', function (event) {
-          event.preventDefault();
-          $e.run('app/open', {
-            url: link.href
-          });
-        });
-        link.addEventListener('mouseenter', function () {
-          $e.run('app/load', {
-            url: link.href
-          });
-        });
-      });
+var _modules = _interopRequireDefault(__webpack_require__(/*! elementor-assets-js/modules/modules */ "../assets/dev/js/modules/modules.js"));
+var _layout = _interopRequireDefault(__webpack_require__(/*! ./views/modal/layout */ "../core/common/assets/js/views/modal/layout.js"));
+var _componentBase = _interopRequireDefault(__webpack_require__(/*! elementor-api/modules/component-base */ "../modules/web-cli/assets/js/modules/component-base.js"));
+var _componentModalBase = _interopRequireDefault(__webpack_require__(/*! elementor-api/modules/component-modal-base */ "../modules/web-cli/assets/js/modules/component-modal-base.js"));
+var _hookBreak = _interopRequireDefault(__webpack_require__(/*! elementor-api/modules/hook-break */ "../modules/web-cli/assets/js/modules/hook-break.js"));
+_modules.default.common = {
+  /**
+   * @deprecated since 2.9.0, use `$e.modules.ComponentBase` instead.
+   */
+  get Component() {
+    // `elementorCommon` isn't available during it self initialize.
+    setTimeout(function () {
+      elementorDevTools.deprecation.deprecated('elementorModules.common.Component', '2.9.0', '$e.modules.ComponentBase');
+    }, 2000);
+    return _componentBase.default;
+  },
+  /**
+   * @deprecated since 2.9.0, use `$e.modules.ComponentModalBase` instead.
+   */
+  get ComponentModal() {
+    // `elementorCommon` isn't available during it self initialize.
+    setTimeout(function () {
+      elementorDevTools.deprecation.deprecated('elementorModules.common.ComponentModal', '2.9.0', '$e.modules.ComponentModalBase');
+    }, 2000);
+    return _componentModalBase.default;
+  },
+  /**
+   * @deprecated since 2.9.0, use `$e.modules.HookBreak` instead.
+   */
+  get HookBreak() {
+    // `elementorCommon` isn't available during it self initialize.
+    setTimeout(function () {
+      elementorDevTools.deprecation.deprecated('elementorModules.common.HookBreak', '2.9.0', '$e.modules.HookBreak');
+    }, 2000);
+    return _hookBreak.default;
+  },
+  views: {
+    modal: {
+      Layout: _layout.default
     }
-  }]);
-  return AppLoader;
-}();
-window.elementorAppLoader = new AppLoader();
+  }
+};
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=app-loader.js.map
+//# sourceMappingURL=common-modules.js.map
