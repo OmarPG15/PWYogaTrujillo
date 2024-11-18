@@ -2,26 +2,47 @@
 <html lang="es">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	
-		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css"> -->
+		
+	
 		<link rel="stylesheet" href="../style.css">
 		<link rel="stylesheet" href="../Popup.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 		<script src="../header.js"></script>
 		<script src="../slider.js"></script>
+		<script src="../carrusel.js"></script>
+		<script src="../burger.js" defer></script>
 		<link rel="stylesheet" type="text/css" href="../slider.css">
 		<link rel="stylesheet" type="text/css" href="../testimonios.css">
+		<link rel="stylesheet" href="../Cards.css">
 		<!-- <link rel="stylesheet" href="Clases.css"> -->
-		<!-- <link rel="stylesheet" href="services.css"> -->
 		<link rel="stylesheet" href="../Clases.css">
 		<link rel="stylesheet" href="../burger.css">
 		<link rel="stylesheet" href="../media.css">
 		<link rel="stylesheet" href="../button.css">
+		
 	
-		<title>Servicios</title>
+		<title>Yoga Trujillo</title>
 	</head>
-	<body>
+	<body class="grid-container">
+		<!-- <dialog id="formulario">
+			<form class="discountForm">
+				<span class="DiscountHeading">Horarios de octubre</span>
+				<div class="inputContainer">
+					<ul>
+						<li><i class="fa-solid fa-heart"></i> Miercoles 5pm</li>
+						<li><i class="fa-solid fa-heart"></i> Sábados 8am</li>
+						<li><i class="fa-solid fa-heart"></i> Domingos 9am</li>
+					</ul>
+					
+					<button type="submit" class="submitButton">más información</button>
+				</div>
+				<button class="exitBtn">×</button>
+			</form>
+			
+		</dialog>  -->
+	
 		<header id="header">
 			
 			<div class="header-content">
@@ -54,7 +75,7 @@
 						</a>
 					</div>
 					<div class="logo">
-						<a href="../#portada">
+						<a href="../index.html">
 							<img src="../Images/Logo/portada-superior.webp" alt="logo">
 						</a>
 					</div>
@@ -62,31 +83,34 @@
 					<div id="men">
 						<ul class="menu">
 							<li>
-								<a  class="menu-link" href="../#clases">Clases <i class="fas fa-angle-right"></i></a>
+								<a class="cel bg-c1 c1b" href="../index.html">Inicio</a>
+							</li>
+							<li>
+								<a  class="menu-link" href="../Clases.html">Clases <i class="fas fa-angle-right"></i></a>
 									<ul class="submenu">
-										<li><a  href="../clases.html#Presenciales">Presenciales</a></li>
+										<li><a  href="../Clases.html#primero">Presenciales</a></li>
 										<li><a href="../Clases.html#medio">Virtuales</a></li>
-										<li><a href="../Clases.html#empresas">Familias y empresas</a></li>
+										<li><a href="../Clases.html#tercero">Familias y empresas</a></li>
 									</ul>
 							</li>           
 							<li>
-								<a class="menu-link" href="../#Experiencias">Experiencias<i class="fas fa-angle-right"></i></a>
+								<a class="menu-link" href="../Experiencias.html">Experiencias<i class="fas fa-angle-right"></i></a>
 								<ul class="submenu">
-									<li><a href="../Experiencias.html#playa">Playa</a></li>
+									<li><a href="../Experiencias.html#primero">Playa</a></li>
 									<li><a href="../Experiencias.html#medio">Retiro anual</a></li>
-									<li><a href="../Experiencias.html#ProxTaller">Talleres</a></li>
+									<li><a href="../Experiencias.html#tercero">Talleres</a></li>
 								</ul>
 							</li>
 							<li>
-								<a class="menu-link" href="../#servicios">Servicios<i class="fas fa-angle-right"></i></a>
+								<a class="menu-link" href="../Servicios.html">Servicios<i class="fas fa-angle-right"></i></a>
 								<ul class="submenu">
-									<li><a href="../Servicios.html#personalizado">Yoga personalizado</a></li>
+									<li><a href="../Servicios.html#primero">Yoga personalizado</a></li>
 									<li><a href="../Servicios.html#medio">Limpieza de aura</a></li>
-									<li><a href="../Servicios.html#ceremonia">Ceremonia holística</a></li>
+									<li><a href="../Servicios.html#tercero">Ceremonia holística</a></li>
 								</ul>
 							</li>
 							<li>
-								<a class="cel bg-c1 c1b" href="../#cursos">Cursos</a>
+								<a class="cel bg-c1 c1b" href="../index.html#cursos">Cursos</a>
 							</li>
 							<li>
 								<a class="cel bg-c1 c1b" href="../BioWr/index.html">Bio</a>
@@ -143,8 +167,6 @@
 		</header>
 <head>
 	<meta charset="UTF-8">
-<head>
-	<meta charset="UTF-8">
 			<title>YogaTrujillo</title>
 		<meta name="robots" content="max-image-preview:large">
 <script type="text/javascript">
@@ -174,16 +196,20 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <link rel="stylesheet" id="elementor-frontend-css" href="./wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.24.7" type="text/css" media="all">
 <link rel="stylesheet" id="swiper-css" href="./wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5" type="text/css" media="all">
 <link rel="stylesheet" id="e-swiper-css" href="./wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=3.24.7" type="text/css" media="all">
-<link rel="stylesheet" id="elementor-post-2818-css" href="./wp-content/uploads/elementor/css/post-2818.css?ver=1731658354" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-2818-css" href="./wp-content/uploads/elementor/css/post-2818.css?ver=1731913953" type="text/css" media="all">
 <link rel="stylesheet" id="elementor-pro-css" href="./wp-content/plugins/pro-elements/assets/css/frontend.min.css?ver=3.24.4" type="text/css" media="all">
-<link rel="stylesheet" id="elementor-global-css" href="./wp-content/uploads/elementor/css/global.css?ver=1731658356" type="text/css" media="all">
-<link rel="stylesheet" id="elementor-post-3295-css" href="./wp-content/uploads/elementor/css/post-3295.css?ver=1731660353" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-global-css" href="./wp-content/uploads/elementor/css/global.css?ver=1731913953" type="text/css" media="all">
+<link rel="stylesheet" id="widget-spacer-css" href="./wp-content/plugins/elementor/assets/css/widget-spacer.min.css?ver=3.24.7" type="text/css" media="all">
+<link rel="stylesheet" id="widget-text-editor-css" href="./wp-content/plugins/elementor/assets/css/widget-text-editor.min.css?ver=3.24.7" type="text/css" media="all">
+<link rel="stylesheet" id="widget-divider-css" href="./wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.24.7" type="text/css" media="all">
+<link rel="stylesheet" id="widget-image-css" href="./wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.24.7" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-3295-css" href="./wp-content/uploads/elementor/css/post-3295.css?ver=1731917890" type="text/css" media="all">
 <link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap&#038;ver=6.7" type="text/css" media="all">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>        <script>
             /* <![CDATA[ */
             var rcewpp = {
                 "ajax_url":".//wp-admin/admin-ajax.php",
-                "nonce": "8227013050",
+                "nonce": "cb8ab53897",
                 "home_url": ".//",
                 "settings_icon": './/wp-content/plugins/export-wp-page-to-static-html/admin/images/settings.png',
                 "settings_hover_icon": './/wp-content/plugins/export-wp-page-to-static-html/admin/images/settings_hover.png'
@@ -262,7 +288,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				<div class="elementor-element elementor-element-3807d6b elementor-align-center elementor-widget elementor-widget-button" data-id="3807d6b" data-element_type="widget" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-button-wrapper">
-			<a class="elementor-button elementor-button-link elementor-size-sm" href="../CursosWr/index.html">
+			<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
 						<span class="elementor-button-content-wrapper">
 									<span class="elementor-button-text">Comprar S/60</span>
 					</span>
@@ -351,11 +377,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				events.forEach( ( event ) => {
 					document.addEventListener( event, lazyloadRunObserver );
 				} );</script>
-			<link rel="stylesheet" id="widget-spacer-css" href="./wp-content/plugins/elementor/assets/css/widget-spacer.min.css?ver=3.24.7" type="text/css" media="all">
-<link rel="stylesheet" id="widget-text-editor-css" href="./wp-content/plugins/elementor/assets/css/widget-text-editor.min.css?ver=3.24.7" type="text/css" media="all">
-<link rel="stylesheet" id="widget-divider-css" href="./wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.24.7" type="text/css" media="all">
-<link rel="stylesheet" id="widget-image-css" href="./wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.24.7" type="text/css" media="all">
-<script type="text/javascript" src="./wp-content/plugins/pro-elements/assets/js/webpack-pro.runtime.min.js?ver=3.24.4" id="elementor-pro-webpack-runtime-js"></script>
+			<script type="text/javascript" src="./wp-content/plugins/pro-elements/assets/js/webpack-pro.runtime.min.js?ver=3.24.4" id="elementor-pro-webpack-runtime-js"></script>
 <script type="text/javascript" src="./wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.24.7" id="elementor-webpack-runtime-js"></script>
 <script type="text/javascript" src="./wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
 <script type="text/javascript" src="./wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
@@ -369,14 +391,14 @@ wp.i18n.setLocaleData( { 'text directionltr': [ 'ltr' ] } );
 </script>
 <script type="text/javascript" id="elementor-pro-frontend-js-before">
 /* <![CDATA[ */
-var ElementorProFrontendConfig = {"ajaxurl":".\/\/wp-admin\/admin-ajax.php","nonce":"3a92ec0ee3","urls":{"assets":".\/\/wp-content\/plugins\/pro-elements\/assets\/","rest":".\/\/wp-json\/"},"settings":{"lazy_load_background_images":true},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"es_ES","app_id":""},"lottie":{"defaultAnimationUrl":".\/\/wp-content\/plugins\/pro-elements\/modules\/lottie\/assets\/animations\/default.json"}};
+var ElementorProFrontendConfig = {"ajaxurl":".\/\/wp-admin\/admin-ajax.php","nonce":"3e78303f2b","urls":{"assets":".\/\/wp-content\/plugins\/pro-elements\/assets\/","rest":".\/\/wp-json\/"},"settings":{"lazy_load_background_images":true},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"es_ES","app_id":""},"lottie":{"defaultAnimationUrl":".\/\/wp-content\/plugins\/pro-elements\/modules\/lottie\/assets\/animations\/default.json"}};
 /* ]]> */
 </script>
 <script type="text/javascript" src="./wp-content/plugins/pro-elements/assets/js/frontend.min.js?ver=3.24.4" id="elementor-pro-frontend-js"></script>
 <script type="text/javascript" src="./wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
 <script type="text/javascript" id="elementor-frontend-js-before">
 /* <![CDATA[ */
-var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartir en Facebook","shareOnTwitter":"Compartir en Twitter","pinIt":"Pinear","download":"Descargar","downloadImage":"Descargar imagen","fullscreen":"Pantalla completa","zoom":"Zoom","share":"Compartir","playVideo":"Reproducir vídeo","previous":"Anterior","next":"Siguiente","close":"Cerrar","a11yCarouselWrapperAriaLabel":"Carrusel | Scroll horizontal: Flecha izquierda y derecha","a11yCarouselPrevSlideMessage":"Diapositiva anterior","a11yCarouselNextSlideMessage":"Diapositiva siguiente","a11yCarouselFirstSlideMessage":"Esta es la primera diapositiva","a11yCarouselLastSlideMessage":"Esta es la última diapositiva","a11yCarouselPaginationBulletMessage":"Ir a la diapositiva"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Móvil vertical","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Móvil horizontal","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tableta vertical","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tableta horizontal","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Portátil","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Pantalla grande","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.24.7","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"container_grid":true,"e_swiper_latest":true,"e_nested_atomic_repeaters":true,"e_optimized_control_loading":true,"e_onboarding":true,"theme_builder_v2":true,"home_screen":true,"ai-layout":true,"nested-elements":true,"editor_v2":true,"e_element_cache":true,"link-in-bio":true,"floating-buttons":true,"display-conditions":true,"form-submissions":true},"urls":{"assets":".\/\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":".\/\/wp-admin\/admin-ajax.php","uploadUrl":".\/\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"f7c29c0119"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":3295,"title":"YogaTrujillo","excerpt":"","featuredImage":false}};
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartir en Facebook","shareOnTwitter":"Compartir en Twitter","pinIt":"Pinear","download":"Descargar","downloadImage":"Descargar imagen","fullscreen":"Pantalla completa","zoom":"Zoom","share":"Compartir","playVideo":"Reproducir vídeo","previous":"Anterior","next":"Siguiente","close":"Cerrar","a11yCarouselWrapperAriaLabel":"Carrusel | Scroll horizontal: Flecha izquierda y derecha","a11yCarouselPrevSlideMessage":"Diapositiva anterior","a11yCarouselNextSlideMessage":"Diapositiva siguiente","a11yCarouselFirstSlideMessage":"Esta es la primera diapositiva","a11yCarouselLastSlideMessage":"Esta es la última diapositiva","a11yCarouselPaginationBulletMessage":"Ir a la diapositiva"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Móvil vertical","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Móvil horizontal","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tableta vertical","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tableta horizontal","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Portátil","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Pantalla grande","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.24.7","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"container_grid":true,"e_swiper_latest":true,"e_nested_atomic_repeaters":true,"e_optimized_control_loading":true,"e_onboarding":true,"theme_builder_v2":true,"home_screen":true,"ai-layout":true,"nested-elements":true,"editor_v2":true,"e_element_cache":true,"link-in-bio":true,"floating-buttons":true,"display-conditions":true,"form-submissions":true},"urls":{"assets":".\/\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":".\/\/wp-admin\/admin-ajax.php","uploadUrl":".\/\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"2a1955fb02"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":3295,"title":"YogaTrujillo","excerpt":"","featuredImage":false}};
 /* ]]> */
 </script>
 <script type="text/javascript" src="./wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.24.7" id="elementor-frontend-js"></script>
@@ -434,6 +456,3 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     
     
 </footer>
-
-</body>
-</html>
