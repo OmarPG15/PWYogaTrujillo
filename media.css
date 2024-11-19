@@ -210,9 +210,12 @@
     
 } 
 @media(max-width: 430px) {
+    .logo
     .olas-abajo{
         height: 10vw;
-        
+    }
+    .logo img {
+        object-fit: contain;
     }
     .large-image {
         /* overflow:visible; */

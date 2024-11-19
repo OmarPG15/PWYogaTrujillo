@@ -64,7 +64,8 @@ body{
     /* text-align: center; */
 }
 .number-font {
-    font-family: "Georgia";
+    font-family: "Serif";
+    font-size: 1.1vw;
 }
 .texto h1 {
     font-size: 2.1rem;

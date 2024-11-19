@@ -739,6 +739,10 @@ body {
   justify-content: center;
   text-decoration: none;
 }
+#bio .number-font{
+  font-family: Serif;
+  font-size: 1vw;
+}
 /* inspired form gumroad website */
 .ver-más {
   font-family: "Romman";
