@@ -8,7 +8,7 @@ document.getElementById("burger").addEventListener("change", function() {
 });
 document.querySelectorAll(".menu-link").forEach(link => {
     link.addEventListener("click", function(event) {
-        event.preventDefault();
+        // event.preventDefault();
         this.classList.toggle("open"); // Alterna la clase 'open' para el giro de la flecha
         const submenu = this.nextElementSibling;
 

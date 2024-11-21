@@ -1,4 +1,6 @@
-<<<<<<< HEAD
+body{
+    background-color: white;
+}
 .header-content {
     background-color: #EAC9C2;
 } 
@@ -90,111 +92,17 @@ body{
 }
 
 /*playa*/
-
-=======
-.header-content {
-    background-color: #EAC9C2;
-} 
-.olas {
-    opacity: 1;
-}
-
-section {
-    display: flex ;
-    justify-content: space-evenly;
-}
-.Cl {
-    flex: 1;
-}
-.pagina {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    margin-top: 9vw;
-    background-color: white;
-    padding: 5vw;
-    text-align:left;
-    color: #9d7378;
-    gap: 4vw;
-}
-.carta{
-    display: flex;
-    /* place-items: center; */
-    font-size: 1.3vw;
-    background-color: #F5F2ED;
-    padding-right: 2vw;
-    width: 100%;
-    border-radius: 5% / 10%;
-}
-#medio {
-    background-color: #F6DEDC;
-}
-
-body{
-    /* padding-top: 100px; */
-    background-color: #FFF;
-}
-.pagina h1 {
-    text-align: center;
-    font-size: 3rem;
-}
-.pagina p {
-    font-family: "Monterchi-Serif";
-    font-size: 20px;
-}
-.pagina ul{
-    list-style: none;
-}
-.texto{
-    height: 100%;
-    place-content: center;
-    padding: 2vw 2vw;
-    text-align: center;
-    width: 100%;
-}
-.texto p {
-    text-align: justify;
-    font-size: 1.5rem;
-    /* text-align: center; */
-}
-.number-font {
-    font-family: "Georgia";
-}
-.texto h1 {
-    font-size: 2.1rem;
-    /* flex-direction: top; */
-}
-.imgclass {
-    margin: 3vw 3vw 3vw 5vw;
-    width: 50%;
-    max-width: 450px;
-    min-width: 277px;
-    /* margin-right: ; */
-    /* align-items: center; */
-}
-.imgclass img{
-    width: 100%;
-    border-radius: 10%;
-}
-
-#primero, #medio, #tercero {
-    scroll-margin-top: 250px;
-}
-
-/*playa*/
-
-
 .help-urls{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
     font-family: 'Monterchi-Serif';
-  src: url('Fonts/Monterchi-Serif-Book-trial.ttf') format('truetype'),
+    src: url('Fonts/Monterchi-Serif-Book-trial.ttf') format('truetype'),
         url('Fonts/Monterchi-Serif-Extrabold-trial.ttf') format('truetype'),
         url('Fonts/Monterchi-Serif-Thin-trial.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-weight: normal;
+    font-style: normal;
 }
 .helo-urls a{
     color: #9D7378;
@@ -205,13 +113,12 @@ body{
 
 }
 @media (max-width: 1200px) {
-    .help-urls{
-       display: flex;
-       flex-direction: column;
+.help-urls{
+    display: flex;
+    flex-direction: column;
     }
     .help-urls a+a{
         margin-top: 10px;
         margin-left: 0px;
     }
 }
->>>>>>> 869414d7f2f5f05aa467a79a3620b67a92197873
