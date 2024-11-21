@@ -879,7 +879,42 @@ footer .men li a{
   font-size: 2em;
   margin: 0 10 px;
 }
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+.help-urls{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: 'Monterchi-Serif';
+  src: url('Fonts/Monterchi-Serif-Book-trial.ttf') format('truetype'),
+      url('Fonts/Monterchi-Serif-Extrabold-trial.ttf') format('truetype'),
+      url('Fonts/Monterchi-Serif-Thin-trial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.helo-urls a{
+  color: #9D7378;
+  font-weight: bold;
+}
+.help-urls a+a{
+  margin-left: 30px;
 
+}
+@media (max-width: 1200px) {
+.help-urls{
+  display: flex;
+  flex-direction: column;
+  }
+  .help-urls a+a{
+      margin-top: 10px;
+      margin-left: 0px;
+  }
+}
 
 /* button {
   position: relative;
