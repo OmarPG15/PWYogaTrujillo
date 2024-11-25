@@ -819,6 +819,7 @@ footer{
   display: grid;
   text-align: center;
   width: 100%;
+  margin-top: -15px;
 }
 .pie a{
   text-decoration: none;

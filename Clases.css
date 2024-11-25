@@ -103,13 +103,19 @@ body{
         url('Fonts/Monterchi-Serif-Thin-trial.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    
+
+    
 }
 .helo-urls a{
     color: #9D7378;
     font-weight: bold;
+    
+    
 }
 .help-urls a+a{
     margin-left: 30px;
+    
 
 }
 @media (max-width: 1200px) {
