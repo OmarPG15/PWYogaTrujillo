@@ -9,8 +9,6 @@
     .navbar {
         position: relative;
     }
-    .menu li a {
-    }
     .tooltip-container {
         margin-top: 10px;
         align-self: center;
@@ -175,11 +173,6 @@
     }
     .logo img {
         object-fit: contain;
-    }
-    .large-image {
-        /* overflow:visible; */
-        /* right: 10%;
-        height: 50vh; */
     }
     .large-image .portada{
         /* height: 100%; */

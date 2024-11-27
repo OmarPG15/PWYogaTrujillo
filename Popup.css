@@ -7,16 +7,34 @@ dialog{
     left: 0;
     /* height: 100vh;
     width: 100vw; */
-    margin: 300px 650px;
+    /* margin: 300px 650px; */
     border-radius: 5%;
     border-color: #D5B75E;
     /* mask-image:url(Images/blob2.svg);
     mask-size: cover;
     mask-repeat: no-repeat; */
-    margin-top: 470px;
+    /* margin-top: 470px; */
+}
+#formulario {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    max-width: 400px;
+    width: 90%;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+}
+#formulario::backdrop {
+background-color: rgba(0, 0, 0, 0.5);
 }
 .discountForm {
-    width: 500px;
+    width: 700px;
     height: 270px;
     background-color: white;
     flex-direction: column;
@@ -33,13 +51,20 @@ dialog{
 }
 
 .DiscountHeading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #E9c9c2;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/* .DiscountHeading {
     font-family: 'Romman';
     font-size: 1.5em;
     color: #E9c9c2;
     font-weight: 700;
     text-align: center;
     font-size: 40px;
-}
+} */
 
 
 
