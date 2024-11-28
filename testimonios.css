@@ -1,5 +1,5 @@
 .testimonios {
-    width: 90%;
+    width: 100%;
     align-items: center;
     /* align-content: center; */
     /* place-content: center; */
@@ -65,7 +65,7 @@
     height: 100%;
 }
 #CART1 {
-    padding-left: 3vw ;
+    padding-left: 5vw ;
 }
 .zoom-image{
     height: 90%;

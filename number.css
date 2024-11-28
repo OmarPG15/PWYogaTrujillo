@@ -1,0 +1,11 @@
+.number-font{
+    font-size: 1vw; 
+    font-family: Serif;
+    font-weight: 100;
+}
+
+@media(max-width: 430px){
+    .number-font{
+        font-size: 1rem;
+    }
+}
