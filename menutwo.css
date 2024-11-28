@@ -201,13 +201,11 @@ header {
 		height: 100%;
 		width: 10%;
 	}
-	.SI {
-        gap: 10vw; /* Aumenta la separación entre íconos */
-    }
 
 	.navbar {
 		left: -100vw;
 		width: 60vw;
+		padding: 10px;
 		padding-top: 0px;
 		padding-bottom: 0;
 		flex-direction: column;
@@ -216,7 +214,11 @@ header {
 		background-color: #EAC9C2;
 		justify-content: flex-start;
 		transition: left 0.5s ease;
-		position: absolute;
+		position: fixed;
+	}
+	.SI{
+		margin-top: 5vw;
+		gap: 10vw;
 	}
 
 	.header-content {
@@ -241,10 +243,12 @@ header {
 		flex-direction: column;
 		align-items: flex-start;
 		width: 100%;
+		margin: 10px 5px 0px 5px;
 	}
 
 	.menu li {
 		align-items: flex-start;
+		padding: 0px;
 	}
 
 	.menu li a {
