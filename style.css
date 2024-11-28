@@ -49,6 +49,7 @@ header {
   width: auto;
   object-fit: cover;
   margin-top: 11px;
+  
 }
 .logo img{
   height: 100%;
@@ -71,6 +72,7 @@ header {
   padding: 10px;
   padding-bottom: 5px;
   height: 100%;
+  overflow: hidden;
 }
 .SI {
   position: relative;
@@ -743,10 +745,6 @@ body {
   display: flex;
   justify-content: center;
   text-decoration: none;
-}
-#bio .number-font{
-  font-family: Serif;
-  font-size: 1vw;
 }
 /* inspired form gumroad website */
 .ver-más {
