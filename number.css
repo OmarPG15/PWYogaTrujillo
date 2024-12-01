@@ -8,4 +8,7 @@
     .number-font{
         font-size: 1.1rem;
     }
+    #bio .number-font{
+        font-size: 0.8rem;
+    }
 }
