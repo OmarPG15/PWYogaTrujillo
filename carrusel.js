@@ -1,17 +1,27 @@
-document.addEventListener('DOMContentLoaded',function(){
-    document.querySelector('#left').addEventListener('click', function() {
-        const carrusel = document.querySelector('.carrusel');
-        carrusel.scrollBy({
-            left:-450,
-            behavior:'smooth'
-        }); // Ajusta el valor según el ancho de los artículos (.cart)
+document.addEventListener('DOMContentLoaded', function () {
+    const carrusel = document.querySelector('.carrusel');
+    const btnLeft = document.querySelector('#left');
+    const btnRight = document.querySelector('#right');
 
-    });
-    document.querySelector('#right').addEventListener('click', function() {
-        const carrusel = document.querySelector('.carrusel');
+    // Calcula el ancho de un card dinámicamente
+    const getCardWidth = () => {
+        const card = carrusel.querySelector('.cart');
+        return card ? card.offsetWidth : 0; // Retorna el ancho de un card
+    };
+
+    btnLeft.addEventListener('click', function () {
+        const cardWidth = getCardWidth();
         carrusel.scrollBy({
-            left:450,
-            behavior:'smooth'
-        }); // Ajusta el valor según el ancho de los artículos (.cart)
+            left: -cardWidth,
+            behavior: 'smooth',
+        });
+    });
+
+    btnRight.addEventListener('click', function () {
+        const cardWidth = getCardWidth();
+        carrusel.scrollBy({
+            left: cardWidth,
+            behavior: 'smooth',
+        });
     });
 });
