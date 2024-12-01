@@ -51,12 +51,12 @@
 @media(max-width: 757px){
     header {
         height: 100%;   
-        width: 10%;
+        width: 1%;
     }
     .header-content{
         /* height: 100px; */
         height: 100%;
-        width: 10%;
+        width: 1%;
         /* left: -100%; */
     }
     .navbar{
@@ -87,6 +87,7 @@
     .logo {
         margin-top: 10%;
         justify-content: center;
+        height: 100px;
     }
     .logo img {
         width: 100%;
@@ -248,7 +249,7 @@
     }
     #bio p {
         width: 90%;
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     
     .imgnsm {
